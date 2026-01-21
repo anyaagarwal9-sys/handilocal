@@ -303,8 +303,50 @@ const Home = () => {
       {/* Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
-      {/* What We Do Section */}
-      <section className="py-20 md:py-28 px-4 bg-background relative">
+      {/* Products Section - What You'll Find */}
+      <section className="py-20 md:py-28 px-4 bg-background">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+              Handcrafted With Love
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">What You'll Find</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Non-perishable, handmade treasures from your community
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="flex flex-wrap justify-center gap-4"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            {[
+              "Handmade Soaps", "Scented Candles", "Pottery", "Puppets",
+              "Handcrafted Jewelry", "Artisan Bags", "Handwoven Sarees & Suits", "Home Decor"
+            ].map((product, index) => (
+              <motion.div 
+                key={product}
+                className="px-6 py-3 bg-card border border-border/50 rounded-full text-foreground font-medium hover:border-primary hover:bg-primary/5 transition-all cursor-default"
+                variants={scaleIn}
+                whileHover={{ scale: 1.05, y: -2 }}
+              >
+                {product}
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* What We Do Section - How We Bridge the Gap */}
+      <section className="py-20 md:py-28 px-4 bg-card relative">
         <div className="container mx-auto max-w-6xl">
           <motion.div 
             className="text-center mb-16"
@@ -347,7 +389,7 @@ const Home = () => {
             ].map((item, index) => (
               <motion.div 
                 key={item.title}
-                className="text-center p-8 rounded-3xl hover:bg-card transition-colors duration-300 group"
+                className="text-center p-8 rounded-3xl hover:bg-background transition-colors duration-300 group"
                 variants={fadeInUp}
               >
                 <motion.div 
@@ -360,49 +402,6 @@ const Home = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-
-      {/* Products Section */}
-      <section className="py-20 md:py-28 px-4 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              Handcrafted With Love
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">What You'll Find</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Non-perishable, handmade treasures from your community
-            </p>
-          </motion.div>
-
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {[
-              "Handmade Soaps", "Scented Candles", "Pottery", "Puppets",
-              "Handcrafted Jewelry", "Artisan Bags", "Handwoven Sarees & Suits", "Home Decor"
-            ].map((product, index) => (
-              <motion.div 
-                key={product}
-                className="px-6 py-3 bg-card border border-border/50 rounded-full text-foreground font-medium hover:border-primary hover:bg-primary/5 transition-all cursor-default"
-                variants={scaleIn}
-                whileHover={{ scale: 1.05, y: -2 }}
-              >
-                {product}
               </motion.div>
             ))}
           </motion.div>
