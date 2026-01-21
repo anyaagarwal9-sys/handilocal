@@ -83,7 +83,7 @@ const About = () => {
             duration: 0.6,
             delay: 0.2
           }}>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mx-0 py-[30px]">
                 We believe in the power of human connection and the beauty of handcrafted goods. 
                 Our platform was born from a simple idea: to create a space where talented local 
                 artisans can share their stories and connect with people who appreciate authentic craftsmanship.
