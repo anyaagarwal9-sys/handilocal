@@ -98,9 +98,9 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 px-4 bg-background md:py-[60px]">
+      <section className="py-8 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <motion.div className="text-center mb-16" initial={{
+          <motion.div className="text-center mb-12" initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
@@ -130,40 +130,6 @@ const About = () => {
                   <p className="text-muted-foreground leading-relaxed">{member.bio}</p>
                 </div>
               </motion.div>)}
-          </motion.div>
-        </div>
-      </section>
-
-
-      {/* Why We're Different */}
-      <section className="py-16 px-4 bg-background">
-        <div className="container mx-auto max-w-4xl">
-          <motion.div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-3xl p-8 md:p-12 border border-primary/20" initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }}>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center">Why We're Different</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              {["No transaction fees or commissions", "Direct communication between artisans and buyers", "Focus on storytelling and authentic connections", "Supporting local communities and economies", "Preserving traditional crafts and techniques", "100% of earnings go to the artisan"].map((item, index) => <motion.div key={index} className="flex items-center gap-3 p-3 bg-background rounded-xl" initial={{
-              opacity: 0,
-              x: -10
-            }} whileInView={{
-              opacity: 1,
-              x: 0
-            }} viewport={{
-              once: true
-            }} transition={{
-              delay: index * 0.05
-            }}>
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                  <span className="text-foreground">{item}</span>
-                </motion.div>)}
-            </div>
           </motion.div>
         </div>
       </section>
