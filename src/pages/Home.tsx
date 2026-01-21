@@ -177,7 +177,7 @@ const Home = () => {
       </section>
 
       {/* Tagline Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-primary to-primary/90 relative overflow-hidden">
+      <section className="py-10 px-4 bg-gradient-to-r from-primary to-primary/90 relative overflow-hidden">
         <motion.div 
           className="absolute inset-0 opacity-10"
           style={{
@@ -197,7 +197,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 px-4 bg-card relative">
+      <section className="py-12 md:py-16 px-4 bg-card relative">
         <div className="container mx-auto max-w-6xl">
           <motion.div 
             className="text-center mb-16"
@@ -304,7 +304,7 @@ const Home = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
       {/* Products Section - What You'll Find */}
-      <section className="py-20 md:py-28 px-4 bg-background">
+      <section className="py-12 md:py-16 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <motion.div 
             className="text-center mb-16"
@@ -346,7 +346,7 @@ const Home = () => {
       </section>
 
       {/* What We Do Section - How We Bridge the Gap */}
-      <section className="py-20 md:py-28 px-4 bg-card relative">
+      <section className="py-12 md:py-16 px-4 bg-card relative">
         <div className="container mx-auto max-w-6xl">
           <motion.div 
             className="text-center mb-16"
@@ -410,7 +410,7 @@ const Home = () => {
 
 
       {/* Trust Section */}
-      <section className="py-16 md:py-20 px-4 bg-background">
+      <section className="py-10 md:py-12 px-4 bg-background">
         <div className="container mx-auto max-w-4xl">
           <motion.div 
             className="grid md:grid-cols-3 gap-8 text-center"
@@ -436,7 +436,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 px-4 bg-primary relative overflow-hidden">
+      <section className="py-14 md:py-18 px-4 bg-primary relative overflow-hidden">
         <motion.div 
           className="absolute inset-0"
           style={{

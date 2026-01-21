@@ -52,7 +52,7 @@ const teamMembers = [{
 const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section - Two Column Layout */}
-      <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+      <section className="relative py-12 md:py-16 px-4 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0 -z-10">
           <img src={aboutElephants} alt="" className="w-full h-full object-cover opacity-15" loading="lazy" />
@@ -98,7 +98,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-8 px-4 bg-background">
+      <section className="py-4 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <motion.div className="text-center mb-12" initial={{
           opacity: 0,
