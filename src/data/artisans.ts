@@ -1,3 +1,24 @@
+export type ProductCategory = 
+  | "Puppets"
+  | "Textiles"
+  | "Jewellery"
+  | "Pottery & Ceramics"
+  | "Bags & Accessories"
+  | "Home Decor"
+  | "Art & Paintings"
+  | "Fragrance";
+
+export const productCategories: ProductCategory[] = [
+  "Puppets",
+  "Textiles",
+  "Jewellery",
+  "Pottery & Ceramics",
+  "Bags & Accessories",
+  "Home Decor",
+  "Art & Paintings",
+  "Fragrance",
+];
+
 export type Artisan = {
   id: number;
   name: string;
@@ -23,6 +44,7 @@ export type Artisan = {
   priceRange?: string;
   materials?: string;
   image?: string;
+  category?: ProductCategory;
 };
 
 const templateImages = [
@@ -62,6 +84,7 @@ const baseArtisans: Artisan[] = [
     craft: "Rajasthani Puppets",
     workLocation: "Delhi Haat, INA",
     timings: "11:00 AM – 8:00 PM",
+    category: "Puppets",
     story:
       "Sunita Bhatt makes Rajasthani puppets entirely by hand—meticulously carving wood, cutting fabric, and painting each puppet. Despite the intricacy and skill in her work, she struggles to find enough customers to sustain a consistent income. She sells her work at INA in hopes her art can support her and her family.",
   },
@@ -82,6 +105,7 @@ const baseArtisans: Artisan[] = [
     howTheyStarted: "Through her sister; gradually started selling",
     reasonForDoingThisWork: "To provide for family",
     challengesFaced: "Selling consistently and finding buyers",
+    category: "Jewellery",
     story:
       "Meena Das has been making handmade jewellery for the past twenty years. Originally from Bengal, she entered the craft to provide for her sister and son and slowly began selling her pieces. With no formal education, this work became her only way to earn and provide. Her jewellery is made entirely by hand, but selling enough to survive is a constant struggle. Yet she continues working every day at INA, hoping her craft will be valued enough for her to keep providing for her family.",
   },
@@ -99,6 +123,7 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "Employment; to provide for family",
     challengesFaced: "Exploitation—corporations collecting his work; hard to get it back",
     priceRange: "₹100 – ₹350",
+    category: "Art & Paintings",
     story:
       "An artisan from Bihar, Ramesh Thakur has spent the last 20 years handcrafting diaries to support his family. Despite his craft being his only source of income, he has faced exploitation, yet perseveres—working tirelessly and masterfully at his trade to make a living. Every purchase helps him provide for his family, despite a market that often values convenience over artistic integrity and effort.",
   },
@@ -134,6 +159,7 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "Family heritage, passion, and continued income",
     challengesFaced: "Very time-consuming handiwork; requires day-and-night effort",
     priceRange: "₹150 – ₹1,500 (based on requirement)",
+    category: "Puppets",
     story:
       "Babulal Bhaat is an artisan from Rajasthan, selling entirely handmade decorative hanging charms and Rajasthani puppets, pouring hours of work into each piece. His work at INA is a testament to family tradition and a dying art. Every purchase helps preserve Rajasthani artistic heritage and supports a household trying to make ends meet.",
   },
@@ -152,6 +178,7 @@ const baseArtisans: Artisan[] = [
       "Learned crochet from YouTube after seeing a crochet flower in Mumbai; started selling in 2011",
     reasonForDoingThisWork: "Support the household + genuine interest",
     challengesFaced: "Eyesight issues, long hours sitting, extensive effort, lack of visibility",
+    category: "Home Decor",
     story:
       "After coming across a small shop in Mumbai, Prince Kumar taught himself crochet through YouTube and began selling his pieces in 2011 to support his household. Despite the physical strain of long working hours and ongoing eyesight issues, Prince continues with a strong artistic eye.",
   },
@@ -163,6 +190,7 @@ const baseArtisans: Artisan[] = [
     craft: "Handcrafted Jewellery",
     workLocation: "Delhi Haat, INA",
     timings: "11:00 AM – 8:00 PM",
+    category: "Jewellery",
     story:
       "Munna Lal works tirelessly, creating handcrafted jewellery from scratch to support his family. It is his sole source of income—often unreliable in a market that overlooks meticulous manual effort. Every customer makes a huge difference.",
   },
@@ -181,6 +209,7 @@ const baseArtisans: Artisan[] = [
     challengesFaced:
       "Recovering from injury; difficult to sell jewellery and find buyers",
     priceRange: "₹50 – ₹250",
+    category: "Jewellery",
     story:
       "Bablu had a stable job at the local passport office until an accident changed his future overnight. A severe leg injury made it impossible to continue working. Sitting at a small table each day, he began experimenting with handcrafted jewellery. He now creates each piece by hand, but selling in a market that often overlooks craftsmanship remains challenging. Supporting artisans like him can make a real difference.",
   },
@@ -204,6 +233,7 @@ const baseArtisans: Artisan[] = [
       "Learning resin safely and mixing correctly; winters reduce demand; finding customers",
     goals: "Expand variety and reach",
     priceRange: "₹40–50 (small keychains), ₹350–400, ₹800–1,000 (custom)",
+    category: "Jewellery",
     story:
       "Arti Madnawat and her teenage daughter, Doyal, create resin art at home and deliver to customers while coordinating over WhatsApp. They started by making hairpins from waste, then gradually expanded into jewellery, car hangings, customized pieces, and magnets.",
   },
@@ -222,6 +252,7 @@ const baseArtisans: Artisan[] = [
     timings: "11:00 AM – 8:00 PM",
     howTheyStarted: "Family business; works with his sons",
     priceRange: "₹300 – ₹1,500 (20% discount currently)",
+    category: "Textiles",
   },
   {
     id: 14,
@@ -236,6 +267,7 @@ const baseArtisans: Artisan[] = [
     workingYears: "20 years",
     timings: "12:00 PM – 9:00 PM",
     priceRange: "₹200+ (varies by piece)",
+    category: "Home Decor",
     story:
       "Sonu is a Dokra artisan from Chhattisgarh, selling traditional metal statues and showpieces at Noida Haat under the name Kuldeep Handiworks. She describes Dokra as time-consuming and physically taxing, yet it competes with cheap factory-made decor that sells faster and draws more attention.",
   },
@@ -252,6 +284,7 @@ const baseArtisans: Artisan[] = [
     timings: "11:00 AM – 9:00 PM",
     reasonForDoingThisWork: "Family business (weavers for nearly 200 years)",
     priceRange: "₹1,500 – ₹6,000",
+    category: "Textiles",
   },
   {
     id: 16,
@@ -269,6 +302,7 @@ const baseArtisans: Artisan[] = [
     family: "Husband, son, granddaughter",
     reasonForDoingThisWork:
       "Former Kathak dancer; began crafting during COVID and turned it into income",
+    category: "Textiles",
     story:
       "Originally from Kolkata, Aratna Bose is a former Kathak dancer whose life changed during the COVID-19 pandemic. As performances stopped and age made it harder to continue, she turned to crafting during lockdown. Encouraged by her son, she transformed her passion into income. With no formal education, this became one of her few ways to support herself. She now runs a permanent shop at Noida Haat, and all products are made entirely by her.",
   },
@@ -288,6 +322,7 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "Family business",
     priceRange: "₹1,200 – ₹34,000",
     materials: "Wool, Pashmina, Silk",
+    category: "Textiles",
   },
   {
     id: 18,
@@ -306,6 +341,7 @@ const baseArtisans: Artisan[] = [
     challengesFaced: "Financial security",
     goals: "To provide for himself",
     priceRange: "₹700/₹1,200 – ₹3,000/₹4,000",
+    category: "Textiles",
     story:
       "Jitendra is an artisan from Haryana whose handcrafted bedsheets, bedcovers, cushion covers, and jute work are made using materials sourced from Jaipur. Under the name Art Creation, he has spent 20 years building a small business with no other financial security to fall back on. He struggles to find buyers who understand handmade value in a market full of machine-made alternatives.",
   },
@@ -321,6 +357,7 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "To provide for family",
     challengesFaced:
       "Visibility, managing buyers, getting buyers, long work hours",
+    category: "Pottery & Ceramics",
     story:
       "In order to support her family, Gauri Devi began selling her ceramic paintings at Dilli Haat 15 years ago, carefully hand-painting each piece with great attention to detail, spending hours attending to her craft. Despite the time and effort required to create each piece, earning a sustainable income through ceramic painting remains a challenge, with her ceramic handiwork being a primary source of income, as well a catalyst to keeping the tradition of Indian handicraft alive. With just the support of a few buyers, Gauri Devi can turn a dying art form into a living income.",
   },
@@ -337,6 +374,7 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork:
       "Keeping a decades-old family tradition alive while making a living",
     challengesFaced: "Visibility, finding buyers, long working hours",
+    category: "Bags & Accessories",
     story:
       "Urmila Ben crafts handmade Gujarati bags distinct to the Kutch region. Her family has been weaving these bags for decades and selling across the country. Her work keeps a rich tradition alive and is the only source of income for her household—small support makes a big difference.",
   },
@@ -368,6 +406,7 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork:
       "Continuing and strengthening a family livelihood",
     priceRange: "₹250 – ₹800",
+    category: "Fragrance",
     story:
       "Anas Khan has been selling hand-crafted Oud for 10 years at Dilli Haat, continuing a family tradition his father started. What began as reselling has become a generational livelihood, and Anas now makes Oud from scratch with technical skill and dedication.",
   },
@@ -380,6 +419,7 @@ const baseArtisans: Artisan[] = [
     craft: "Paper Mâché & Handmade Bags",
     workLocation: "Delhi Haat, INA",
     priceRange: "₹150 – ₹750",
+    category: "Home Decor",
   },
 ];
 
