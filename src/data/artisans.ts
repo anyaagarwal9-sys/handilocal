@@ -206,6 +206,8 @@ const baseArtisans: Artisan[] = [
     workLocation: "Delhi Haat, INA",
     timings: "11:00 AM – 8:00 PM",
     categories: ["Jewellery"],
+    image: "/assets/munna-profile.jpg",
+    gallery: ["/assets/munna-1.jpg"],
     story:
       "Munna Lal works tirelessly, creating handcrafted jewellery from scratch to support his family. It is his sole source of income—often unreliable in a market that overlooks meticulous manual effort. Every customer makes a huge difference.",
   },
