@@ -42,6 +42,7 @@ export type Artisan = {
   priceRange?: string;
   materials?: string;
   image?: string;
+  gallery?: string[];
   categories?: ProductCategory[];
 };
 
@@ -72,6 +73,14 @@ const baseArtisans: Artisan[] = [
     goals: "To pay for children's education",
     priceRange: "₹100 – ₹5,000",
     categories: ["Bags & Accessories"],
+    image: "/assets/bimes-profile.jpg",
+    gallery: [
+      "/assets/bimes-1.jpg",
+      "/assets/bimes-2.jpg",
+      "/assets/bimes-3.jpg",
+      "/assets/bimes-4.jpg",
+      "/assets/bimes-5.jpg",
+    ],
     story:
       "Bimes Trivedi began selling hand-crafted bags since Dilli Haat opened 15 years ago to support her children's education. She works morning to night and often feels overburdened by work, but struggles to make ends meet. Every purchase makes a difference and can be life-changing.",
   },
