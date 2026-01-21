@@ -8,7 +8,7 @@ const Artisans = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | null>(null);
 
   const filteredArtisans = selectedCategory
-    ? artisans.filter((artisan) => artisan.category === selectedCategory)
+    ? artisans.filter((artisan) => artisan.categories?.includes(selectedCategory))
     : artisans;
 
   return (
