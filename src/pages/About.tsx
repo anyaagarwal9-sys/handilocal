@@ -176,9 +176,8 @@ const About = () => {
                     <User className="w-12 h-12 text-primary/50" />
                   )}
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
-                <p className="text-sm text-primary font-medium">{member.role}</p>
-                <p className="text-sm text-muted-foreground mb-3">Age: {member.age}</p>
+                <h3 className="text-lg font-bold text-foreground mb-1">{member.name}, {member.age}</h3>
+                <p className="text-sm text-primary font-medium mb-3">{member.role}</p>
                 <p className="text-sm text-muted-foreground">{member.bio}</p>
               </motion.div>
             ))}
