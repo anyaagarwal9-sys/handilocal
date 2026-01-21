@@ -34,9 +34,6 @@ const Artisans = () => {
                     {artisan.workLocation ?? artisan.location}
                   </p>
                 )}
-                {artisan.timings && (
-                  <p className="text-sm text-muted-foreground">{artisan.timings}</p>
-                )}
               </CardContent>
               <CardFooter>
                 <Link to={`/artisan/${artisan.id}`} className="w-full">
