@@ -24,25 +24,25 @@ const teamMembers = [
   {
     name: "Anya Agarwal",
     role: "Web Developer, Tech and Communications Lead",
-    bio: "Passionate about connecting artisans with their community. Add your introduction here.",
+    bio: "Builds the website and coordinates producer outreach and interviews. With strong programming and robotics skills, she handles technical tasks smoothly and keeps the team organized and ahead.",
     image: team1
   },
   {
-    name: "Team Member 2",
-    role: "Co-Founder",
-    bio: "Dedicated to preserving traditional crafts and empowering local creators. Add your introduction here.",
+    name: "Vaahini Bajoria",
+    role: "Documentation and Design Lead",
+    bio: "Keeps detailed meeting minutes and documents decisions clearly. She gathers producer stories during interviews to support the team and the website content.",
     image: team2
   },
   {
-    name: "Team Member 3",
-    role: "Co-Founder",
-    bio: "Believes in the power of human connection and authentic storytelling. Add your introduction here.",
+    name: "Shivnandini Dhaul",
+    role: "Photographer and Design Lead",
+    bio: "Leads photography and compiles photos/videos from interviews and meetings for the evidence section. She also supports the website design.",
     image: team3
   },
   {
-    name: "Team Member 4",
-    role: "Co-Founder",
-    bio: "Committed to bridging the digital divide for local artisans. Add your introduction here.",
+    name: "Neesah Kant Sharma",
+    role: "Creative & Coordination Head",
+    bio: "Builds strong connections with producers and communicates with empathy (Hindi fluent). She manages schedules, responsibilities, and interviews, keeping everyone aligned and on time.",
     image: null
   }
 ];
