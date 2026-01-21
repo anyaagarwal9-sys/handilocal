@@ -162,7 +162,12 @@ const About = () => {
               >
                 <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 overflow-hidden">
                   {member.image ? (
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" loading="lazy" />
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-[50%_22%]"
+                      loading="lazy"
+                    />
                   ) : (
                     <User className="w-12 h-12 text-primary/50" />
                   )}
