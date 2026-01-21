@@ -87,31 +87,31 @@ const Home = () => {
               variants={fadeInUp}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground leading-tight"
             >
-              Beautiful Products Exist{" "}
+              Discover the Hands{" "}
               <span className="text-primary relative">
-                Minutes
+                Behind
                 <motion.div 
-                  className="absolute -bottom-2 left-0 right-0 h-3 bg-primary/20 -z-10 rounded"
+                  className="absolute -bottom-2 left-0 right-0 h-3 bg-secondary/30 -z-10 rounded"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ delay: 0.8, duration: 0.5 }}
                 />
               </span>{" "}
-              From Your Home
+              Your Community
             </motion.h1>
             
             <motion.p 
               variants={fadeInUp}
               className="text-lg md:text-xl mb-6 text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             >
-              Local artisans remain invisible because we choose convenience over community.
+              Beautiful handmade products exist just minutes from your home — but local artisans remain invisible.
             </motion.p>
             
             <motion.p 
               variants={fadeInUp}
               className="text-2xl md:text-3xl font-bold mb-10 text-foreground"
             >
-              <span className="text-primary">HandiLocal</span> changes that.
+              <span className="text-primary">HandiLocal</span> bridges that gap.
             </motion.p>
 
             {/* Key Stats */}
@@ -191,7 +191,7 @@ const Home = () => {
       </section>
 
       {/* Tagline Section */}
-      <section className="py-16 px-4 bg-primary relative overflow-hidden">
+      <section className="py-16 px-4 bg-gradient-to-r from-primary to-primary/90 relative overflow-hidden">
         <motion.div 
           className="absolute inset-0 opacity-10"
           style={{
@@ -204,13 +204,13 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-4"
+            className="space-y-2"
           >
-            <p className="text-lg md:text-xl text-primary-foreground/80 font-medium">
-              Bridging Communities, One Artisan at a Time
-            </p>
             <p className="text-2xl md:text-3xl font-bold text-primary-foreground">
-              "Scan and discover the hands behind your community"
+              23 Creators. 100+ Products. Zero Excuses.
+            </p>
+            <p className="text-lg md:text-xl text-primary-foreground/80">
+              Bridging communities, one artisan at a time.
             </p>
           </motion.div>
         </div>
