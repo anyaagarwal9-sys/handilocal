@@ -366,56 +366,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-20 md:py-28 px-4 bg-card relative overflow-hidden">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              Simple Process
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">How It Works</h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { icon: Package, title: "Browse", description: "Explore our curated collection of local artisans" },
-              { icon: Users, title: "Discover", description: "Read their stories and view their handmade products" },
-              { icon: MessageCircle, title: "Connect", description: "Reach out directly via WhatsApp or call" },
-              { icon: HandHeart, title: "Support", description: "Buy directly — 100% goes to the artisan" }
-            ].map((step, index) => (
-              <motion.div 
-                key={step.title}
-                className="relative"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="text-center p-6">
-                  <div className="relative inline-block mb-4">
-                    <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center">
-                      <step.icon className="w-8 h-8 text-primary-foreground" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-background border-2 border-primary flex items-center justify-center text-sm font-bold text-primary">
-                      {index + 1}
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 text-foreground">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground">{step.description}</p>
-                </div>
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gradient-to-r from-primary/50 to-transparent" />
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Products Section */}
       <section className="py-20 md:py-28 px-4 bg-background">
