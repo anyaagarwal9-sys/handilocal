@@ -417,8 +417,15 @@ const baseArtisans: Artisan[] = [
       "Continuing and strengthening a family livelihood",
     priceRange: "₹250 – ₹800",
     categories: ["Fragrance"],
-    image: "/assets/anas-1.jpg",
-    gallery: ["/assets/anas-1.jpg"],
+    image: "/assets/anas-profile.jpg",
+    gallery: [
+      "/assets/anas-1.jpg",
+      "/assets/anas-2.jpg",
+      "/assets/anas-3.jpg",
+      "/assets/anas-4.jpg",
+      "/assets/anas-5.jpg",
+      "/assets/anas-6.jpg",
+    ],
     story:
       "Anas Khan has been selling hand-crafted Oud for 10 years at Dilli Haat, continuing a family tradition his father started. What began as reselling has become a generational livelihood, and Anas now makes Oud from scratch with technical skill and dedication.",
   },
