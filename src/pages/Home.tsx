@@ -87,10 +87,10 @@ const Home = () => {
             
             <motion.p 
               variants={fadeInUp}
-              className="text-lg md:text-xl mb-8 text-foreground/80 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl mb-8 text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             >
               Beautiful handmade products exist just minutes from your home — yet local artisans remain invisible 
-              because we choose <span className="text-foreground font-semibold">convenience over community</span>.
+              because we choose <span className="text-foreground font-medium">convenience over community</span>.
             </motion.p>
             
             <motion.p 
