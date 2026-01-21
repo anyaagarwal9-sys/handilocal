@@ -57,7 +57,7 @@ const Home = () => {
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-background/60" />
         </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -177,42 +177,26 @@ const Home = () => {
       </section>
 
       {/* Tagline Section */}
-      <section className="py-16 px-4 bg-card relative overflow-hidden">
+      <section className="py-16 px-4 bg-gradient-to-r from-primary to-primary/90 relative overflow-hidden">
+        <motion.div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
+            backgroundSize: "32px 32px"
+          }}
+        />
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bold text-foreground"
+            className="text-2xl md:text-3xl font-bold text-primary-foreground"
           >
             Bridging communities, one artisan at a time.
           </motion.p>
         </div>
       </section>
 
-      {/* Gradient Background Section - wraps all remaining content */}
-      <div className="bg-gradient-to-b from-primary/10 via-primary/5 to-background relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div 
-            className="absolute top-20 left-10 w-72 h-72 bg-primary/15 rounded-full blur-3xl"
-            animate={{ 
-              x: [0, 30, 0],
-              y: [0, -20, 0],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div 
-            className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/30 rounded-full blur-3xl"
-            animate={{ 
-              x: [0, -20, 0],
-              y: [0, 30, 0],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </div>
-
-      {/* The Problem Section */}
       <section className="py-20 md:py-28 px-4 bg-card relative">
         <div className="container mx-auto max-w-6xl">
           <motion.div 
@@ -534,7 +518,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-      </div>
     </div>
   );
 };
