@@ -55,9 +55,9 @@ const Home = () => {
           <img 
             src="/images/hero-crafts.png" 
             alt="" 
-            className="w-full h-full object-cover sepia-[0.35] saturate-[1.3] brightness-90 contrast-[1.05]"
+            className="w-full h-full object-cover sepia-[0.25] saturate-[1.2] brightness-100 contrast-[1.0] opacity-70"
           />
-          <div className="absolute inset-0 bg-primary/20" />
+          <div className="absolute inset-0 bg-background/30" />
         </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">

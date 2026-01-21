@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, UserPlus, MessageCircle, Handshake, Heart, Users, Store, User } from "lucide-react";
+import { Search, UserPlus, MessageCircle, Handshake, User } from "lucide-react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -68,78 +68,52 @@ const steps = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
+      {/* Hero Section - Two Column Layout */}
       <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto max-w-5xl">
-          <motion.div 
-            className="text-center"
-            initial="initial"
-            animate="animate"
-            variants={staggerContainer}
-          >
-            <motion.span 
-              variants={fadeInUp}
-              className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+            {/* Left Column - About HandiLocal */}
+            <motion.div 
+              className="text-left"
+              initial="initial"
+              animate="animate"
+              variants={staggerContainer}
             >
-              Our Story
-            </motion.span>
-            <motion.h1 
-              variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground"
-            >
-              About <span className="text-primary">HandiLocal</span>
-            </motion.h1>
-            <motion.p 
-              variants={fadeInUp}
-              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-            >
-              We believe in the power of human connection and the beauty of handcrafted goods. 
-              Our platform was born from a simple idea: to create a space where talented local 
-              artisans can share their stories and connect with people who appreciate authentic craftsmanship.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-16 px-4 bg-card">
-        <div className="container mx-auto max-w-5xl">
-          <motion.div 
-            className="grid md:grid-cols-3 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            {[
-              {
-                icon: Heart,
-                title: "Our Mission",
-                description: "To empower local artisans by providing them with visibility and direct connections to their community."
-              },
-              {
-                icon: Users,
-                title: "Our Vision",
-                description: "A world where every local artisan can thrive without barriers, connecting directly with those who value their craft."
-              },
-              {
-                icon: Store,
-                title: "Our Promise",
-                description: "We never handle transactions or take commissions. Artisans keep 100% of their earnings, always."
-              }
-            ].map((item) => (
-              <motion.div 
-                key={item.title}
-                className="text-center p-6"
-                whileHover={{ y: -5 }}
+              <motion.span 
+                variants={fadeInUp}
+                className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
               >
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
+                Our Story
+              </motion.span>
+              <motion.h1 
+                variants={fadeInUp}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground"
+              >
+                About <span className="text-primary">HandiLocal</span>
+              </motion.h1>
+            </motion.div>
+
+            {/* Divider - Hidden on mobile */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-border to-transparent" style={{ height: '100%' }} />
+
+            {/* Right Column - Description */}
+            <motion.div 
+              className="text-left md:pl-8 md:border-l border-border"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                We believe in the power of human connection and the beauty of handcrafted goods. 
+                Our platform was born from a simple idea: to create a space where talented local 
+                artisans can share their stories and connect with people who appreciate authentic craftsmanship.
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-4">
+                We're not a marketplace — we're a bridge. We never handle transactions or take commissions. 
+                Every artisan keeps 100% of their earnings, always.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
