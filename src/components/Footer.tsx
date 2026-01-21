@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-bold text-lg mb-4 text-primary">ArtisanBridge</h3>
+            <h3 className="font-bold text-lg mb-4 text-primary font-heading">HandiLocal</h3>
             <p className="text-sm text-muted-foreground">
               Connecting local artisans with those who care.
             </p>
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 ArtisanBridge. All rights reserved.</p>
+          <p>&copy; 2024 HandiLocal. All rights reserved.</p>
         </div>
       </div>
     </footer>

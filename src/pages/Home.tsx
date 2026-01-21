@@ -55,9 +55,9 @@ const Home = () => {
           <img 
             src="/images/hero-crafts.png" 
             alt="" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover sepia-[0.2] saturate-[1.2] brightness-95"
           />
-          <div className="absolute inset-0 bg-background/60" />
+          <div className="absolute inset-0 bg-background/40" />
         </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -87,10 +87,10 @@ const Home = () => {
             
             <motion.p 
               variants={fadeInUp}
-              className="text-lg md:text-xl mb-8 text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl mb-8 text-foreground/80 max-w-3xl mx-auto leading-relaxed"
             >
               Beautiful handmade products exist just minutes from your home — yet local artisans remain invisible 
-              because we choose <span className="text-foreground font-medium">convenience over community</span>.
+              because we choose <span className="text-foreground font-semibold">convenience over community</span>.
             </motion.p>
             
             <motion.p 
@@ -270,7 +270,7 @@ const Home = () => {
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-4">
                   <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-medium text-primary uppercase tracking-wide">Noida & Greater Noida</span>
+                  <span className="text-sm font-medium text-primary uppercase tracking-wide">Noida and Delhi NCR</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">The Local Reality</h3>
                 <p className="text-muted-foreground leading-relaxed text-lg">

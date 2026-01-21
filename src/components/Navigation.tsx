@@ -30,9 +30,9 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">H</span>
+              <span className="text-primary-foreground font-bold text-lg font-heading">H</span>
             </div>
-            <span className="text-xl font-bold text-foreground tracking-tight">
+            <span className="text-xl font-bold text-foreground tracking-tight font-heading">
               Handi<span className="text-primary">Local</span>
             </span>
           </Link>
@@ -43,7 +43,7 @@ const Navigation = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 font-heading ${
                   isActive(link.to)
                     ? "bg-primary text-primary-foreground"
                     : "text-foreground/70 hover:text-foreground hover:bg-accent"
@@ -77,7 +77,7 @@ const Navigation = () => {
                     key={link.to}
                     to={link.to}
                     onClick={() => setIsOpen(false)}
-                    className={`px-4 py-3 text-base font-medium rounded-lg transition-all ${
+                    className={`px-4 py-3 text-base font-medium rounded-lg transition-all font-heading ${
                       isActive(link.to)
                         ? "bg-primary text-primary-foreground"
                         : "text-foreground/70 hover:text-foreground hover:bg-accent"
