@@ -402,6 +402,8 @@ const baseArtisans: Artisan[] = [
       "Keeping a decades-old family tradition alive while making a living",
     challengesFaced: "Visibility, finding buyers, long working hours",
     categories: ["Bags & Accessories"],
+    image: "/assets/urmila-profile.jpg",
+    gallery: ["/assets/urmila-1.jpg", "/assets/urmila-2.jpg"],
     story:
       "Urmila Ben crafts handmade Gujarati bags distinct to the Kutch region. Her family has been weaving these bags for decades and selling across the country. Her work keeps a rich tradition alive and is the only source of income for her household—small support makes a big difference.",
   },
