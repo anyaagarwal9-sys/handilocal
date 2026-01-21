@@ -42,7 +42,7 @@ const teamMembers = [
   {
     name: "Neesah Kant Sharma",
     role: "Creative & Coordination Head",
-    bio: "Builds strong connections with producers and communicates with empathy (Hindi fluent). She manages schedules, responsibilities, and interviews, keeping everyone aligned and on time.",
+    bio: "Communicates with artisans and builds genuine connections. She manages schedules, responsibilities, and interviews, keeping everyone aligned and on time.",
     image: null
   }
 ];
