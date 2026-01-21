@@ -102,17 +102,23 @@ const Home = () => {
             
             <motion.p 
               variants={fadeInUp}
-              className="text-lg md:text-xl mb-6 text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl mb-8 text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             >
-              Beautiful handmade products exist just minutes from your home — but local artisans remain invisible.
+              Beautiful handmade products exist just minutes from your home — yet local artisans remain invisible 
+              because we choose <span className="text-foreground font-medium">convenience over community</span>.
             </motion.p>
             
-            <motion.p 
+            <motion.div 
               variants={fadeInUp}
-              className="text-2xl md:text-3xl font-bold mb-10 text-foreground"
+              className="mb-10"
             >
-              <span className="text-primary">HandiLocal</span> bridges that gap.
-            </motion.p>
+              <p className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                <span className="text-primary">HandiLocal</span> changes that.
+              </p>
+              <p className="text-lg md:text-xl font-semibold text-secondary">
+                23 creators. 100+ products. Zero excuses.
+              </p>
+            </motion.div>
 
             {/* Key Stats */}
             <motion.div 
