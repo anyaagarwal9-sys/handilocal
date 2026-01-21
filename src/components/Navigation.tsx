@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { NavLink } from "./NavLink";
+import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,48 +6,91 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useState } from "react";
 
 const Navigation = () => {
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+  
   const links = [
     { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
+    { to: "/about", label: "About Us" },
     { to: "/artisans", label: "Artisans" },
     { to: "/how-it-works", label: "How It Works" },
     { to: "/impact", label: "Impact" },
     { to: "/contact", label: "Contact" },
   ];
 
+  const isActive = (path: string) => location.pathname === path;
+
   return (
-    <nav className="sticky top-0 z-50 bg-card border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold text-primary">
-            ArtisanBridge
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50 shadow-sm">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-18 py-4">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-lg">H</span>
+            </div>
+            <span className="text-xl font-bold text-foreground tracking-tight">
+              Handi<span className="text-primary">Local</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             {links.map((link) => (
-              <NavLink key={link.to} to={link.to}>
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  isActive(link.to)
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground/70 hover:text-foreground hover:bg-accent"
+                }`}
+              >
                 {link.label}
-              </NavLink>
+              </Link>
             ))}
           </div>
 
+          {/* CTA Button - Desktop */}
+          <div className="hidden lg:block">
+            <Link to="/artisans">
+              <Button className="rounded-full px-6">
+                Find Artisans
+              </Button>
+            </Link>
+          </div>
+
           {/* Mobile Navigation */}
-          <Sheet>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild className="lg:hidden">
+              <Button variant="ghost" size="icon" className="rounded-full">
+                <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent>
-              <div className="flex flex-col gap-4 mt-8">
+            <SheetContent className="bg-background">
+              <div className="flex flex-col gap-2 mt-8">
                 {links.map((link) => (
-                  <NavLink key={link.to} to={link.to}>
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setIsOpen(false)}
+                    className={`px-4 py-3 text-base font-medium rounded-lg transition-all ${
+                      isActive(link.to)
+                        ? "bg-primary text-primary-foreground"
+                        : "text-foreground/70 hover:text-foreground hover:bg-accent"
+                    }`}
+                  >
                     {link.label}
-                  </NavLink>
+                  </Link>
                 ))}
+                <Link to="/artisans" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full mt-4 rounded-full">
+                    Find Artisans
+                  </Button>
+                </Link>
               </div>
             </SheetContent>
           </Sheet>
