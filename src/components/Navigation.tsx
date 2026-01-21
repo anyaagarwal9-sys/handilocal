@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useState } from "react";
-import handiLocalLogo from "@/assets/handilocal-logo.png";
+
 
 const Navigation = () => {
   const location = useLocation();
@@ -28,8 +28,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={handiLocalLogo} alt="HandiLocal" className="h-9 w-9" />
+          <Link to="/" className="flex items-center">
             <span className="text-xl font-bold text-foreground tracking-tight font-heading">
               Handi<span className="text-primary">Local</span>
             </span>
