@@ -98,7 +98,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 px-4 bg-background">
+      <section className="py-16 px-4 bg-background md:py-[60px]">
         <div className="container mx-auto max-w-6xl">
           <motion.div className="text-center mb-16" initial={{
           opacity: 0,
@@ -109,7 +109,7 @@ const About = () => {
         }} viewport={{
           once: true
         }}>
-            <span className="inline-block py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 px-px">
+            <span className="inline-block py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 px-[16px] text-left">
               The People Behind HandiLocal
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">Meet Our Team</h2>
