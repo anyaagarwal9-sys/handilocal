@@ -176,19 +176,21 @@ const ArtisanProfile = () => {
           </dl>
         </Card>
 
-        <div className="mt-8">
-          <h2 className="text-2xl font-semibold mb-6">Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <img 
-                key={i}
-                src={`https://images.unsplash.com/photo-${1578749556568 + i}-d91c8c818e33?w=400&h=400&fit=crop`}
-                alt={`Work ${i}`}
-                className="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity"
-              />
-            ))}
+        {artisan.gallery && artisan.gallery.length > 0 && (
+          <div className="mt-8">
+            <h2 className="text-2xl font-semibold mb-6">Gallery</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {artisan.gallery.map((img, i) => (
+                <img 
+                  key={i}
+                  src={img}
+                  alt={`${artisan.name}'s work ${i + 1}`}
+                  className="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity"
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

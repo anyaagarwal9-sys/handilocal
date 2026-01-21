@@ -1,3 +1,66 @@
+// Image imports for artisan profiles and galleries
+import bimesProfile from "@/assets/bimes-profile.jpg";
+import bimes1 from "@/assets/bimes-1.jpg";
+import bimes2 from "@/assets/bimes-2.jpg";
+import bimes3 from "@/assets/bimes-3.jpg";
+import bimes4 from "@/assets/bimes-4.jpg";
+import bimes5 from "@/assets/bimes-5.jpg";
+
+import sunitaProfile from "@/assets/sunita-profile.jpg";
+import sunita1 from "@/assets/sunita-1.jpg";
+import sunita2 from "@/assets/sunita-2.jpg";
+
+import meenaProfile from "@/assets/meena-profile.jpg";
+import meena1 from "@/assets/meena-1.jpg";
+import meena2 from "@/assets/meena-2.jpg";
+import meena3 from "@/assets/meena-3.jpg";
+
+import rameshProfile from "@/assets/ramesh-profile.jpg";
+import ramesh1 from "@/assets/ramesh-1.jpg";
+
+import bandhuProfile from "@/assets/bandhu-profile.jpg";
+import bandhu1 from "@/assets/bandhu-1.jpg";
+
+import babulalProfile from "@/assets/babulal-profile.jpg";
+import babulal1 from "@/assets/babulal-1.jpg";
+import babulal2 from "@/assets/babulal-2.jpg";
+
+import princeProfile from "@/assets/prince-profile.jpg";
+import prince1 from "@/assets/prince-1.jpg";
+import prince2 from "@/assets/prince-2.jpg";
+import prince3 from "@/assets/prince-3.jpg";
+
+import munnaProfile from "@/assets/munna-profile.jpg";
+import munna1 from "@/assets/munna-1.jpg";
+
+import babluProfile from "@/assets/bablu-profile.jpg";
+import bablu1 from "@/assets/bablu-1.jpg";
+import bablu2 from "@/assets/bablu-2.jpg";
+
+import gauriProfile from "@/assets/gauri-profile.jpg";
+import gauri1 from "@/assets/gauri-1.jpg";
+import gauri2 from "@/assets/gauri-2.jpg";
+import gauri3 from "@/assets/gauri-3.jpg";
+
+import urmilaProfile from "@/assets/urmila-profile.jpg";
+import urmila1 from "@/assets/urmila-1.jpg";
+import urmila2 from "@/assets/urmila-2.jpg";
+
+import sarthakProfile from "@/assets/sarthak-profile.jpg";
+import sarthak1 from "@/assets/sarthak-1.jpg";
+
+import anasProfile from "@/assets/anas-profile.jpg";
+import anas1 from "@/assets/anas-1.jpg";
+import anas2 from "@/assets/anas-2.jpg";
+import anas3 from "@/assets/anas-3.jpg";
+import anas4 from "@/assets/anas-4.jpg";
+import anas5 from "@/assets/anas-5.jpg";
+import anas6 from "@/assets/anas-6.jpg";
+
+import rajeenProfile from "@/assets/rajeen-profile.jpg";
+import rajeen1 from "@/assets/rajeen-1.jpg";
+import rajeen2 from "@/assets/rajeen-2.jpg";
+
 export type ProductCategory = 
   | "Puppets"
   | "Textiles"
@@ -73,14 +136,8 @@ const baseArtisans: Artisan[] = [
     goals: "To pay for children's education",
     priceRange: "₹100 – ₹5,000",
     categories: ["Bags & Accessories"],
-    image: "/assets/bimes-profile.jpg",
-    gallery: [
-      "/assets/bimes-1.jpg",
-      "/assets/bimes-2.jpg",
-      "/assets/bimes-3.jpg",
-      "/assets/bimes-4.jpg",
-      "/assets/bimes-5.jpg",
-    ],
+    image: bimesProfile,
+    gallery: [bimes1, bimes2, bimes3, bimes4, bimes5],
     story:
       "Bimes Trivedi began selling hand-crafted bags since Dilli Haat opened 15 years ago to support her children's education. She works morning to night and often feels overburdened by work, but struggles to make ends meet. Every purchase makes a difference and can be life-changing.",
   },
@@ -93,8 +150,8 @@ const baseArtisans: Artisan[] = [
     workLocation: "Delhi Haat, INA",
     timings: "11:00 AM – 8:00 PM",
     categories: ["Puppets"],
-    image: "/assets/sunita-profile.jpg",
-    gallery: ["/assets/sunita-1.jpg", "/assets/sunita-2.jpg"],
+    image: sunitaProfile,
+    gallery: [sunita1, sunita2],
     story:
       "Sunita Bhatt makes Rajasthani puppets entirely by hand—meticulously carving wood, cutting fabric, and painting each puppet. Despite the intricacy and skill in her work, she struggles to find enough customers to sustain a consistent income. She sells her work at INA in hopes her art can support her and her family.",
   },
@@ -116,8 +173,8 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "To provide for family",
     challengesFaced: "Selling consistently and finding buyers",
     categories: ["Jewellery"],
-    image: "/assets/meena-profile.jpg",
-    gallery: ["/assets/meena-1.jpg", "/assets/meena-2.jpg", "/assets/meena-3.jpg"],
+    image: meenaProfile,
+    gallery: [meena1, meena2, meena3],
     story:
       "Meena Das has been making handmade jewellery for the past twenty years. Originally from Bengal, she entered the craft to provide for her sister and son and slowly began selling her pieces. With no formal education, this work became her only way to earn and provide. Her jewellery is made entirely by hand, but selling enough to survive is a constant struggle. Yet she continues working every day at INA, hoping her craft will be valued enough for her to keep providing for her family.",
   },
@@ -136,8 +193,8 @@ const baseArtisans: Artisan[] = [
     challengesFaced: "Exploitation—corporations collecting his work; hard to get it back",
     priceRange: "₹100 – ₹350",
     categories: ["Art & Paintings"],
-    image: "/assets/ramesh-profile.jpg",
-    gallery: ["/assets/ramesh-1.jpg"],
+    image: rameshProfile,
+    gallery: [ramesh1],
     story:
       "An artisan from Bihar, Ramesh Thakur has spent the last 20 years handcrafting diaries to support his family. Despite his craft being his only source of income, he has faced exploitation, yet perseveres—working tirelessly and masterfully at his trade to make a living. Every purchase helps him provide for his family, despite a market that often values convenience over artistic integrity and effort.",
   },
@@ -157,8 +214,8 @@ const baseArtisans: Artisan[] = [
     challengesFaced: "Getting visibility and buyers for stable income",
     priceRange: "₹150 – ₹2,000",
     categories: ["Puppets", "Home Decor"],
-    image: "/assets/bandhu-profile.jpg",
-    gallery: ["/assets/bandhu-1.jpg"],
+    image: bandhuProfile,
+    gallery: [bandhu1],
     story:
       "Bandhu Khan has been selling Rajasthani puppets at Dilli Haat since it was established nearly 16 years ago, sustaining a family tradition and keeping his father's legacy alive. His craft supports his family and deserves to be valued—helping create a better quality of life.",
   },
@@ -177,8 +234,8 @@ const baseArtisans: Artisan[] = [
     challengesFaced: "Very time-consuming handiwork; requires day-and-night effort",
     priceRange: "₹150 – ₹1,500 (based on requirement)",
     categories: ["Puppets", "Home Decor"],
-    image: "/assets/babulal-profile.jpg",
-    gallery: ["/assets/babulal-1.jpg", "/assets/babulal-2.jpg"],
+    image: babulalProfile,
+    gallery: [babulal1, babulal2],
     story:
       "Babulal Bhaat is an artisan from Rajasthan, selling entirely handmade decorative hanging charms and Rajasthani puppets, pouring hours of work into each piece. His work at INA is a testament to family tradition and a dying art. Every purchase helps preserve Rajasthani artistic heritage and supports a household trying to make ends meet.",
   },
@@ -198,8 +255,8 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "Support the household + genuine interest",
     challengesFaced: "Eyesight issues, long hours sitting, extensive effort, lack of visibility",
     categories: ["Home Decor"],
-    image: "/assets/prince-profile.jpg",
-    gallery: ["/assets/prince-1.jpg", "/assets/prince-2.jpg", "/assets/prince-3.jpg"],
+    image: princeProfile,
+    gallery: [prince1, prince2, prince3],
     story:
       "After coming across a small shop in Mumbai, Prince Kumar taught himself crochet through YouTube and began selling his pieces in 2011 to support his household. Despite the physical strain of long working hours and ongoing eyesight issues, Prince continues with a strong artistic eye.",
   },
@@ -212,8 +269,8 @@ const baseArtisans: Artisan[] = [
     workLocation: "Delhi Haat, INA",
     timings: "11:00 AM – 8:00 PM",
     categories: ["Jewellery"],
-    image: "/assets/munna-profile.jpg",
-    gallery: ["/assets/munna-1.jpg"],
+    image: munnaProfile,
+    gallery: [munna1],
     story:
       "Munna Lal works tirelessly, creating handcrafted jewellery from scratch to support his family. It is his sole source of income—often unreliable in a market that overlooks meticulous manual effort. Every customer makes a huge difference.",
   },
@@ -233,8 +290,8 @@ const baseArtisans: Artisan[] = [
       "Recovering from injury; difficult to sell jewellery and find buyers",
     priceRange: "₹50 – ₹250",
     categories: ["Jewellery"],
-    image: "/assets/bablu-profile.jpg",
-    gallery: ["/assets/bablu-1.jpg", "/assets/bablu-2.jpg"],
+    image: babluProfile,
+    gallery: [bablu1, bablu2],
     story:
       "Bablu had a stable job at the local passport office until an accident changed his future overnight. A severe leg injury made it impossible to continue working. Sitting at a small table each day, he began experimenting with handcrafted jewellery. He now creates each piece by hand, but selling in a market that often overlooks craftsmanship remains challenging. Supporting artisans like him can make a real difference.",
   },
@@ -383,8 +440,8 @@ const baseArtisans: Artisan[] = [
     challengesFaced:
       "Visibility, managing buyers, getting buyers, long work hours",
     categories: ["Art & Paintings"],
-    image: "/assets/gauri-profile.jpg",
-    gallery: ["/assets/gauri-1.jpg", "/assets/gauri-2.jpg", "/assets/gauri-3.jpg"],
+    image: gauriProfile,
+    gallery: [gauri1, gauri2, gauri3],
     story:
       "In order to support her family, Gauri Devi began selling her ceramic paintings at Dilli Haat 15 years ago, carefully hand-painting each piece with great attention to detail, spending hours attending to her craft. Despite the time and effort required to create each piece, earning a sustainable income through ceramic painting remains a challenge, with her ceramic handiwork being a primary source of income, as well a catalyst to keeping the tradition of Indian handicraft alive. With just the support of a few buyers, Gauri Devi can turn a dying art form into a living income.",
   },
@@ -402,8 +459,8 @@ const baseArtisans: Artisan[] = [
       "Keeping a decades-old family tradition alive while making a living",
     challengesFaced: "Visibility, finding buyers, long working hours",
     categories: ["Bags & Accessories"],
-    image: "/assets/urmila-profile.jpg",
-    gallery: ["/assets/urmila-1.jpg", "/assets/urmila-2.jpg"],
+    image: urmilaProfile,
+    gallery: [urmila1, urmila2],
     story:
       "Urmila Ben crafts handmade Gujarati bags distinct to the Kutch region. Her family has been weaving these bags for decades and selling across the country. Her work keeps a rich tradition alive and is the only source of income for her household—small support makes a big difference.",
   },
@@ -418,8 +475,8 @@ const baseArtisans: Artisan[] = [
     howTheyStarted: "Family shop started in 1980 (third generation)",
     reasonForDoingThisWork: "Family business; keeping the craft alive",
     categories: ["Textiles"],
-    image: "/assets/sarthak-profile.jpg",
-    gallery: ["/assets/sarthak-1.jpg"],
+    image: sarthakProfile,
+    gallery: [sarthak1],
     story:
       "Sarthak Chawla sells handcrafted dupattas from his family's shop in Lajpat Nagar. The business began in 1980 and has now reached its third generation. For him, it's more than income—it's continuing a family craft in a market dominated by mass-produced clothing.",
   },
@@ -439,15 +496,8 @@ const baseArtisans: Artisan[] = [
       "Continuing and strengthening a family livelihood",
     priceRange: "₹250 – ₹800",
     categories: ["Fragrance"],
-    image: "/assets/anas-profile.jpg",
-    gallery: [
-      "/assets/anas-1.jpg",
-      "/assets/anas-2.jpg",
-      "/assets/anas-3.jpg",
-      "/assets/anas-4.jpg",
-      "/assets/anas-5.jpg",
-      "/assets/anas-6.jpg",
-    ],
+    image: anasProfile,
+    gallery: [anas1, anas2, anas3, anas4, anas5, anas6],
     story:
       "Anas Khan has been selling hand-crafted Oud for 10 years at Dilli Haat, continuing a family tradition his father started. What began as reselling has become a generational livelihood, and Anas now makes Oud from scratch with technical skill and dedication.",
   },
@@ -461,8 +511,8 @@ const baseArtisans: Artisan[] = [
     workLocation: "Delhi Haat, INA",
     priceRange: "₹150 – ₹750",
     categories: ["Bags & Accessories"],
-    image: "/assets/rajeen-profile.jpg",
-    gallery: ["/assets/rajeen-1.jpg", "/assets/rajeen-2.jpg"],
+    image: rajeenProfile,
+    gallery: [rajeen1, rajeen2],
   },
 ];
 
