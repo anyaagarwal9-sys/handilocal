@@ -93,6 +93,8 @@ const baseArtisans: Artisan[] = [
     workLocation: "Delhi Haat, INA",
     timings: "11:00 AM – 8:00 PM",
     categories: ["Puppets"],
+    image: "/assets/sunita-profile.jpg",
+    gallery: ["/assets/sunita-1.jpg", "/assets/sunita-2.jpg"],
     story:
       "Sunita Bhatt makes Rajasthani puppets entirely by hand—meticulously carving wood, cutting fabric, and painting each puppet. Despite the intricacy and skill in her work, she struggles to find enough customers to sustain a consistent income. She sells her work at INA in hopes her art can support her and her family.",
   },
