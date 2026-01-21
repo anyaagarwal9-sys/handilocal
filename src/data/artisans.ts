@@ -134,6 +134,8 @@ const baseArtisans: Artisan[] = [
     challengesFaced: "Exploitation—corporations collecting his work; hard to get it back",
     priceRange: "₹100 – ₹350",
     categories: ["Art & Paintings"],
+    image: "/assets/ramesh-profile.jpg",
+    gallery: ["/assets/ramesh-1.jpg"],
     story:
       "An artisan from Bihar, Ramesh Thakur has spent the last 20 years handcrafting diaries to support his family. Despite his craft being his only source of income, he has faced exploitation, yet perseveres—working tirelessly and masterfully at his trade to make a living. Every purchase helps him provide for his family, despite a market that often values convenience over artistic integrity and effort.",
   },
