@@ -31,11 +31,11 @@ const teamMembers = [{
   bio: "Builds the website and coordinates producer outreach and interviews. With strong programming and robotics skills, she handles technical tasks smoothly and keeps the team organized and ahead.",
   image: team1
 }, {
-  name: "Vaahini Bajoria",
+  name: "Neesah Kant Sharma",
   age: 14,
-  role: "Documentation and Design Lead",
-  bio: "Keeps detailed meeting minutes and documents decisions clearly. She gathers producer stories during interviews to support the team and the website content.",
-  image: team2
+  role: "Creative & Coordination Head",
+  bio: "Communicates with artisans and builds genuine connections. She manages schedules, responsibilities, and interviews, keeping everyone aligned and on time.",
+  image: null
 }, {
   name: "Shivnandini Dhaul",
   age: 15,
@@ -43,11 +43,11 @@ const teamMembers = [{
   bio: "Leads photography and compiles photos/videos from interviews and meetings for the evidence section. She also supports the website design.",
   image: team3
 }, {
-  name: "Neesah Kant Sharma",
+  name: "Vaahini Bajoria",
   age: 14,
-  role: "Creative & Coordination Head",
-  bio: "Communicates with artisans and builds genuine connections. She manages schedules, responsibilities, and interviews, keeping everyone aligned and on time.",
-  image: null
+  role: "Documentation and Design Lead",
+  bio: "Keeps detailed meeting minutes and documents decisions clearly. She gathers producer stories during interviews to support the team and the website content.",
+  image: team2
 }];
 const About = () => {
   return <div className="min-h-screen bg-background">
