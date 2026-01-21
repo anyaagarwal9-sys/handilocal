@@ -2,50 +2,73 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const artisans = [
+const artisanNames = [
+  "Bimes Trivedi",
+  "Sunita Bhatt",
+  "Meena Das",
+  "Ramesh Thakur",
+  "Bandhu Khan",
+  "Babulal Bhaat",
+  "Prince Kumar",
+  "Munna Lal",
+  "Bablu",
+  "Nomaan Mansuri",
+  "Lakshman Kumar",
+  "Arti Madnawat",
+  "ML Muku",
+  "Sonu",
+  "Salman",
+  "Aratna Bose",
+  "Mohammed Imtiyaz",
+  "Jitendra",
+  "Gauri Devi",
+  "Urmila Ben",
+  "Sarthak Chawla",
+  "Anas Khan",
+  "Rajeen Mishra",
+];
+
+const artisanTemplates = [
   {
-    id: 1,
-    name: "Sarah Chen",
     craft: "Pottery & Ceramics",
     location: "Portland, OR",
     image: "https://images.unsplash.com/photo-1493106819501-66d381c466f1?w=400&h=400&fit=crop",
   },
   {
-    id: 2,
-    name: "Marcus Johnson",
     craft: "Woodworking",
     location: "Austin, TX",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
   },
   {
-    id: 3,
-    name: "Elena Rodriguez",
     craft: "Textile Art",
     location: "Santa Fe, NM",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
   },
   {
-    id: 4,
-    name: "David Kim",
     craft: "Jewelry Making",
     location: "Seattle, WA",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
   },
   {
-    id: 5,
-    name: "Amara Patel",
     craft: "Glass Blowing",
     location: "Denver, CO",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
   },
   {
-    id: 6,
-    name: "James Wilson",
     craft: "Leatherwork",
     location: "Nashville, TN",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
   },
 ];
+
+const artisans = artisanNames.map((name, index) => {
+  const template = artisanTemplates[index % artisanTemplates.length];
+  return {
+    id: index + 1,
+    name,
+    ...template,
+  };
+});
 
 const Artisans = () => {
   return (
