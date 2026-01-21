@@ -78,3 +78,26 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-lg;
+  }
+  
+  .section-divider {
+    @apply relative;
+  }
+  
+  .section-divider::before {
+    content: "";
+    @apply absolute left-1/2 -translate-x-1/2 top-0 w-24 h-1 bg-primary/30 rounded-full;
+  }
+}
