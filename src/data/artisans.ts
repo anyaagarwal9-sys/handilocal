@@ -233,7 +233,7 @@ const baseArtisans: Artisan[] = [
       "Learning resin safely and mixing correctly; winters reduce demand; finding customers",
     goals: "Expand variety and reach",
     priceRange: "₹40–50 (small keychains), ₹350–400, ₹800–1,000 (custom)",
-    category: "Jewellery",
+    category: "Home Decor",
     story:
       "Arti Madnawat and her teenage daughter, Doyal, create resin art at home and deliver to customers while coordinating over WhatsApp. They started by making hairpins from waste, then gradually expanded into jewellery, car hangings, customized pieces, and magnets.",
   },
@@ -357,7 +357,7 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "To provide for family",
     challengesFaced:
       "Visibility, managing buyers, getting buyers, long work hours",
-    category: "Pottery & Ceramics",
+    category: "Art & Paintings",
     story:
       "In order to support her family, Gauri Devi began selling her ceramic paintings at Dilli Haat 15 years ago, carefully hand-painting each piece with great attention to detail, spending hours attending to her craft. Despite the time and effort required to create each piece, earning a sustainable income through ceramic painting remains a challenge, with her ceramic handiwork being a primary source of income, as well a catalyst to keeping the tradition of Indian handicraft alive. With just the support of a few buyers, Gauri Devi can turn a dying art form into a living income.",
   },
@@ -419,7 +419,7 @@ const baseArtisans: Artisan[] = [
     craft: "Paper Mâché & Handmade Bags",
     workLocation: "Delhi Haat, INA",
     priceRange: "₹150 – ₹750",
-    category: "Home Decor",
+    category: "Bags & Accessories",
   },
 ];
 
