@@ -60,7 +60,7 @@ const baseArtisans: Artisan[] = [
     phone: "+91 9873051302",
     products: "Rajasthani dolls / puppets",
     craft: "Rajasthani Puppets",
-    workLocation: "INA",
+    workLocation: "Delhi Haat, INA",
     timings: "11:00 AM – 8:00 PM",
     story:
       "Sunita Bhatt makes Rajasthani puppets entirely by hand—meticulously carving wood, cutting fabric, and painting each puppet. Despite the intricacy and skill in her work, she struggles to find enough customers to sustain a consistent income. She sells her work at INA in hopes her art can support her and her family.",
@@ -75,7 +75,7 @@ const baseArtisans: Artisan[] = [
     family: "Son, sister",
     products: "Entirely handmade jewellery",
     craft: "Handmade Jewellery",
-    workLocation: "INA",
+    workLocation: "Delhi Haat, INA",
     businessName: "N/A",
     workingYears: "20 years",
     timings: "11:00 AM – 8:00 PM",
@@ -219,6 +219,7 @@ const baseArtisans: Artisan[] = [
     craft: "Pashmina & Hand Embroidery",
     businessName: "CraftsPoint",
     workingYears: "50 years",
+    workLocation: "Noida Haat",
     timings: "11:00 AM – 8:00 PM",
     howTheyStarted: "Family business; works with his sons",
     priceRange: "₹300 – ₹1,500 (20% discount currently)",
@@ -239,7 +240,20 @@ const baseArtisans: Artisan[] = [
     story:
       "Sonu is a Dokra artisan from Chhattisgarh, selling traditional metal statues and showpieces at Noida Haat under the name Kuldeep Handiworks. She describes Dokra as time-consuming and physically taxing, yet it competes with cheap factory-made decor that sells faster and draws more attention.",
   },
-  { id: 15, name: "Salman", age: 21, phone: "+91 8423866933", homeVillage: "Havada, Bihar", products: "Madhubani hand-embroidered suits, sarees; block painted sarees", craft: "Madhubani Textiles", workingYears: "15 years", timings: "11:00 AM – 9:00 PM", reasonForDoingThisWork: "Family business (weavers for nearly 200 years)", priceRange: "₹1,500 – ₹6,000" },
+  {
+    id: 15,
+    name: "Salman",
+    age: 21,
+    phone: "+91 8423866933",
+    homeVillage: "Havada, Bihar",
+    products: "Madhubani hand-embroidered suits, sarees; block painted sarees",
+    craft: "Madhubani Textiles",
+    workingYears: "15 years",
+    workLocation: "Noida Haat",
+    timings: "11:00 AM – 9:00 PM",
+    reasonForDoingThisWork: "Family business (weavers for nearly 200 years)",
+    priceRange: "₹1,500 – ₹6,000",
+  },
   {
     id: 16,
     name: "Aratna Bose",
@@ -252,7 +266,7 @@ const baseArtisans: Artisan[] = [
     timings: "11:00 AM – 8:00 PM",
     priceRange: "₹350 – ₹3,500",
     businessName: "Ratna Creations",
-    workLocation: "G-13, Noida Haat",
+    workLocation: "Noida Haat",
     family: "Husband, son, granddaughter",
     reasonForDoingThisWork:
       "Former Kathak dancer; began crafting during COVID and turned it into income",
@@ -296,7 +310,21 @@ const baseArtisans: Artisan[] = [
     story:
       "Jitendra is an artisan from Haryana whose handcrafted bedsheets, bedcovers, cushion covers, and jute work are made using materials sourced from Jaipur. Under the name Art Creation, he has spent 20 years building a small business with no other financial security to fall back on. He struggles to find buyers who understand handmade value in a market full of machine-made alternatives.",
   },
-  { id: 19, name: "Gauri Devi" },
+  {
+    id: 19,
+    name: "Gauri Devi",
+    age: 55,
+    products: "Ceramic painting",
+    craft: "Ceramic Painting",
+    workLocation: "Delhi Haat, INA",
+    workingYears: "15 years",
+    timings: "11:00 AM – 9:00 PM",
+    reasonForDoingThisWork: "To provide for family",
+    challengesFaced:
+      "Visibility, managing buyers, getting buyers, long work hours",
+    story:
+      "In order to support her family, Gauri Devi began selling her ceramic paintings at Dilli Haat 15 years ago, carefully hand-painting each piece with great attention to detail, spending hours attending to her craft. Despite the time and effort required to create each piece, earning a sustainable income through ceramic painting remains a challenge, with her ceramic handiwork being a primary source of income, as well a catalyst to keeping the tradition of Indian handicraft alive. With just the support of a few buyers, Gauri Devi can turn a dying art form into a living income.",
+  },
   {
     id: 20,
     name: "Urmila Ben",
@@ -356,7 +384,52 @@ const baseArtisans: Artisan[] = [
   },
 ];
 
+const normalizeInaLocation = (loc?: string) => {
+  if (!loc) return loc;
+  return loc.trim().toLowerCase() === "ina" ? "Delhi Haat, INA" : loc;
+};
+
+const shouldBeNoidaHaat = (a: Artisan) =>
+  ["ML Muku", "Sonu", "Salman", "Aratna Bose", "Mohammed Imtiyaz", "Jitendra"].includes(
+    a.name
+  );
+
+const normalizeWorkLocation = (a: Artisan): Artisan => {
+  const next = {
+    ...a,
+    workLocation: normalizeInaLocation(a.workLocation),
+  };
+
+  if (shouldBeNoidaHaat(next)) {
+    return { ...next, workLocation: "Noida Haat" };
+  }
+
+  return next;
+};
+
+const normalizeTimings = (a: Artisan): Artisan => {
+  // All artisans at Delhi Haat, INA should be 11-9pm EXCEPT Ramesh Thakur.
+  if (a.name !== "Ramesh Thakur" && a.workLocation === "Delhi Haat, INA") {
+    return { ...a, timings: "11:00 AM – 9:00 PM" };
+  }
+
+  // Explicit timing overrides for Noida Haat list.
+  const noidaOverrides: Record<string, string> = {
+    "ML Muku": "11:00 AM – 8:00 PM",
+    Sonu: "12:00 PM – 9:00 PM",
+    Salman: "11:00 AM – 9:00 PM",
+    "Aratna Bose": "11:00 AM – 8:00 PM",
+    "Mohammed Imtiyaz": "12:00 PM – 7:00 PM",
+    Jitendra: "11:00 AM – 8:00 PM",
+  };
+  if (a.workLocation === "Noida Haat" && noidaOverrides[a.name]) {
+    return { ...a, timings: noidaOverrides[a.name] };
+  }
+
+  return a;
+};
+
 export const artisans: Artisan[] = baseArtisans.map((a, idx) => ({
-  ...a,
+  ...normalizeTimings(normalizeWorkLocation(a)),
   image: a.image ?? templateImages[idx % templateImages.length],
 }));

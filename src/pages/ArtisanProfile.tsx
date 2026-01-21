@@ -1,7 +1,6 @@
-import { useParams } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Link, useParams } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { ArrowLeft, Mail, Phone, MapPin, Globe } from "lucide-react";
 import { artisans } from "@/data/artisans";
 
 const ArtisanProfile = () => {
@@ -25,6 +24,17 @@ const ArtisanProfile = () => {
   return (
     <div className="min-h-screen py-16 px-4 bg-background">
       <div className="container mx-auto max-w-5xl">
+        <div className="mb-6">
+          <Link
+            to="/artisans"
+            className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:underline"
+            aria-label="Back to artisan directory"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to directory
+          </Link>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <img 
@@ -72,10 +82,6 @@ const ArtisanProfile = () => {
                 </div>
               )}
             </div>
-
-            <Button size="lg" className="w-full md:w-auto">
-              Contact {artisan.name.split(" ")[0]}
-            </Button>
           </div>
         </div>
 
