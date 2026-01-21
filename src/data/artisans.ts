@@ -114,6 +114,8 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "To provide for family",
     challengesFaced: "Selling consistently and finding buyers",
     categories: ["Jewellery"],
+    image: "/assets/meena-profile.jpg",
+    gallery: ["/assets/meena-1.jpg", "/assets/meena-2.jpg", "/assets/meena-3.jpg"],
     story:
       "Meena Das has been making handmade jewellery for the past twenty years. Originally from Bengal, she entered the craft to provide for her sister and son and slowly began selling her pieces. With no formal education, this work became her only way to earn and provide. Her jewellery is made entirely by hand, but selling enough to survive is a constant struggle. Yet she continues working every day at INA, hoping her craft will be valued enough for her to keep providing for her family.",
   },
