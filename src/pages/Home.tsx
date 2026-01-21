@@ -49,30 +49,15 @@ const Home = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 bg-background overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div 
-            className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl"
-            animate={{ 
-              x: [0, 30, 0],
-              y: [0, -20, 0],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      <section className="relative py-20 md:py-32 px-4 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/hero-crafts.png" 
+            alt="" 
+            className="w-full h-full object-cover"
           />
-          <motion.div 
-            className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/40 rounded-full blur-3xl"
-            animate={{ 
-              x: [0, -20, 0],
-              y: [0, 30, 0],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          />
+          <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
         </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -192,25 +177,40 @@ const Home = () => {
       </section>
 
       {/* Tagline Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-primary to-primary/90 relative overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-            backgroundSize: "32px 32px"
-          }}
-        />
+      <section className="py-16 px-4 bg-card relative overflow-hidden">
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bold text-primary-foreground"
+            className="text-2xl md:text-3xl font-bold text-foreground"
           >
             Bridging communities, one artisan at a time.
           </motion.p>
         </div>
       </section>
+
+      {/* Gradient Background Section - wraps all remaining content */}
+      <div className="bg-gradient-to-b from-primary/10 via-primary/5 to-background relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <motion.div 
+            className="absolute top-20 left-10 w-72 h-72 bg-primary/15 rounded-full blur-3xl"
+            animate={{ 
+              x: [0, 30, 0],
+              y: [0, -20, 0],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div 
+            className="absolute bottom-10 right-10 w-96 h-96 bg-secondary/30 rounded-full blur-3xl"
+            animate={{ 
+              x: [0, -20, 0],
+              y: [0, 30, 0],
+            }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </div>
 
       {/* The Problem Section */}
       <section className="py-20 md:py-28 px-4 bg-card relative">
@@ -459,8 +459,8 @@ const Home = () => {
             viewport={{ once: true }}
           >
             {[
-              "Handmade Soaps", "Scented Candles", "Pottery", "Pickles & Preserves",
-              "Handcrafted Jewelry", "Artisan Bags", "Traditional Clothes", "Home Decor"
+              "Handmade Soaps", "Scented Candles", "Pottery", "Puppets",
+              "Handcrafted Jewelry", "Artisan Bags", "Handwoven Sarees & Suits", "Home Decor"
             ].map((product, index) => (
               <motion.div 
                 key={product}
@@ -475,34 +475,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Promotion Section */}
-      <section className="py-16 px-4 bg-muted">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div 
-            className="flex flex-col md:flex-row items-center justify-between gap-8"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <div>
-              <h3 className="text-2xl font-bold mb-2 text-foreground">How We're Spreading the Word</h3>
-              <p className="text-muted-foreground">Grassroots promotion for maximum community impact</p>
-            </div>
-            <div className="flex flex-wrap gap-4">
-              {[
-                { icon: "🏫", label: "School Events" },
-                { icon: "💬", label: "WhatsApp Groups" },
-                { icon: "🏠", label: "Housing Societies" }
-              ].map((item) => (
-                <div key={item.label} className="flex items-center gap-2 px-4 py-2 bg-background rounded-full border border-border/50">
-                  <span className="text-xl">{item.icon}</span>
-                  <span className="font-medium text-foreground">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Trust Section */}
       <section className="py-16 md:py-20 px-4 bg-background">
@@ -562,6 +534,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+      </div>
     </div>
   );
 };
