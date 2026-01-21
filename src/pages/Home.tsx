@@ -55,9 +55,9 @@ const Home = () => {
           <img 
             src="/images/hero-crafts.png" 
             alt="" 
-            className="w-full h-full object-cover sepia-[0.2] saturate-[1.2] brightness-95"
+            className="w-full h-full object-cover sepia-[0.35] saturate-[1.3] brightness-90 contrast-[1.05]"
           />
-          <div className="absolute inset-0 bg-background/40" />
+          <div className="absolute inset-0 bg-primary/20" />
         </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -70,7 +70,7 @@ const Home = () => {
             
             <motion.h1 
               variants={fadeInUp}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground leading-tight"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground drop-shadow-md leading-tight"
             >
               Discover the Hands{" "}
               <span className="text-primary relative">
@@ -87,15 +87,15 @@ const Home = () => {
             
             <motion.p 
               variants={fadeInUp}
-              className="text-lg md:text-xl mb-8 text-foreground/80 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl mb-8 text-foreground/90 max-w-3xl mx-auto leading-relaxed drop-shadow-sm"
             >
               Beautiful handmade products exist just minutes from your home — yet local artisans remain invisible 
-              because we choose <span className="text-foreground font-semibold">convenience over community</span>.
+              because we choose <span className="text-foreground font-bold">convenience over community</span>.
             </motion.p>
             
             <motion.p 
               variants={fadeInUp}
-              className="text-2xl md:text-3xl font-bold mb-10 text-foreground"
+              className="text-2xl md:text-3xl font-bold mb-10 text-foreground drop-shadow-md"
             >
               <span className="text-primary">HandiLocal</span> changes that.
             </motion.p>
