@@ -22,7 +22,7 @@ const staggerContainer = {
 
 const teamMembers = [
   {
-    name: "Team Member 1",
+    name: "Anya Agarwal",
     role: "Co-Founder",
     bio: "Passionate about connecting artisans with their community. Add your introduction here.",
     image: team1
