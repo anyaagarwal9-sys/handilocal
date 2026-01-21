@@ -108,17 +108,12 @@ const Home = () => {
               because we choose <span className="text-foreground font-medium">convenience over community</span>.
             </motion.p>
             
-            <motion.div 
+            <motion.p 
               variants={fadeInUp}
-              className="mb-10"
+              className="text-2xl md:text-3xl font-bold mb-10 text-foreground"
             >
-              <p className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                <span className="text-primary">HandiLocal</span> changes that.
-              </p>
-              <p className="text-lg md:text-xl font-semibold text-secondary">
-                23 creators. 100+ products. Zero excuses.
-              </p>
-            </motion.div>
+              <span className="text-primary">HandiLocal</span> changes that.
+            </motion.p>
 
             {/* Key Stats */}
             <motion.div 
@@ -206,19 +201,14 @@ const Home = () => {
           }}
         />
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-2"
+            className="text-2xl md:text-3xl font-bold text-primary-foreground"
           >
-            <p className="text-2xl md:text-3xl font-bold text-primary-foreground">
-              23 Creators. 100+ Products. Zero Excuses.
-            </p>
-            <p className="text-lg md:text-xl text-primary-foreground/80">
-              Bridging communities, one artisan at a time.
-            </p>
-          </motion.div>
+            Bridging communities, one artisan at a time.
+          </motion.p>
         </div>
       </section>
 
