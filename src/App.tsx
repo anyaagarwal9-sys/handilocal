@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Artisans from "./pages/Artisans";
 import ArtisanProfile from "./pages/ArtisanProfile";
-
+import HowItWorks from "./pages/HowItWorks";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -27,7 +27,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/artisans" element={<Artisans />} />
           <Route path="/artisan/:id" element={<ArtisanProfile />} />
-          <Route path="/how-it-works" element={<Navigate to="/about" replace />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/impact" element={<Navigate to="/" replace />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

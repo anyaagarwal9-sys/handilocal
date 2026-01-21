@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, UserPlus, MessageCircle, Handshake, User } from "lucide-react";
+import { User } from "lucide-react";
 
 import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
@@ -15,7 +15,7 @@ const fadeInUp = {
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.15
     }
   }
 };
@@ -48,29 +48,6 @@ const teamMembers = [
     role: "Creative & Coordination Head",
     bio: "Communicates with artisans and builds genuine connections. She manages schedules, responsibilities, and interviews, keeping everyone aligned and on time.",
     image: null
-  }
-];
-
-const steps = [
-  {
-    icon: Search,
-    title: "Browse Artisans",
-    description: "Explore our directory of talented local artisans and small business owners. Filter by craft, location, or specialty."
-  },
-  {
-    icon: UserPlus,
-    title: "Learn Their Story",
-    description: "Read about each artisan's journey, their craft techniques, and what makes their work unique."
-  },
-  {
-    icon: MessageCircle,
-    title: "Connect Directly",
-    description: "Use the contact information provided to reach out directly to the artisan via WhatsApp or call."
-  },
-  {
-    icon: Handshake,
-    title: "Support Local",
-    description: "Build a direct relationship with the artisan. 100% of your payment goes straight to them."
   }
 ];
 
@@ -137,9 +114,9 @@ const About = () => {
 
       {/* Team Section */}
       <section className="py-16 md:py-24 px-4 bg-background">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <motion.div 
-            className="text-center mb-12"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -151,20 +128,20 @@ const About = () => {
           </motion.div>
 
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid md:grid-cols-2 gap-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member) => (
               <motion.div 
                 key={member.name}
-                className="bg-card rounded-2xl p-6 text-center border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all"
+                className="bg-card rounded-3xl p-8 border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all flex flex-col sm:flex-row gap-6 items-center sm:items-start"
                 variants={fadeInUp}
                 whileHover={{ y: -5 }}
               >
-                <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                <div className="w-32 h-32 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
                   {member.image ? (
                     <img
                       src={member.image}
@@ -173,63 +150,20 @@ const About = () => {
                       loading="lazy"
                     />
                   ) : (
-                    <User className="w-12 h-12 text-primary/50" />
+                    <User className="w-16 h-16 text-primary/50" />
                   )}
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-1">{member.name}, {member.age}</h3>
-                <p className="text-sm text-primary font-medium mb-3">{member.role}</p>
-                <p className="text-sm text-muted-foreground">{member.bio}</p>
+                <div className="text-center sm:text-left flex-1">
+                  <h3 className="text-xl font-bold text-foreground mb-1">{member.name}, {member.age}</h3>
+                  <p className="text-primary font-medium mb-3">{member.role}</p>
+                  <p className="text-muted-foreground leading-relaxed">{member.bio}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-16 md:py-24 px-4 bg-card">
-        <div className="container mx-auto max-w-5xl">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              Simple Process
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">How It Works</h2>
-            <p className="text-lg text-muted-foreground">
-              Connecting you with local artisans in four simple steps
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {steps.map((step, index) => (
-              <motion.div 
-                key={step.title}
-                className="flex gap-4 items-start p-6 bg-background rounded-2xl"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center relative">
-                    <step.icon className="w-7 h-7 text-primary-foreground" />
-                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-background border-2 border-primary flex items-center justify-center text-xs font-bold text-primary">
-                      {index + 1}
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-foreground">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why We're Different */}
       <section className="py-16 px-4 bg-background">
