@@ -151,6 +151,8 @@ const baseArtisans: Artisan[] = [
     challengesFaced: "Getting visibility and buyers for stable income",
     priceRange: "₹150 – ₹2,000",
     categories: ["Puppets", "Home Decor"],
+    image: "/assets/bandhu-profile.jpg",
+    gallery: ["/assets/bandhu-1.jpg"],
     story:
       "Bandhu Khan has been selling Rajasthani puppets at Dilli Haat since it was established nearly 16 years ago, sustaining a family tradition and keeping his father's legacy alive. His craft supports his family and deserves to be valued—helping create a better quality of life.",
   },
