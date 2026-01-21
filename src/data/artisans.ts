@@ -373,6 +373,8 @@ const baseArtisans: Artisan[] = [
     challengesFaced:
       "Visibility, managing buyers, getting buyers, long work hours",
     categories: ["Art & Paintings"],
+    image: "/assets/gauri-profile.jpg",
+    gallery: ["/assets/gauri-1.jpg", "/assets/gauri-2.jpg", "/assets/gauri-3.jpg"],
     story:
       "In order to support her family, Gauri Devi began selling her ceramic paintings at Dilli Haat 15 years ago, carefully hand-painting each piece with great attention to detail, spending hours attending to her craft. Despite the time and effort required to create each piece, earning a sustainable income through ceramic painting remains a challenge, with her ceramic handiwork being a primary source of income, as well a catalyst to keeping the tradition of Indian handicraft alive. With just the support of a few buyers, Gauri Devi can turn a dying art form into a living income.",
   },
