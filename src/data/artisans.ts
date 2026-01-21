@@ -133,7 +133,7 @@ const baseArtisans: Artisan[] = [
     phone: "+91 8381949528",
     homeVillage: "Uttar Pradesh",
     products: "Rajasthani puppets (Kathputli), decorative hanging charms (chains)",
-    craft: "Kathputli Puppets",
+    craft: "Kathputli Puppets and Hanging Charms",
     workLocation: "Delhi Haat, INA",
     workingYears: "15 years",
     timings: "11:00 AM – 8:00 PM",
