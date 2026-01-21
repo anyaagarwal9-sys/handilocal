@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Search, UserPlus, MessageCircle, Handshake, User } from "lucide-react";
 
+import team1 from "@/assets/team-1.jpg";
+import team2 from "@/assets/team-2.jpg";
+import team3 from "@/assets/team-3.jpg";
+import aboutElephants from "@/assets/about-elephants.jpg";
+
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
@@ -20,19 +25,19 @@ const teamMembers = [
     name: "Team Member 1",
     role: "Co-Founder",
     bio: "Passionate about connecting artisans with their community. Add your introduction here.",
-    image: null
+    image: team1
   },
   {
     name: "Team Member 2",
     role: "Co-Founder",
     bio: "Dedicated to preserving traditional crafts and empowering local creators. Add your introduction here.",
-    image: null
+    image: team2
   },
   {
     name: "Team Member 3",
     role: "Co-Founder",
     bio: "Believes in the power of human connection and authentic storytelling. Add your introduction here.",
-    image: null
+    image: team3
   },
   {
     name: "Team Member 4",
@@ -69,9 +74,18 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Two Column Layout */}
-      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-primary/5 to-background">
+      <section className="relative py-16 md:py-24 px-4 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 -z-10">
+          <img
+            src={aboutElephants}
+            alt=""
+            className="w-full h-full object-cover opacity-15"
+            loading="lazy"
+          />
+        </div>
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div className="relative grid md:grid-cols-2 gap-8 md:gap-12 items-start">
             {/* Left Column - About HandiLocal */}
             <motion.div 
               className="text-left"
@@ -94,7 +108,7 @@ const About = () => {
             </motion.div>
 
             {/* Divider - Hidden on mobile */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-border to-transparent" style={{ height: '100%' }} />
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-border to-transparent" />
 
             {/* Right Column - Description */}
             <motion.div 
@@ -148,7 +162,7 @@ const About = () => {
               >
                 <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 overflow-hidden">
                   {member.image ? (
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" loading="lazy" />
                   ) : (
                     <User className="w-12 h-12 text-primary/50" />
                   )}
