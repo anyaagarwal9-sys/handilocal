@@ -27,10 +27,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg font-heading">H</span>
-            </div>
+          <Link to="/" className="flex items-center">
             <span className="text-xl font-bold text-foreground tracking-tight font-heading">
               Handi<span className="text-primary">Local</span>
             </span>
