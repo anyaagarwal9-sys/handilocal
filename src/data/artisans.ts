@@ -194,6 +194,8 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "Support the household + genuine interest",
     challengesFaced: "Eyesight issues, long hours sitting, extensive effort, lack of visibility",
     categories: ["Home Decor"],
+    image: "/assets/prince-profile.jpg",
+    gallery: ["/assets/prince-1.jpg", "/assets/prince-2.jpg", "/assets/prince-3.jpg"],
     story:
       "After coming across a small shop in Mumbai, Prince Kumar taught himself crochet through YouTube and began selling his pieces in 2011 to support his household. Despite the physical strain of long working hours and ongoing eyesight issues, Prince continues with a strong artistic eye.",
   },
