@@ -169,6 +169,8 @@ const baseArtisans: Artisan[] = [
     challengesFaced: "Very time-consuming handiwork; requires day-and-night effort",
     priceRange: "₹150 – ₹1,500 (based on requirement)",
     categories: ["Puppets", "Home Decor"],
+    image: "/assets/babulal-profile.jpg",
+    gallery: ["/assets/babulal-1.jpg", "/assets/babulal-2.jpg"],
     story:
       "Babulal Bhaat is an artisan from Rajasthan, selling entirely handmade decorative hanging charms and Rajasthani puppets, pouring hours of work into each piece. His work at INA is a testament to family tradition and a dying art. Every purchase helps preserve Rajasthani artistic heritage and supports a household trying to make ends meet.",
   },
