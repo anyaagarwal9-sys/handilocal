@@ -82,13 +82,6 @@ const Home = () => {
             animate="animate"
             variants={staggerContainer}
           >
-            <motion.div 
-              variants={fadeInUp}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-8"
-            >
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Bridging Communities, One Artisan at a Time</span>
-            </motion.div>
             
             <motion.h1 
               variants={fadeInUp}
@@ -198,7 +191,7 @@ const Home = () => {
       </section>
 
       {/* Tagline Section */}
-      <section className="py-12 px-4 bg-primary relative overflow-hidden">
+      <section className="py-16 px-4 bg-primary relative overflow-hidden">
         <motion.div 
           className="absolute inset-0 opacity-10"
           style={{
@@ -207,14 +200,19 @@ const Home = () => {
           }}
         />
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <motion.p 
-            className="text-xl md:text-2xl font-medium text-primary-foreground"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="space-y-4"
           >
-            "Scan and discover the hands behind your community"
-          </motion.p>
+            <p className="text-lg md:text-xl text-primary-foreground/80 font-medium">
+              Bridging Communities, One Artisan at a Time
+            </p>
+            <p className="text-2xl md:text-3xl font-bold text-primary-foreground">
+              "Scan and discover the hands behind your community"
+            </p>
+          </motion.div>
         </div>
       </section>
 
