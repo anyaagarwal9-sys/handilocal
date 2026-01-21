@@ -185,7 +185,6 @@ const baseArtisans: Artisan[] = [
       "Bablu had a stable job at the local passport office until an accident changed his future overnight. A severe leg injury made it impossible to continue working. Sitting at a small table each day, he began experimenting with handcrafted jewellery. He now creates each piece by hand, but selling in a market that often overlooks craftsmanship remains challenging. Supporting artisans like him can make a real difference.",
   },
   { id: 10, name: "Nomaan Mansuri" },
-  { id: 11, name: "Lakshman Kumar" },
   {
     id: 12,
     name: "Arti Madnawat",
