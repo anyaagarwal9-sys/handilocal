@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 20 6% 15%;
     
-    /* Burnt Sienna - Primary */
-    --primary: 28 92% 37%;
+    /* Burnt Sienna - Primary (Darker) */
+    --primary: 28 92% 28%;
     --primary-foreground: 0 0% 100%;
     
     /* Warm Amber/Gold - Secondary */
