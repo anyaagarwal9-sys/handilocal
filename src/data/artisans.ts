@@ -453,6 +453,8 @@ const baseArtisans: Artisan[] = [
     workLocation: "Delhi Haat, INA",
     priceRange: "₹150 – ₹750",
     categories: ["Bags & Accessories"],
+    image: "/assets/rajeen-profile.jpg",
+    gallery: ["/assets/rajeen-1.jpg", "/assets/rajeen-2.jpg"],
   },
 ];
 
