@@ -18,7 +18,6 @@ const Artisans = () => {
       <section className="relative py-16 md:py-20 px-4 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={prince3}
             alt=""
             className="w-full h-full object-cover object-[50%_72%] sepia-[0.2] saturate-[1.15] brightness-[1.08] contrast-[0.98] opacity-70"
             loading="lazy"
@@ -62,60 +61,50 @@ const Artisans = () => {
             </div>
           </div>
 
-        {/* Results count */}
-        <p className="text-sm text-muted-foreground mb-6">
-          Showing {filteredArtisans.length} artisan{filteredArtisans.length !== 1 ? "s" : ""}
-          {selectedCategory && ` in ${selectedCategory}`}
-        </p>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredArtisans.map((artisan) => (
-            <Card key={artisan.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="aspect-square overflow-hidden">
-                <img 
-                  src={artisan.image} 
-                  alt={artisan.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="pt-4">
-                <h3 className="text-xl font-semibold mb-1">{artisan.name}</h3>
-                {(artisan.craft || artisan.products) && (
-                  <p className="text-primary font-medium mb-2">
-                    {artisan.craft ?? artisan.products}
-                  </p>
-                )}
-                {(artisan.workLocation || artisan.location) && (
-                  <p className="text-sm text-muted-foreground">
-                    {artisan.workLocation ?? artisan.location}
-                  </p>
-                )}
-              </CardContent>
-              <CardFooter>
-                <Link to={`/artisan/${artisan.id}`} className="w-full">
-                  <Button variant="outline" className="w-full">
-                    View Profile
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+          {/* Results count */}
+          <p className="text-sm text-muted-foreground mb-6">
+            Showing {filteredArtisans.length} artisan{filteredArtisans.length !== 1 ? "s" : ""}
+            {selectedCategory && ` in ${selectedCategory}`}
+          </p>
 
-        {filteredArtisans.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground text-lg">
-              No artisans found in this category.
-            </p>
-            <Button
-              variant="link"
-              onClick={() => setSelectedCategory(null)}
-              className="mt-2"
-            >
-              View all artisans
-            </Button>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredArtisans.map((artisan) => (
+              <Card key={artisan.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={artisan.image}
+                    alt={artisan.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="pt-4">
+                  <h3 className="text-xl font-semibold mb-1">{artisan.name}</h3>
+                  {(artisan.craft || artisan.products) && (
+                    <p className="text-primary font-medium mb-2">{artisan.craft ?? artisan.products}</p>
+                  )}
+                  {(artisan.workLocation || artisan.location) && (
+                    <p className="text-sm text-muted-foreground">{artisan.workLocation ?? artisan.location}</p>
+                  )}
+                </CardContent>
+                <CardFooter>
+                  <Link to={`/artisan/${artisan.id}`} className="w-full">
+                    <Button variant="outline" className="w-full">
+                      View Profile
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
-        )}
+
+          {filteredArtisans.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground text-lg">No artisans found in this category.</p>
+              <Button variant="link" onClick={() => setSelectedCategory(null)} className="mt-2">
+                View all artisans
+              </Button>
+            </div>
+          )}
         </div>
       </section>
     </div>
