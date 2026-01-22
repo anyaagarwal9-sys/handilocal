@@ -106,7 +106,7 @@ const Home = () => {
               className="flex flex-wrap justify-center gap-8 md:gap-12 mb-10"
             >
               {[
-                { number: "23", label: "Creators" },
+                { number: "21+", label: "Creators" },
                 { number: "100+", label: "Products" },
                 { number: "0", label: "Commissions" },
               ].map((stat, index) => (
