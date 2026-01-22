@@ -46,6 +46,9 @@ import urmilaProfile from "@/assets/urmila-profile.jpg";
 import urmila1 from "@/assets/urmila-1.jpg";
 import urmila2 from "@/assets/urmila-2.jpg";
 
+// Note: For artisans whose profile photo shows products (not portraits),
+// we include the profile image in the gallery so products are shown in the "work" section.
+
 import sarthakProfile from "@/assets/sarthak-profile.jpg";
 import sarthak1 from "@/assets/sarthak-1.jpg";
 
@@ -460,7 +463,7 @@ const baseArtisans: Artisan[] = [
     challengesFaced: "Visibility, finding buyers, long working hours",
     categories: ["Bags & Accessories"],
     image: urmilaProfile,
-    gallery: [urmila1, urmila2],
+    gallery: [urmilaProfile, urmila1, urmila2],
     story:
       "Urmila Ben crafts handmade Gujarati bags distinct to the Kutch region. Her family has been weaving these bags for decades and selling across the country. Her work keeps a rich tradition alive and is the only source of income for her household—small support makes a big difference.",
   },
@@ -476,7 +479,7 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "Family business; keeping the craft alive",
     categories: ["Textiles"],
     image: sarthakProfile,
-    gallery: [sarthak1],
+    gallery: [sarthakProfile, sarthak1],
     story:
       "Sarthak Chawla sells handcrafted dupattas from his family's shop in Lajpat Nagar. The business began in 1980 and has now reached its third generation. For him, it's more than income—it's continuing a family craft in a market dominated by mass-produced clothing.",
   },
