@@ -39,6 +39,17 @@ import bablu5 from "@/assets/bablu-5.jpg";
 import bablu6 from "@/assets/bablu-6.jpg";
 import bablu7 from "@/assets/bablu-7.jpg";
 
+import nomaanProfile from "@/assets/nomaan-profile.jpg";
+import nomaan1 from "@/assets/nomaan-1.jpg";
+import nomaan2 from "@/assets/nomaan-2.jpg";
+import nomaan3 from "@/assets/nomaan-3.jpg";
+import nomaan4 from "@/assets/nomaan-4.jpg";
+import nomaan5 from "@/assets/nomaan-5.jpg";
+import nomaan6 from "@/assets/nomaan-6.jpg";
+import nomaan7 from "@/assets/nomaan-7.jpg";
+import nomaan8 from "@/assets/nomaan-8.jpg";
+import nomaan9 from "@/assets/nomaan-9.jpg";
+
 import mlMukuProfile from "@/assets/ml-muku-profile.jpg";
 import mlMuku1 from "@/assets/ml-muku-1.jpg";
 import mlMuku2 from "@/assets/ml-muku-2.jpg";
@@ -382,6 +393,8 @@ const baseArtisans: Artisan[] = [
     howTheyStarted: "Continuing a craft his grandfather began in 1971 and his father devoted his life to.",
     priceRange: "",
     categories: ["Home Decor"],
+    image: nomaanProfile,
+    gallery: [nomaan1, nomaan2, nomaan3, nomaan4, nomaan5, nomaan6, nomaan7, nomaan8, nomaan9],
     story:
       "Nomaan Mansuri is a third-generation artisan from Muradabad, continuing a craft his grandfather began in 1971 and his father devoted his life to. Since childhood, he has grown up watching metal being shaped by hand—a tradition that once earned government recognition and newspaper coverage. But according to him, in the last 15 years the world has moved faster while traditional metal artisans earn less. Marketing is difficult, government policies are hard to oblige to, and setting up factories is nearly impossible. Despite these challenges, Nomaan took out a loan simply to continue the work he loves. He continues this work not because it is easy, but to carry forward the generational business of metal craftsmanship.",
   },
