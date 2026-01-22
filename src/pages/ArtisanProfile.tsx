@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Mail, Phone, MapPin, Globe } from "lucide-react";
 import { artisans } from "@/data/artisans";
+import { GalleryLightbox } from "@/components/GalleryLightbox";
 
 const ArtisanProfile = () => {
   const { id } = useParams();
@@ -179,16 +180,7 @@ const ArtisanProfile = () => {
         {artisan.gallery && artisan.gallery.length > 0 && (
           <div className="mt-8">
             <h2 className="text-2xl font-semibold mb-6">Gallery</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {artisan.gallery.map((img, i) => (
-                <img 
-                  key={i}
-                  src={img}
-                  alt={`${artisan.name}'s work ${i + 1}`}
-                  className="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity"
-                />
-              ))}
-            </div>
+            <GalleryLightbox images={artisan.gallery} title={artisan.name} />
           </div>
         )}
       </div>
