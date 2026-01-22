@@ -55,8 +55,18 @@ const HowItWorks = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto max-w-5xl text-center">
+      <section className="relative py-16 md:py-24 px-4 overflow-hidden">
+        {/* Background Image with Overlay (matches Home hero style) */}
+        <div className="absolute inset-0">
+          <img
+            src="/images/hero-crafts.png"
+            alt=""
+            className="w-full h-full object-cover sepia-[0.25] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-55"
+          />
+          <div className="absolute inset-0 bg-background/30" />
+        </div>
+
+        <div className="container mx-auto max-w-5xl text-center relative z-10">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
