@@ -52,6 +52,8 @@ import urmila2 from "@/assets/urmila-2.jpg";
 
 import sarthakProfile from "@/assets/sarthak-profile.jpg";
 import sarthak1 from "@/assets/sarthak-1.jpg";
+import sarthak2 from "@/assets/sarthak-2.jpg";
+import sarthak3 from "@/assets/sarthak-3.jpg";
 
 import anasProfile from "@/assets/anas-profile.jpg";
 import anas1 from "@/assets/anas-1.jpg";
@@ -479,8 +481,8 @@ const baseArtisans: Artisan[] = [
     howTheyStarted: "Family shop started in 1980 (third generation)",
     reasonForDoingThisWork: "Family business; keeping the craft alive",
     categories: ["Textiles"],
-    image: sarthakProfile,
-    gallery: [sarthakProfile, sarthak1],
+    image: sarthak2,
+    gallery: [sarthakProfile, sarthak1, sarthak2, sarthak3],
     story:
       "Sarthak Chawla sells handcrafted dupattas from his family's shop in Lajpat Nagar. The business began in 1980 and has now reached its third generation. For him, it's more than income—it's continuing a family craft in a market dominated by mass-produced clothing.",
   },
