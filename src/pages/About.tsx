@@ -60,26 +60,21 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Two Column Layout */}
-      <section className="relative py-12 md:py-16 px-4 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
+      <section className="relative py-12 md:py-16 px-4 overflow-hidden">
+        {/* Hero background (visible behind heading area) */}
+        <div className="absolute inset-0 -z-10">
+          <img
+            src={aratnaBose6}
+            alt=""
+            className="w-full h-full object-cover object-[50%_62%] sepia-[0.2] saturate-[1.15] brightness-[1.08] contrast-[0.98] opacity-70"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/35 to-background/85" />
+        </div>
         <div className="container mx-auto max-w-6xl">
           <div className="relative grid md:grid-cols-2 gap-8 md:gap-12 items-start">
             {/* Left Column - About HandiLocal */}
-              <motion.div
-                className="relative text-left overflow-hidden rounded-3xl p-6 md:p-8"
-                initial="initial"
-                animate="animate"
-                variants={staggerContainer}
-              >
-                {/* Heading-only background image */}
-                <div className="absolute inset-0 -z-10">
-                  <img
-                    src={aratnaBose6}
-                    alt=""
-                    className="w-full h-full object-cover object-[50%_72%] sepia-[0.2] saturate-[1.15] brightness-[1.08] contrast-[0.98] opacity-70"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/40 to-background/70" />
-                </div>
+            <motion.div className="text-left" initial="initial" animate="animate" variants={staggerContainer}>
               <motion.span
                 variants={fadeInUp}
                 className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
@@ -99,7 +94,7 @@ const About = () => {
 
             {/* Right Column - Description */}
             <motion.div
-              className="text-left md:pl-8 md:border-l border-border"
+              className="text-left md:pl-8 md:border-l border-border bg-background/90 backdrop-blur-sm rounded-2xl p-6 md:p-8"
               initial={{
                 opacity: 0,
                 x: 20,
