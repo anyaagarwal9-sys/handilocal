@@ -85,6 +85,17 @@ import rajeenProfile from "@/assets/rajeen-profile.jpg";
 import rajeen1 from "@/assets/rajeen-1.jpg";
 import rajeen2 from "@/assets/rajeen-2.jpg";
 
+import aratnaBoseProfile from "@/assets/aratna-bose-profile.jpg";
+import aratnaBose1 from "@/assets/aratna-bose-1.jpg";
+import aratnaBose2 from "@/assets/aratna-bose-2.jpg";
+import aratnaBose3 from "@/assets/aratna-bose-3.jpg";
+import aratnaBose4 from "@/assets/aratna-bose-4.jpg";
+import aratnaBose5 from "@/assets/aratna-bose-5.jpg";
+import aratnaBose6 from "@/assets/aratna-bose-6.jpg";
+import aratnaBose7 from "@/assets/aratna-bose-7.jpg";
+import aratnaBose8 from "@/assets/aratna-bose-8.jpg";
+import aratnaBose9 from "@/assets/aratna-bose-9.jpg";
+
 export type ProductCategory = 
   | "Puppets"
   | "Textiles"
@@ -397,6 +408,18 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork:
       "Former Kathak dancer; began crafting during COVID and turned it into income",
     categories: ["Textiles"],
+    image: aratnaBoseProfile,
+    gallery: [
+      aratnaBose1,
+      aratnaBose2,
+      aratnaBose3,
+      aratnaBose4,
+      aratnaBose5,
+      aratnaBose6,
+      aratnaBose7,
+      aratnaBose8,
+      aratnaBose9,
+    ],
     story:
       "Originally from Kolkata, Aratna Bose is a former Kathak dancer whose life changed during the COVID-19 pandemic. As performances stopped and age made it harder to continue, she turned to crafting during lockdown. Encouraged by her son, she transformed her passion into income. With no formal education, this became one of her few ways to support herself. She now runs a permanent shop at Noida Haat, and all products are made entirely by her.",
   },
