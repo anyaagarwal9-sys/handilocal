@@ -319,7 +319,12 @@ const baseArtisans: Artisan[] = [
     story:
       "Bablu had a stable job at the local passport office until an accident changed his future overnight. A severe leg injury made it impossible to continue working. Sitting at a small table each day, he began experimenting with handcrafted jewellery. He now creates each piece by hand, but selling in a market that often overlooks craftsmanship remains challenging. Supporting artisans like him can make a real difference.",
   },
-  { id: 10, name: "Nomaan Mansuri" },
+  {
+    id: 10,
+    name: "Nomaan Mansuri",
+    story:
+      "Nomaan Mansuri is a third-generation artisan from Muradabad, continuing a craft his grandfather began in 1971 and his father devoted his life to. Since childhood, he has grown up watching metal being shaped by hand—a tradition that once earned government recognition and newspaper coverage. But according to him, in the last 15 years the world has moved faster while traditional metal artisans earn less. Marketing is difficult, government policies are hard to oblige to, and setting up factories is nearly impossible. Despite these challenges, Nomaan took out a loan simply to continue the work he loves. He continues this work not because it is easy, but to carry forward the generational business of metal craftsmanship.",
+  },
   {
     id: 13,
     name: "ML Muku",
@@ -338,6 +343,8 @@ const baseArtisans: Artisan[] = [
     categories: ["Textiles"],
     image: mlMukuProfile,
     gallery: [mlMuku1, mlMuku2, mlMuku3, mlMuku4, mlMuku5],
+    story:
+      "ML Muku is a master artisan from Kashmir with over 50 years of experience in Pashmina shawls and hand embroidery. Through CraftsPoint, he continues a family craft that has survived for nearly 200 years, now working alongside his two sons to keep it alive. In a time where imitation \"Kashmiri\" products flood the market, authentic handwork struggles for recognition and fair value. His shawls represent generations of skill, patience, and cultural heritage that risk being lost if people stop choosing real handmade shawls over factory-made ones.",
   },
   {
     id: 14,
@@ -370,6 +377,8 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "Family business (weavers for nearly 200 years)",
     priceRange: "₹1,500 – ₹6,000",
     categories: ["Textiles"],
+    story:
+      "Salman is a 21-year-old artisan from Havada, Bihar, who has been involved in his family’s weaving tradition for the past 15 years. Coming from a lineage of weavers dating back nearly 200 years, he began learning the craft at a very young age, continuing a family business passed down through generations. He creates Madhubani hand-embroidered as well as block-painted suits and sarees, combining traditional techniques with careful, skilled workmanship. For him, this work is not just a profession, but a legacy—a responsibility to preserve his family’s heritage. Despite the time and effort required to produce each piece by hand, sustaining a livelihood through traditional weaving remains challenging. Support for artisans like Salman helps ensure that centuries-old crafts continue to survive, and families can make ends meet.",
   },
   {
     id: 16,
@@ -529,6 +538,8 @@ const baseArtisans: Artisan[] = [
     categories: ["Bags & Accessories"],
     image: rajeenProfile,
     gallery: [rajeen1, rajeen2],
+    story:
+      "Rajeen Mishra creates intricate papier-mâché artwork that closely resembles ceramic painting. Although his pieces have the appearance and finish of ceramics, they are entirely handmade from papier-mâché—a process that requires precision, patience, and skill. Through this craft, Rajeen produces decorative pieces that reflect both creativity and careful workmanship. However, like many traditional artisans, he faces challenges in gaining recognition for the time and effort invested in handmade work. Greater awareness and support can help ensure that unique crafts such as papier-mâché continue to be valued and sustained.",
   },
 ];
 
