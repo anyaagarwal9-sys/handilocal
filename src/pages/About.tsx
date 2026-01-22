@@ -66,10 +66,10 @@ const About = () => {
           <img
             src={aratnaBose6}
             alt=""
-            className="w-full h-full object-cover object-[50%_62%] sepia-[0.2] saturate-[1.15] brightness-[1.08] contrast-[0.98] opacity-70"
+            className="w-full h-full object-cover object-[50%_62%] sepia-[0.18] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-85"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/35 to-background/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/18 to-background/60" />
         </div>
         <div className="container mx-auto max-w-6xl">
           <div className="relative grid md:grid-cols-2 gap-8 md:gap-12 items-start">

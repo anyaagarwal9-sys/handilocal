@@ -16,27 +16,44 @@ const Navigation = () => {
 
   const shareUrl = "https://handilocal.com";
 
+  const copyToClipboard = async (text: string) => {
+    const nav = typeof window !== "undefined" ? window.navigator : undefined;
+
+    // Modern clipboard API
+    if (nav?.clipboard?.writeText) {
+      await nav.clipboard.writeText(text);
+      return;
+    }
+
+    // Fallback for environments where clipboard API isn't available
+    if (typeof document !== "undefined") {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.top = "0";
+      textarea.style.left = "0";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+    }
+  };
+
   const handleShare = async () => {
     try {
+      // Prefer native share where available, but ALWAYS copy as well.
       const nav = typeof window !== "undefined" ? window.navigator : undefined;
-
       if (nav && typeof (nav as any).share === "function") {
         await (nav as any).share({ title: "HandiLocal", url: shareUrl });
-        return;
       }
 
-      if (!nav?.clipboard?.writeText) {
-        throw new Error("Clipboard not available");
-      }
-
-      await nav.clipboard.writeText(shareUrl);
+      await copyToClipboard(shareUrl);
       toast({ title: "Link copied", description: shareUrl });
     } catch {
-      toast({
-        title: "Couldn’t share",
-        description: "Please copy: " + shareUrl,
-        variant: "destructive",
-      });
+      // Silent fail: user asked to avoid error messaging.
     }
   };
   
