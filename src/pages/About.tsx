@@ -5,6 +5,7 @@ import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
 import team4 from "@/assets/team-4.jpeg";
 import aboutElephants from "@/assets/about-elephants.jpg";
+import aratnaBose6 from "@/assets/aratna-bose-6.jpg";
 const fadeInUp = {
   initial: {
     opacity: 0,
@@ -60,14 +61,25 @@ const About = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section - Two Column Layout */}
       <section className="relative py-12 md:py-16 px-4 bg-gradient-to-b from-primary/5 to-background overflow-hidden">
-        {/* Background image */}
-        <div className="absolute inset-0 -z-10">
-          <img src={aboutElephants} alt="" className="w-full h-full object-cover opacity-15" loading="lazy" />
-        </div>
         <div className="container mx-auto max-w-6xl">
           <div className="relative grid md:grid-cols-2 gap-8 md:gap-12 items-start">
             {/* Left Column - About HandiLocal */}
-            <motion.div className="text-left" initial="initial" animate="animate" variants={staggerContainer}>
+              <motion.div
+                className="relative text-left overflow-hidden rounded-3xl p-6 md:p-8"
+                initial="initial"
+                animate="animate"
+                variants={staggerContainer}
+              >
+                {/* Heading-only background image */}
+                <div className="absolute inset-0 -z-10">
+                  <img
+                    src={aratnaBose6}
+                    alt=""
+                    className="w-full h-full object-cover object-[50%_72%] sepia-[0.2] saturate-[1.15] brightness-[1.08] contrast-[0.98] opacity-70"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/40 to-background/70" />
+                </div>
               <motion.span
                 variants={fadeInUp}
                 className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
