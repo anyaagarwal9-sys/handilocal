@@ -59,6 +59,18 @@ import sonu9 from "@/assets/sonu-9.jpg";
 import sonu10 from "@/assets/sonu-10.jpg";
 import sonu11 from "@/assets/sonu-11.jpg";
 
+import salmanProfile from "@/assets/salman-profile.jpg";
+import salman1 from "@/assets/salman-1.jpg";
+import salman2 from "@/assets/salman-2.jpg";
+import salman3 from "@/assets/salman-3.jpg";
+import salman4 from "@/assets/salman-4.jpg";
+import salman5 from "@/assets/salman-5.jpg";
+import salman6 from "@/assets/salman-6.jpg";
+import salman7 from "@/assets/salman-7.jpg";
+import salman8 from "@/assets/salman-8.jpg";
+import salman9 from "@/assets/salman-9.jpg";
+import salman10 from "@/assets/salman-10.jpg";
+import salman11 from "@/assets/salman-11.jpg";
 
 import mohammedImtiyazProfile from "@/assets/mohammed-imtiyaz-profile.jpg";
 import mohammedImtiyaz1 from "@/assets/mohammed-imtiyaz-1.jpg";
@@ -405,6 +417,8 @@ const baseArtisans: Artisan[] = [
     reasonForDoingThisWork: "Family business (weavers for nearly 200 years)",
     priceRange: "₹1,500 – ₹6,000",
     categories: ["Textiles"],
+    image: salmanProfile,
+    gallery: [salman1, salman2, salman3, salman4, salman5, salman6, salman7, salman8, salman9, salman10, salman11],
     story:
       "Salman is a 21-year-old artisan from Havada, Bihar, who has been involved in his family’s weaving tradition for the past 15 years. Coming from a lineage of weavers dating back nearly 200 years, he began learning the craft at a very young age, continuing a family business passed down through generations. He creates Madhubani hand-embroidered as well as block-painted suits and sarees, combining traditional techniques with careful, skilled workmanship. For him, this work is not just a profession, but a legacy—a responsibility to preserve his family’s heritage. Despite the time and effort required to produce each piece by hand, sustaining a livelihood through traditional weaving remains challenging. Support for artisans like Salman helps ensure that centuries-old crafts continue to survive, and families can make ends meet.",
   },
