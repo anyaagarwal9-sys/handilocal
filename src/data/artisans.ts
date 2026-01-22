@@ -33,10 +33,11 @@ import prince3 from "@/assets/prince-3.jpg";
 import munnaProfile from "@/assets/munna-profile.jpg";
 import munna1 from "@/assets/munna-1.jpg";
 
-import babluProfile from "@/assets/bablu-profile.jpg";
-import bablu1 from "@/assets/bablu-1.jpg";
-import bablu2 from "@/assets/bablu-2.jpg";
-import bablu3 from "@/assets/bablu-3.jpg";
+import babluProfileNew from "@/assets/bablu-profile-new.jpg";
+import bablu4 from "@/assets/bablu-4.jpg";
+import bablu5 from "@/assets/bablu-5.jpg";
+import bablu6 from "@/assets/bablu-6.jpg";
+import bablu7 from "@/assets/bablu-7.jpg";
 
 import gauriProfile from "@/assets/gauri-profile.jpg";
 import gauri1 from "@/assets/gauri-1.jpg";
@@ -296,8 +297,8 @@ const baseArtisans: Artisan[] = [
       "Recovering from injury; difficult to sell jewellery and find buyers",
     priceRange: "₹50 – ₹250",
     categories: ["Jewellery"],
-    image: bablu3,
-    gallery: [babluProfile, bablu1, bablu2],
+    image: babluProfileNew,
+    gallery: [bablu4, bablu5, bablu6, bablu7],
     story:
       "Bablu had a stable job at the local passport office until an accident changed his future overnight. A severe leg injury made it impossible to continue working. Sitting at a small table each day, he began experimenting with handcrafted jewellery. He now creates each piece by hand, but selling in a market that often overlooks craftsmanship remains challenging. Supporting artisans like him can make a real difference.",
   },
