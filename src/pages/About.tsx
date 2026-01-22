@@ -3,7 +3,7 @@ import { User } from "lucide-react";
 import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
-import team4 from "@/assets/team-4.jpg";
+import team4 from "@/assets/team-4.jpeg";
 import aboutElephants from "@/assets/about-elephants.jpg";
 const fadeInUp = {
   initial: {
