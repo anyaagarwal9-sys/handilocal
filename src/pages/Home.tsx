@@ -329,8 +329,8 @@ const Home = () => {
             viewport={{ once: true }}
           >
             {[
-              "Handmade Soaps", "Scented Candles", "Pottery", "Puppets",
-              "Handcrafted Jewelry", "Artisan Bags", "Handwoven Sarees & Suits", "Home Decor"
+              "Rajasthani Puppets", "Handwoven Textiles", "Handcrafted Jewellery", 
+              "Artisan Bags", "Home Decor", "Art & Paintings", "Hand-crafted Oud"
             ].map((product, index) => (
               <motion.div 
                 key={product}
