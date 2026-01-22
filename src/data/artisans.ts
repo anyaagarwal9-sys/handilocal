@@ -373,6 +373,15 @@ const baseArtisans: Artisan[] = [
   {
     id: 10,
     name: "Nomaan Mansuri",
+    phone: "+91 9219596989",
+    homeVillage: "Moradabad",
+    products: "Gold and Metal Home Decor and Cutlery",
+    craft: "Handmade Show Pieces and Cutlery",
+    workingYears: " 3 generations (120 years)",
+    workLocation: "Muradabad",
+    howTheyStarted: "Continuing a craft his grandfather began in 1971 and his father devoted his life to.",
+    priceRange: "",
+    categories: ["Home Decor"],
     story:
       "Nomaan Mansuri is a third-generation artisan from Muradabad, continuing a craft his grandfather began in 1971 and his father devoted his life to. Since childhood, he has grown up watching metal being shaped by hand—a tradition that once earned government recognition and newspaper coverage. But according to him, in the last 15 years the world has moved faster while traditional metal artisans earn less. Marketing is difficult, government policies are hard to oblige to, and setting up factories is nearly impossible. Despite these challenges, Nomaan took out a loan simply to continue the work he loves. He continues this work not because it is easy, but to carry forward the generational business of metal craftsmanship.",
   },
