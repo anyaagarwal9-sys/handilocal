@@ -39,6 +39,13 @@ import bablu5 from "@/assets/bablu-5.jpg";
 import bablu6 from "@/assets/bablu-6.jpg";
 import bablu7 from "@/assets/bablu-7.jpg";
 
+import mlMukuProfile from "@/assets/ml-muku-profile.jpg";
+import mlMuku1 from "@/assets/ml-muku-1.jpg";
+import mlMuku2 from "@/assets/ml-muku-2.jpg";
+import mlMuku3 from "@/assets/ml-muku-3.jpg";
+import mlMuku4 from "@/assets/ml-muku-4.jpg";
+import mlMuku5 from "@/assets/ml-muku-5.jpg";
+
 import gauriProfile from "@/assets/gauri-profile.jpg";
 import gauri1 from "@/assets/gauri-1.jpg";
 import gauri2 from "@/assets/gauri-2.jpg";
@@ -319,6 +326,8 @@ const baseArtisans: Artisan[] = [
     howTheyStarted: "Family business; works with his sons",
     priceRange: "₹300 – ₹1,500 (20% discount currently)",
     categories: ["Textiles"],
+    image: mlMukuProfile,
+    gallery: [mlMuku1, mlMuku2, mlMuku3, mlMuku4, mlMuku5],
   },
   {
     id: 14,
