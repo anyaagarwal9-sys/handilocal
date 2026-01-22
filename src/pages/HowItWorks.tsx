@@ -62,9 +62,9 @@ const HowItWorks = () => {
           <img
             src={mlMuku5}
             alt=""
-            className="w-full h-full object-cover sepia-[0.25] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-55"
+            className="w-full h-full object-cover object-[50%_78%] sepia-[0.25] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-55"
           />
-          <div className="absolute inset-0 bg-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/25 to-background/65" />
         </div>
 
         <div className="container mx-auto max-w-5xl text-center relative z-10">
@@ -87,7 +87,7 @@ const HowItWorks = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-foreground/85 font-semibold max-w-2xl mx-auto"
           >
             Connecting you with local artisans in four simple steps — no middlemen, no fees, just direct connection.
           </motion.p>
