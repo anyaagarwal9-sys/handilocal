@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -17,45 +17,46 @@ All colors MUST be HSL.
     --card-foreground: 20 6% 15%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 6% 15%;
-    
+
     /* Burnt Sienna - Primary (Darker) */
     --primary: 28 92% 28%;
     --primary-foreground: 0 0% 100%;
-    
+
     /* Warm Amber/Gold - Secondary */
     --secondary: 38 92% 50%;
     --secondary-foreground: 20 6% 15%;
-    
+
     /* Deep Teal/Green - Accent */
-    --accent: 161 94% 30%;
-    --accent-foreground: 0 0% 100%;
-    
+    --accent: 28 92% 28%; /* Match primary (Burnt Sienna) */
+    /* or */
+    --accent: 38 92% 50%; /* Match secondary (Warm Amber) */
+
     /* Muted */
     --muted: 30 15% 92%;
     --muted-foreground: 30 6% 45%;
-    
+
     /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
+
     /* UI Elements */
     --border: 30 20% 88%;
     --input: 30 20% 88%;
     --ring: 28 92% 37%;
     --radius: 0.75rem;
-    
+
     /* CTA - Rich Amber */
     --success: 32 95% 44%;
     --success-foreground: 0 0% 100%;
-    
+
     /* Info/Links - Cyan */
     --info: 189 94% 37%;
     --info-foreground: 0 0% 100%;
-    
+
     /* Badges - Deep Gold */
     --badge: 45 94% 40%;
     --badge-foreground: 0 0% 100%;
-    
+
     /* Sidebar */
     --sidebar-background: 36 100% 98%;
     --sidebar-foreground: 20 6% 15%;
@@ -65,10 +66,10 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 30 20% 88%;
     --sidebar-ring: 28 92% 37%;
-    
+
     /* Typography */
-    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
-    --font-body: 'Source Sans 3', system-ui, sans-serif;
+    --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+    --font-body: "Source Sans 3", system-ui, sans-serif;
   }
 
   .dark {
@@ -115,8 +116,13 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-family: var(--font-body);
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
 }
@@ -125,44 +131,44 @@ All colors MUST be HSL.
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
   }
-  
+
   .text-gradient-accent {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent/70;
   }
-  
+
   .hover-lift {
     @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
   }
-  
+
   .glass-card {
     @apply bg-card/90 backdrop-blur-sm border border-border/50 shadow-lg;
   }
-  
+
   .section-divider {
     @apply relative;
   }
-  
+
   .section-divider::before {
     content: "";
     @apply absolute left-1/2 -translate-x-1/2 top-0 w-24 h-1 bg-primary/30 rounded-full;
   }
-  
+
   .font-heading {
     font-family: var(--font-heading);
   }
-  
+
   .font-body {
     font-family: var(--font-body);
   }
-  
+
   .badge-featured {
     @apply bg-badge text-badge-foreground;
   }
-  
+
   .link-info {
     @apply text-info hover:text-info/80;
   }
-  
+
   .btn-cta {
     @apply bg-success text-success-foreground hover:bg-success/90;
   }
