@@ -46,6 +46,16 @@ import mlMuku3 from "@/assets/ml-muku-3.jpg";
 import mlMuku4 from "@/assets/ml-muku-4.jpg";
 import mlMuku5 from "@/assets/ml-muku-5.jpg";
 
+import mohammedImtiyazProfile from "@/assets/mohammed-imtiyaz-profile.jpg";
+import mohammedImtiyaz1 from "@/assets/mohammed-imtiyaz-1.jpg";
+import mohammedImtiyaz2 from "@/assets/mohammed-imtiyaz-2.jpg";
+import mohammedImtiyaz3 from "@/assets/mohammed-imtiyaz-3.jpg";
+import mohammedImtiyaz4 from "@/assets/mohammed-imtiyaz-4.jpg";
+import mohammedImtiyaz5 from "@/assets/mohammed-imtiyaz-5.jpg";
+import mohammedImtiyaz6 from "@/assets/mohammed-imtiyaz-6.jpg";
+import mohammedImtiyaz7 from "@/assets/mohammed-imtiyaz-7.jpg";
+import mohammedImtiyaz8 from "@/assets/mohammed-imtiyaz-8.jpg";
+
 import gauriProfile from "@/assets/gauri-profile.jpg";
 import gauri1 from "@/assets/gauri-1.jpg";
 import gauri2 from "@/assets/gauri-2.jpg";
@@ -398,6 +408,17 @@ const baseArtisans: Artisan[] = [
     priceRange: "₹1,200 – ₹34,000",
     materials: "Wool, Pashmina, Silk",
     categories: ["Textiles"],
+    image: mohammedImtiyazProfile,
+    gallery: [
+      mohammedImtiyaz1,
+      mohammedImtiyaz2,
+      mohammedImtiyaz3,
+      mohammedImtiyaz4,
+      mohammedImtiyaz5,
+      mohammedImtiyaz6,
+      mohammedImtiyaz7,
+      mohammedImtiyaz8,
+    ],
   },
   {
     id: 18,
