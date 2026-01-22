@@ -82,6 +82,19 @@ import mohammedImtiyaz6 from "@/assets/mohammed-imtiyaz-6.jpg";
 import mohammedImtiyaz7 from "@/assets/mohammed-imtiyaz-7.jpg";
 import mohammedImtiyaz8 from "@/assets/mohammed-imtiyaz-8.jpg";
 
+import jitendraProfile from "@/assets/jitendra-profile.jpg";
+import jitendra1 from "@/assets/jitendra-1.jpg";
+import jitendra2 from "@/assets/jitendra-2.jpg";
+import jitendra3 from "@/assets/jitendra-3.jpg";
+import jitendra4 from "@/assets/jitendra-4.jpg";
+import jitendra5 from "@/assets/jitendra-5.jpg";
+import jitendra6 from "@/assets/jitendra-6.jpg";
+import jitendra7 from "@/assets/jitendra-7.jpg";
+import jitendra8 from "@/assets/jitendra-8.jpg";
+import jitendra9 from "@/assets/jitendra-9.jpg";
+import jitendra10 from "@/assets/jitendra-10.jpg";
+import jitendra11 from "@/assets/jitendra-11.jpg";
+
 import gauriProfile from "@/assets/gauri-profile.jpg";
 import gauri1 from "@/assets/gauri-1.jpg";
 import gauri2 from "@/assets/gauri-2.jpg";
@@ -487,7 +500,7 @@ const baseArtisans: Artisan[] = [
   },
   {
     id: 18,
-    name: "Jitendra",
+    name: "Jitender",
     age: 38,
     phone: "+91 7988849208",
     homeVillage: "Haryana (handiwork sourced from Jaipur)",
@@ -503,6 +516,8 @@ const baseArtisans: Artisan[] = [
     goals: "To provide for himself",
     priceRange: "₹700/₹1,200 – ₹3,000/₹4,000",
     categories: ["Textiles"],
+    image: jitendraProfile,
+    gallery: [jitendra1, jitendra2, jitendra3, jitendra4, jitendra5, jitendra6, jitendra7, jitendra8, jitendra9, jitendra10, jitendra11],
     story:
       "Jitendra is an artisan from Haryana whose handcrafted bedsheets, bedcovers, cushion covers, and jute work are made using materials sourced from Jaipur. Under the name Art Creation, he has spent 20 years building a small business with no other financial security to fall back on. He struggles to find buyers who understand handmade value in a market full of machine-made alternatives.",
   },
