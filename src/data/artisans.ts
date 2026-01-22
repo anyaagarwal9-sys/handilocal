@@ -197,7 +197,7 @@ const baseArtisans: Artisan[] = [
     priceRange: "₹100 – ₹350",
     categories: ["Art & Paintings"],
     image: rameshProfile,
-    gallery: [ramesh1],
+    gallery: [rameshProfile, ramesh1],
     story:
       "An artisan from Bihar, Ramesh Thakur has spent the last 20 years handcrafting diaries to support his family. Despite his craft being his only source of income, he has faced exploitation, yet perseveres—working tirelessly and masterfully at his trade to make a living. Every purchase helps him provide for his family, despite a market that often values convenience over artistic integrity and effort.",
   },
@@ -218,7 +218,7 @@ const baseArtisans: Artisan[] = [
     priceRange: "₹150 – ₹2,000",
     categories: ["Puppets", "Home Decor"],
     image: bandhuProfile,
-    gallery: [bandhu1],
+    gallery: [bandhuProfile, bandhu1],
     story:
       "Bandhu Khan has been selling Rajasthani puppets at Dilli Haat since it was established nearly 16 years ago, sustaining a family tradition and keeping his father's legacy alive. His craft supports his family and deserves to be valued—helping create a better quality of life.",
   },
@@ -238,7 +238,7 @@ const baseArtisans: Artisan[] = [
     priceRange: "₹150 – ₹1,500 (based on requirement)",
     categories: ["Puppets", "Home Decor"],
     image: babulalProfile,
-    gallery: [babulal1, babulal2],
+    gallery: [babulalProfile, babulal1, babulal2],
     story:
       "Babulal Bhaat is an artisan from Rajasthan, selling entirely handmade decorative hanging charms and Rajasthani puppets, pouring hours of work into each piece. His work at INA is a testament to family tradition and a dying art. Every purchase helps preserve Rajasthani artistic heritage and supports a household trying to make ends meet.",
   },
@@ -273,7 +273,7 @@ const baseArtisans: Artisan[] = [
     timings: "11:00 AM – 8:00 PM",
     categories: ["Jewellery"],
     image: munnaProfile,
-    gallery: [munna1],
+    gallery: [munnaProfile, munna1],
     story:
       "Munna Lal works tirelessly, creating handcrafted jewellery from scratch to support his family. It is his sole source of income—often unreliable in a market that overlooks meticulous manual effort. Every customer makes a huge difference.",
   },
@@ -293,8 +293,8 @@ const baseArtisans: Artisan[] = [
       "Recovering from injury; difficult to sell jewellery and find buyers",
     priceRange: "₹50 – ₹250",
     categories: ["Jewellery"],
-    image: babluProfile,
-    gallery: [bablu1, bablu2],
+    image: bablu2,
+    gallery: [babluProfile, bablu1, bablu2],
     story:
       "Bablu had a stable job at the local passport office until an accident changed his future overnight. A severe leg injury made it impossible to continue working. Sitting at a small table each day, he began experimenting with handcrafted jewellery. He now creates each piece by hand, but selling in a market that often overlooks craftsmanship remains challenging. Supporting artisans like him can make a real difference.",
   },
