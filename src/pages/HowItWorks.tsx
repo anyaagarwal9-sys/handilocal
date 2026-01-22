@@ -7,49 +7,50 @@ import mlMuku5 from "@/assets/ml-muku-5.jpg";
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
+  transition: { duration: 0.6 },
 };
 
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 const steps = [
   {
     icon: Search,
     title: "Browse Artisans",
-    description: "Explore our directory of talented local artisans and small business owners. Filter by craft, location, or specialty.",
-    detail: "We've carefully curated a collection of skilled creators from Noida, Delhi Haat, and surrounding areas."
+    description:
+      "Explore our directory of talented local artisans and small business owners. Filter by craft, location, or specialty.",
+    detail: "We've carefully curated a collection of skilled creators from Noida, Delhi Haat, and surrounding areas.",
   },
   {
     icon: UserPlus,
     title: "Learn Their Story",
     description: "Read about each artisan's journey, their craft techniques, and what makes their work unique.",
-    detail: "Every artisan has a story — from years of experience to the challenges they've overcome."
+    detail: "Every artisan has a story — from years of experience to the challenges they've overcome.",
   },
   {
     icon: MessageCircle,
     title: "Connect Directly",
     description: "Use the contact information provided to reach out directly to the artisan via WhatsApp or call.",
-    detail: "No middlemen, no complicated forms — just direct human connection."
+    detail: "No middlemen, no complicated forms — just direct human connection.",
   },
   {
     icon: Handshake,
     title: "Support Local",
     description: "Build a direct relationship with the artisan. 100% of your payment goes straight to them.",
-    detail: "We never handle transactions or take commissions. Your support goes directly to the creator."
-  }
+    detail: "We never handle transactions or take commissions. Your support goes directly to the creator.",
+  },
 ];
 
 const quickSteps = [
   { icon: Package, title: "Browse", description: "Explore our curated collection of local artisans" },
   { icon: Users, title: "Discover", description: "Read their stories and view their handmade products" },
   { icon: MessageCircle, title: "Connect", description: "Reach out directly via WhatsApp or call" },
-  { icon: HandHeart, title: "Support", description: "Buy directly — 100% goes to the artisan" }
+  { icon: HandHeart, title: "Support", description: "Buy directly — 100% goes to the artisan" },
 ];
 
 const HowItWorks = () => {
@@ -60,7 +61,6 @@ const HowItWorks = () => {
         {/* Background Image with Overlay (matches Home hero style) */}
         <div className="absolute inset-0">
           <img
-            src={mlMuku5}
             alt=""
             className="w-full h-full object-cover object-[50%_78%] sepia-[0.25] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-70"
           />
@@ -68,14 +68,14 @@ const HowItWorks = () => {
         </div>
 
         <div className="container mx-auto max-w-5xl text-center relative z-10">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
           >
             Simple Process
           </motion.span>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -83,7 +83,7 @@ const HowItWorks = () => {
           >
             How <span className="text-primary">HandiLocal</span> Works
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -99,7 +99,7 @@ const HowItWorks = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-4 gap-6">
             {quickSteps.map((step, index) => (
-              <motion.div 
+              <motion.div
                 key={step.title}
                 className="relative"
                 initial={{ opacity: 0, y: 30 }}
@@ -131,7 +131,7 @@ const HowItWorks = () => {
       {/* Detailed Steps */}
       <section className="py-16 md:py-24 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +145,7 @@ const HowItWorks = () => {
 
           <div className="space-y-8">
             {steps.map((step, index) => (
-              <motion.div 
+              <motion.div
                 key={step.title}
                 className="flex flex-col md:flex-row gap-6 items-start p-8 bg-card rounded-3xl border border-border/50"
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -175,7 +175,7 @@ const HowItWorks = () => {
       {/* Why We're Different */}
       <section className="py-16 px-4 bg-card">
         <div className="container mx-auto max-w-4xl">
-          <motion.div 
+          <motion.div
             className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-3xl p-8 md:p-12 border border-primary/20"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -189,9 +189,9 @@ const HowItWorks = () => {
                 "Focus on storytelling and authentic connections",
                 "Supporting local communities and economies",
                 "Preserving traditional crafts and techniques",
-                "100% of earnings go to the artisan"
+                "100% of earnings go to the artisan",
               ].map((item, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="flex items-center gap-3 p-3 bg-background rounded-xl"
                   initial={{ opacity: 0, x: -10 }}
@@ -211,11 +211,7 @@ const HowItWorks = () => {
       {/* CTA Section */}
       <section className="py-16 md:py-20 px-4 bg-background">
         <div className="container mx-auto max-w-3xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Ready to Support Local Artisans?</h2>
             <p className="text-lg text-muted-foreground mb-8">
               Start browsing our directory and discover the talented creators in your community.
