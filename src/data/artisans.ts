@@ -419,6 +419,8 @@ const baseArtisans: Artisan[] = [
       mohammedImtiyaz7,
       mohammedImtiyaz8,
     ],
+    story:
+      "Mohammad Imtiyaz is an artisan from Srinagar, Kashmir, who has been involved in his family’s textile business for over 25 years. His family’s work dates back nearly 200 years, originating in Pahalgam, where traditional Kashmiri textiles were first produced and passed down through generations. Through his business, GM Textiles, Mohammad creates Kashmiri suits, Pashmina shawls, and silk sarees—all made entirely by hand. Using materials such as wool, pashmina, and silk, his work reflects the intricate craftsmanship and cultural heritage of the region. Continuing a family tradition, Mohammad remains committed to preserving these techniques. However, sustaining traditional textile work in a modern market presents ongoing challenges. Greater appreciation and support for handmade products made by artisans like Mohammad can help ensure long-standing cultural crafts and family livelihoods continue.",
   },
   {
     id: 18,
