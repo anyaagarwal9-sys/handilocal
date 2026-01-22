@@ -304,29 +304,6 @@ const baseArtisans: Artisan[] = [
   },
   { id: 10, name: "Nomaan Mansuri" },
   {
-    id: 12,
-    name: "Arti Madnawat",
-    age: 41,
-    phone: "+91 89760 75689",
-    homeVillage: "Delhi / UP",
-    family: "Arti and her daughter Doyal (15, 10th grade)",
-    products:
-      "Jewellery, car hangings, magnets (customized), stone bracelets",
-    craft: "Resin Art",
-    businessName: "Merkhaba Resin Art Gallery",
-    workingYears: "1 year",
-    timings: "Paused in winters",
-    howTheyStarted:
-      "Started with hairpins from waste; became obsessed with resin and expanded into more products",
-    challengesFaced:
-      "Learning resin safely and mixing correctly; winters reduce demand; finding customers",
-    goals: "Expand variety and reach",
-    priceRange: "₹40–50 (small keychains), ₹350–400, ₹800–1,000 (custom)",
-    categories: ["Home Decor"],
-    story:
-      "Arti Madnawat and her teenage daughter, Doyal, create resin art at home and deliver to customers while coordinating over WhatsApp. They started by making hairpins from waste, then gradually expanded into jewellery, car hangings, customized pieces, and magnets.",
-  },
-  {
     id: 13,
     name: "ML Muku",
     age: 70,
