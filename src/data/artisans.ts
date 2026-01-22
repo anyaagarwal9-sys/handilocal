@@ -46,6 +46,20 @@ import mlMuku3 from "@/assets/ml-muku-3.jpg";
 import mlMuku4 from "@/assets/ml-muku-4.jpg";
 import mlMuku5 from "@/assets/ml-muku-5.jpg";
 
+import sonuProfile from "@/assets/sonu-profile.jpg";
+import sonu1 from "@/assets/sonu-1.jpg";
+import sonu2 from "@/assets/sonu-2.jpg";
+import sonu3 from "@/assets/sonu-3.jpg";
+import sonu4 from "@/assets/sonu-4.jpg";
+import sonu5 from "@/assets/sonu-5.jpg";
+import sonu6 from "@/assets/sonu-6.jpg";
+import sonu7 from "@/assets/sonu-7.jpg";
+import sonu8 from "@/assets/sonu-8.jpg";
+import sonu9 from "@/assets/sonu-9.jpg";
+import sonu10 from "@/assets/sonu-10.jpg";
+import sonu11 from "@/assets/sonu-11.jpg";
+
+
 import mohammedImtiyazProfile from "@/assets/mohammed-imtiyaz-profile.jpg";
 import mohammedImtiyaz1 from "@/assets/mohammed-imtiyaz-1.jpg";
 import mohammedImtiyaz2 from "@/assets/mohammed-imtiyaz-2.jpg";
@@ -372,6 +386,8 @@ const baseArtisans: Artisan[] = [
     timings: "12:00 PM – 9:00 PM",
     priceRange: "₹200+ (varies by piece)",
     categories: ["Home Decor"],
+    image: sonuProfile,
+    gallery: [sonu1, sonu2, sonu3, sonu4, sonu5, sonu6, sonu7, sonu8, sonu9, sonu10, sonu11],
     story:
       "Sonu is a Dokra artisan from Chhattisgarh, selling traditional metal statues and showpieces at Noida Haat under the name Kuldeep Handiworks. She describes Dokra as time-consuming and physically taxing, yet it competes with cheap factory-made decor that sells faster and draws more attention.",
   },
