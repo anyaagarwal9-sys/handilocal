@@ -62,9 +62,9 @@ const HowItWorks = () => {
           <img
             src={mlMuku5}
             alt=""
-            className="w-full h-full object-cover object-[50%_78%] sepia-[0.25] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-55"
+            className="w-full h-full object-cover object-[50%_78%] sepia-[0.25] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-70"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/25 to-background/65" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/5 via-background/20 to-background/55" />
         </div>
 
         <div className="container mx-auto max-w-5xl text-center relative z-10">
