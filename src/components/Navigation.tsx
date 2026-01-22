@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -7,11 +7,38 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
 
 
 const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+
+  const shareUrl = "https://handilocal.com";
+
+  const handleShare = async () => {
+    try {
+      const nav = typeof window !== "undefined" ? window.navigator : undefined;
+
+      if (nav && typeof (nav as any).share === "function") {
+        await (nav as any).share({ title: "HandiLocal", url: shareUrl });
+        return;
+      }
+
+      if (!nav?.clipboard?.writeText) {
+        throw new Error("Clipboard not available");
+      }
+
+      await nav.clipboard.writeText(shareUrl);
+      toast({ title: "Link copied", description: shareUrl });
+    } catch {
+      toast({
+        title: "Couldn’t share",
+        description: "Please copy: " + shareUrl,
+        variant: "destructive",
+      });
+    }
+  };
   
   const links = [
     { to: "/", label: "Home" },
@@ -51,12 +78,19 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden lg:block">
+          {/* CTA Buttons - Desktop */}
+          <div className="hidden lg:flex items-center gap-2">
+            <Button
+              type="button"
+              variant="outline"
+              className="rounded-full px-4"
+              onClick={handleShare}
+            >
+              <Share2 className="h-4 w-4 mr-2" />
+              Share
+            </Button>
             <Link to="/artisans">
-              <Button className="rounded-full px-6">
-                Find Artisans
-              </Button>
+              <Button className="rounded-full px-6">Find Artisans</Button>
             </Link>
           </div>
 
@@ -88,6 +122,18 @@ const Navigation = () => {
                     Find Artisans
                   </Button>
                 </Link>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-full rounded-full"
+                  onClick={async () => {
+                    await handleShare();
+                    setIsOpen(false);
+                  }}
+                >
+                  <Share2 className="h-4 w-4 mr-2" />
+                  Share
+                </Button>
               </div>
             </SheetContent>
           </Sheet>

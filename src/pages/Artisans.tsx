@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { artisans, productCategories, ProductCategory } from "@/data/artisans";
+import prince3 from "@/assets/prince-3.jpg";
 
 const Artisans = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | null>(null);
@@ -12,38 +13,54 @@ const Artisans = () => {
     : artisans;
 
   return (
-    <div className="min-h-screen py-16 px-4 bg-background">
-      <div className="container mx-auto max-w-6xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Artisan Directory</h1>
-        <p className="text-xl text-muted-foreground mb-8">
-          Discover talented creators in your community
-        </p>
-        
-        {/* Category Filter */}
-        <div className="mb-10">
-          <h3 className="text-sm font-medium text-muted-foreground mb-3">Filter by Category</h3>
-          <div className="flex flex-wrap gap-2">
-            <Button
-              variant={selectedCategory === null ? "default" : "outline"}
-              size="sm"
-              className="rounded-full"
-              onClick={() => setSelectedCategory(null)}
-            >
-              All
-            </Button>
-            {productCategories.map((category) => (
+    <div className="min-h-screen bg-background">
+      {/* Heading / Hero */}
+      <section className="relative py-16 md:py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={prince3}
+            alt=""
+            className="w-full h-full object-cover object-[50%_72%] sepia-[0.2] saturate-[1.15] brightness-[1.08] contrast-[0.98] opacity-70"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/35 to-background/85" />
+        </div>
+
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Artisan Directory</h1>
+          <p className="text-xl text-foreground/85 font-semibold max-w-2xl">
+            Discover talented creators in your community
+          </p>
+        </div>
+      </section>
+
+      <section className="py-12 px-4">
+        <div className="container mx-auto max-w-6xl">
+          {/* Category Filter */}
+          <div className="mb-10">
+            <h3 className="text-sm font-medium text-muted-foreground mb-3">Filter by Category</h3>
+            <div className="flex flex-wrap gap-2">
               <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
+                variant={selectedCategory === null ? "default" : "outline"}
                 size="sm"
                 className="rounded-full"
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => setSelectedCategory(null)}
               >
-                {category}
+                All
               </Button>
-            ))}
+              {productCategories.map((category) => (
+                <Button
+                  key={category}
+                  variant={selectedCategory === category ? "default" : "outline"}
+                  size="sm"
+                  className="rounded-full"
+                  onClick={() => setSelectedCategory(category)}
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
           </div>
-        </div>
 
         {/* Results count */}
         <p className="text-sm text-muted-foreground mb-6">
@@ -99,7 +116,8 @@ const Artisans = () => {
             </Button>
           </div>
         )}
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
