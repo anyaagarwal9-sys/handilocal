@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Search, UserPlus, MessageCircle, Handshake, Package, Users, HandHeart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import mlMuku5 from "@/assets/ml-muku-5.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -59,7 +60,7 @@ const HowItWorks = () => {
         {/* Background Image with Overlay (matches Home hero style) */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-crafts.png"
+            src={mlMuku5}
             alt=""
             className="w-full h-full object-cover sepia-[0.25] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-55"
           />
