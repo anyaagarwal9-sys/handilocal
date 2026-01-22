@@ -96,6 +96,7 @@ import aratnaBose7 from "@/assets/aratna-bose-7.jpg";
 import aratnaBose8 from "@/assets/aratna-bose-8.jpg";
 import aratnaBose9 from "@/assets/aratna-bose-9.jpg";
 
+
 export type ProductCategory = 
   | "Puppets"
   | "Textiles"
