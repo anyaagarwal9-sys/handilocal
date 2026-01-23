@@ -3,9 +3,8 @@ import { User } from "lucide-react";
 import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
-import team4 from "@/assets/team-4.jpeg";
-import aboutElephants from "@/assets/about-elephants.jpg";
-import aratnaBose6 from "@/assets/aratna-bose-6.jpg";
+import neesahNew from "@/assets/neesah-new.jpg";
+import jitendra9 from "@/assets/jitendra-9.jpg";
 const fadeInUp = {
   initial: {
     opacity: 0,
@@ -39,7 +38,7 @@ const teamMembers = [
     age: 14,
     role: "Creative & Coordination Head",
     bio: "Communicates with artisans and builds genuine connections. She manages schedules, responsibilities, and interviews, keeping everyone aligned and on time.",
-    image: team4,
+    image: neesahNew,
   },
   {
     name: "Shivnandini Dhaul",
@@ -64,7 +63,7 @@ const About = () => {
         {/* Hero background (visible behind heading area) */}
         <div className="absolute inset-0 -z-10">
           <img
-            src={aratnaBose6}
+            src={jitendra9}
             alt=""
             className="w-full h-full object-cover object-[50%_62%] sepia-[0.18] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-85"
             loading="lazy"
