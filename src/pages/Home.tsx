@@ -24,6 +24,24 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+// Import artisan images for the gallery
+import aratnaBose1 from "@/assets/aratna-bose-1.jpg";
+import aratnaBose2 from "@/assets/aratna-bose-2.jpg";
+import jitendra3 from "@/assets/jitendra-3.jpg";
+import jitendra5 from "@/assets/jitendra-5.jpg";
+import sonu2 from "@/assets/sonu-2.jpg";
+import sonu5 from "@/assets/sonu-5.jpg";
+import salman3 from "@/assets/salman-3.jpg";
+import nomaan2 from "@/assets/nomaan-2.jpg";
+import heroCrafts from "@/assets/hero-crafts.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -45,21 +63,24 @@ const scaleIn = {
   transition: { duration: 0.5 }
 };
 
+// Gallery images for carousel
+const galleryImages = [
+  { src: heroCrafts, alt: "Handcrafted items" },
+  { src: aratnaBose1, alt: "Aratna Bose's textiles" },
+  { src: aratnaBose2, alt: "Beautiful fabric work" },
+  { src: jitendra3, alt: "Jitendra's puppets" },
+  { src: jitendra5, alt: "Traditional puppetry" },
+  { src: sonu2, alt: "Sonu's craft work" },
+  { src: sonu5, alt: "Handmade products" },
+  { src: salman3, alt: "Salman's creations" },
+  { src: nomaan2, alt: "Nomaan's artwork" },
+];
+
 const Home = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0">
-          <img 
-            src="/images/hero-crafts.png" 
-            alt="" 
-            className="w-full h-full object-cover sepia-[0.25] saturate-[1.2] brightness-[1.12] contrast-[0.98] opacity-55"
-          />
-          <div className="absolute inset-0 bg-background/25" />
-        </div>
-
+      <section className="relative py-16 md:py-24 px-4 overflow-hidden bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.div 
             className="text-center"
@@ -159,21 +180,47 @@ const Home = () => {
             </motion.div>
           </motion.div>
         </div>
+      </section>
 
-        {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center pt-2">
-            <motion.div 
-              className="w-1.5 h-1.5 bg-primary rounded-full"
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </div>
-        </motion.div>
+      {/* Featured Crafts Carousel */}
+      <section className="py-8 md:py-12 px-4 bg-card border-y border-border/50">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-6"
+          >
+            <h3 className="text-lg md:text-xl font-semibold text-foreground">Glimpses of Local Craftsmanship</h3>
+          </motion.div>
+          <Carousel 
+            opts={{ 
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {galleryImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <motion.div 
+                    className="aspect-square rounded-2xl overflow-hidden border border-border/50 shadow-md hover:shadow-lg transition-shadow"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full h-full object-cover sepia-[0.15] saturate-[1.1] brightness-[1.05]"
+                      loading="lazy"
+                    />
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-4" />
+            <CarouselNext className="hidden md:flex -right-4" />
+          </Carousel>
+        </div>
       </section>
 
       {/* Tagline Section */}
