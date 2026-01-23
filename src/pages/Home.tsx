@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Heart, Users, Store, TrendingDown, Wifi, ShoppingBag, Sparkles, HandHeart, MessageCircle, MapPin, Package, BadgeCheck } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useEffect, useState } from "react";
-import bandhu2 from "@/assets/bandhu2.jpg"; //bg
 
 // Import artisan images for the gallery
 import aratnaBose1 from "@/assets/aratna-bose-1.jpg";
@@ -81,25 +79,9 @@ const galleryImages = [{
   alt: "Nomaan's artwork"
 }];
 const Home = () => {
-  const [visitorCount, setVisitorCount] = useState(0);
-
-useEffect(() => {
-  const storedCount = Number(localStorage.getItem("visitorCount") || 0);
-  const newCount = storedCount + 1;
-  localStorage.setItem("visitorCount", newCount);
-  setVisitorCount(newCount);
-}, []);
-  
   return <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section
-  className="relative py-16 px-4 overflow-hidden md:py-[50px] bg-cover bg-center"
-  style={{
-    backgroundImage: `url(${bandhu2})`
-  }}
->
-        <div className="absolute inset-0 bg-black/40 z-0" />
-
+      <section className="relative py-16 px-4 overflow-hidden bg-gradient-to-b from-primary/5 to-background md:py-[50px]">
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.div className="text-center" initial="initial" animate="animate" variants={staggerContainer}>
             
@@ -139,10 +121,6 @@ useEffect(() => {
             }, {
               number: "0",
               label: "Commissions"
-            }, {
-               number: visitorCount.toString(),
-                label: "Visitors"
-              }
             }].map((stat, index) => <motion.div key={stat.label} className="text-center" initial={{
               opacity: 0,
               y: 20
