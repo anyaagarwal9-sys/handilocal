@@ -26,7 +26,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { useVisitorTracking } from "@/hooks/useVisitorTracking";
 
 // Import artisan images for the gallery
 import aratnaBose1 from "@/assets/aratna-bose-1.jpg";
@@ -123,7 +122,7 @@ const Home = () => {
           <img
             src={heroCrafts}
             alt=""
-            className="w-full h-full object-cover sepia-[0.15] saturate-[1.1] brightness-[1.05] opacity-90"
+            className="w-full h-full object-cover sepia-[0.15] saturate-[1.1] brightness-[1.05] opacity-80"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
@@ -183,10 +182,6 @@ const Home = () => {
                 {
                   number: "NIL",
                   label: "Commissions",
-                },
-                {
-                  number: loading ? "..." : (visitorCount ?? 0).toLocaleString(),
-                  label: "Visitors",
                 },
               ].map((stat, index) => (
                 <motion.div
