@@ -187,7 +187,6 @@ const Home = () => {
                 {
                   number: loading ? "..." : (visitorCount ?? 0).toLocaleString(),
                   label: "Visitors",
-                  icon: Eye,
                 },
               ].map((stat, index) => (
                 <motion.div
