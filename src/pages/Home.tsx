@@ -181,7 +181,7 @@ const Home = () => {
                   label: "Products",
                 },
                 {
-                  number: "0",
+                  number: "NIL",
                   label: "Commissions",
                 },
                 {
