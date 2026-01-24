@@ -1,19 +1,13 @@
 import { Link, useParams } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, Mail, Phone, MapPin, Globe, ChevronDown } from "lucide-react";
+import { ArrowLeft, Mail, Phone, MapPin, Globe } from "lucide-react";
 import { artisans } from "@/data/artisans";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
 
 const ArtisanProfile = () => {
   const { id } = useParams();
   const artisanId = Number(id);
   const artisan = artisans.find((a) => a.id === artisanId);
-  const [contactOpen, setContactOpen] = useState(false);
-
-  const hasContactInfo = artisan?.email || artisan?.phone || artisan?.website;
 
   if (!artisan) {
     return (
@@ -61,52 +55,34 @@ const ArtisanProfile = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">{artisan.story}</p>
             )}
             
-            {/* Location - always visible */}
-            {(artisan.workLocation || artisan.location || artisan.homeVillage) && (
-              <div className="flex items-center gap-2 text-muted-foreground mb-4">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span>
-                  {artisan.workLocation ?? artisan.location ?? artisan.homeVillage}
-                </span>
-              </div>
-            )}
-
-            {/* Collapsible contact details */}
-            {hasContactInfo && (
-              <Collapsible open={contactOpen} onOpenChange={setContactOpen} className="mb-8">
-                <CollapsibleTrigger asChild>
-                  <Button variant="outline" className="w-full justify-between gap-2">
-                    View Contact Details
-                    <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${contactOpen ? 'rotate-180' : ''}`} />
-                  </Button>
-                </CollapsibleTrigger>
-                <CollapsibleContent className="mt-4 space-y-3">
-                  {artisan.email && (
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Mail className="w-5 h-5 text-primary" />
-                      <a href={`mailto:${artisan.email}`} className="hover:text-primary transition-colors">
-                        {artisan.email}
-                      </a>
-                    </div>
-                  )}
-                  {artisan.phone && (
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Phone className="w-5 h-5 text-primary" />
-                      <a href={`tel:${artisan.phone}`} className="hover:text-primary transition-colors">
-                        {artisan.phone}
-                      </a>
-                    </div>
-                  )}
-                  {artisan.website && (
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Globe className="w-5 h-5 text-primary" />
-                      <span>{artisan.website}</span>
-                    </div>
-                  )}
-                </CollapsibleContent>
-              </Collapsible>
-            )}
-            {!hasContactInfo && <div className="mb-8" />}
+            <div className="space-y-3 mb-8">
+              {(artisan.workLocation || artisan.location || artisan.homeVillage) && (
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span>
+                    {artisan.workLocation ?? artisan.location ?? artisan.homeVillage}
+                  </span>
+                </div>
+              )}
+              {artisan.email && (
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <span>{artisan.email}</span>
+                </div>
+              )}
+              {artisan.phone && (
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Phone className="w-5 h-5 text-primary" />
+                  <span>{artisan.phone}</span>
+                </div>
+              )}
+              {artisan.website && (
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Globe className="w-5 h-5 text-primary" />
+                  <span>{artisan.website}</span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 

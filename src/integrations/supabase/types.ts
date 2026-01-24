@@ -14,45 +14,7 @@ export type Database = {
   }
   public: {
     Tables: {
-      profile_clicks: {
-        Row: {
-          artisan_id: number
-          clicked_at: string
-          id: string
-        }
-        Insert: {
-          artisan_id: number
-          clicked_at?: string
-          id?: string
-        }
-        Update: {
-          artisan_id?: number
-          clicked_at?: string
-          id?: string
-        }
-        Relationships: []
-      }
-      site_visitors: {
-        Row: {
-          id: string
-          page_path: string | null
-          user_agent: string | null
-          visited_at: string
-        }
-        Insert: {
-          id?: string
-          page_path?: string | null
-          user_agent?: string | null
-          visited_at?: string
-        }
-        Update: {
-          id?: string
-          page_path?: string | null
-          user_agent?: string | null
-          visited_at?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never

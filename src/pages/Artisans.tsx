@@ -1,19 +1,12 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { artisans, productCategories, ProductCategory } from "@/data/artisans";
 import prince3 from "@/assets/prince-3.jpg";
-import { trackProfileClick } from "@/hooks/useVisitorTracking";
 
 const Artisans = () => {
-  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | null>(null);
-
-  const handleCardClick = async (artisanId: number) => {
-    await trackProfileClick(artisanId);
-    navigate(`/artisan/${artisanId}`);
-  };
 
   const filteredArtisans = selectedCategory
     ? artisans.filter((artisan) => artisan.categories?.includes(selectedCategory))
@@ -76,11 +69,7 @@ const Artisans = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredArtisans.map((artisan) => (
-              <Card 
-                key={artisan.id} 
-                className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-                onClick={() => handleCardClick(artisan.id)}
-              >
+              <Card key={artisan.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="aspect-square overflow-hidden">
                   <img
                     src={artisan.image}
@@ -98,16 +87,11 @@ const Artisans = () => {
                   )}
                 </CardContent>
                 <CardFooter>
-                  <Button 
-                    variant="outline" 
-                    className="w-full"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleCardClick(artisan.id);
-                    }}
-                  >
-                    View Profile
-                  </Button>
+                  <Link to={`/artisan/${artisan.id}`} className="w-full">
+                    <Button variant="outline" className="w-full">
+                      View Profile
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             ))}
