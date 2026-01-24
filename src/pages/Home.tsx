@@ -40,7 +40,7 @@ import nomaan2 from "@/assets/nomaan-2.jpg";
 import heroCrafts from "@/assets/hero-crafts.png";
 const fadeInUp = {
   initial: {
-    opacity: 20,
+    opacity: 0,
     y: 30,
   },
   animate: {
@@ -123,7 +123,7 @@ const Home = () => {
           <img
             src={heroCrafts}
             alt=""
-            className="w-full h-full object-cover sepia-[0.15] saturate-[1.1] brightness-[1.05] opacity-25"
+            className="w-full h-full object-cover sepia-[0.15] saturate-[1.1] brightness-[1.05] opacity-40"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
