@@ -26,6 +26,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useVisitorTracking } from "@/hooks/useVisitorTracking";
 
 // Import artisan images for the gallery
 import aratnaBose1 from "@/assets/aratna-bose-1.jpg";
@@ -180,8 +181,13 @@ const Home = () => {
                   label: "Products",
                 },
                 {
-                  number: "NIL",
+                  number: "0",
                   label: "Commissions",
+                },
+                {
+                  number: loading ? "..." : (visitorCount ?? 0).toLocaleString(),
+                  label: "Visitors",
+                  icon: Eye,
                 },
               ].map((stat, index) => (
                 <motion.div
