@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Heart, Users, Store, TrendingDown, Wifi, ShoppingBag, Sparkles, HandHeart, MessageCircle, MapPin, Package, BadgeCheck } from "lucide-react";
+import { ArrowRight, Heart, Users, Store, TrendingDown, Wifi, ShoppingBag, Sparkles, HandHeart, MessageCircle, MapPin, Package, BadgeCheck, Eye } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useVisitorTracking } from "@/hooks/useVisitorTracking";
 
 // Import artisan images for the gallery
 import aratnaBose1 from "@/assets/aratna-bose-1.jpg";
@@ -79,9 +80,21 @@ const galleryImages = [{
   alt: "Nomaan's artwork"
 }];
 const Home = () => {
+  const { visitorCount, loading } = useVisitorTracking();
+  
   return <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section className="relative py-16 px-4 overflow-hidden bg-gradient-to-b from-primary/5 to-background md:py-[50px]">
+      <section className="relative py-16 px-4 overflow-hidden md:py-[50px]">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroCrafts}
+            alt=""
+            className="w-full h-full object-cover sepia-[0.15] saturate-[1.1] brightness-[1.05] opacity-25"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+        </div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.div className="text-center" initial="initial" animate="animate" variants={staggerContainer}>
             
@@ -121,6 +134,10 @@ const Home = () => {
             }, {
               number: "0",
               label: "Commissions"
+            }, {
+              number: loading ? "..." : (visitorCount ?? 0).toLocaleString(),
+              label: "Visitors",
+              icon: Eye
             }].map((stat, index) => <motion.div key={stat.label} className="text-center" initial={{
               opacity: 0,
               y: 20
@@ -130,7 +147,10 @@ const Home = () => {
             }} transition={{
               delay: 0.5 + index * 0.1
             }}>
-                  <div className="text-4xl md:text-5xl font-bold text-primary">{stat.number}</div>
+                  <div className="text-4xl md:text-5xl font-bold text-primary flex items-center justify-center gap-2">
+                    {stat.icon && <stat.icon className="w-8 h-8 md:w-10 md:h-10" />}
+                    {stat.number}
+                  </div>
                   <div className="text-sm text-muted-foreground uppercase tracking-wide">{stat.label}</div>
                 </motion.div>)}
             </motion.div>
