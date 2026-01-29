@@ -114,6 +114,17 @@ const Home = () => {
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
       <section className="relative py-16 px-4 overflow-hidden bg-gradient-to-b from-primary/5 to-background md:py-[50px]">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroCrafts}
+            alt=""
+            className="w-full h-full object-cover sepia-[0.15] saturate-[1.1] brightness-[1.05] opacity-25"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+        </div>
+
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.div className="text-center" initial="initial" animate="animate" variants={staggerContainer}>
             <motion.h1
