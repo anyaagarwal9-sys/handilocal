@@ -29,7 +29,7 @@ const teamMembers = [
   {
     name: "Anya Agarwal",
     age: 14,
-    role: "Web Developer, Tech and Communications Lead",
+    role: "Tech and Communications Lead, Web Developer",
     bio: "Builds the website and coordinates producer outreach and interviews. With strong programming and robotics skills, she handles technical tasks smoothly and keeps the team organized and ahead.",
     image: team1,
   },
