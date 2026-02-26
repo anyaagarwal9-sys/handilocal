@@ -163,6 +163,7 @@ const Navigation = () => {
             </SheetContent>
           </Sheet>
           </div>
+        </div>
       </div>
     </nav>
   );
