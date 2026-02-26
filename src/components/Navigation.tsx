@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, Share2 } from "lucide-react";
+import { Menu, Share2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -111,14 +111,21 @@ const Navigation = () => {
             </Link>
           </div>
 
-          {/* Mobile Navigation */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" className="rounded-full gap-2 px-3">
-                <Menu className="h-5 w-5" />
-                <span className="text-xs text-muted-foreground">Menu</span>
+          {/* Mobile: Artisans shortcut + Menu */}
+          <div className="flex lg:hidden items-center gap-2">
+            <Link to="/artisans">
+              <Button size="sm" className="rounded-full px-4 text-xs gap-1">
+                <Sparkles className="h-3.5 w-3.5" />
+                Artisans
               </Button>
-            </SheetTrigger>
+            </Link>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" className="rounded-full gap-2 px-3">
+                  <Menu className="h-5 w-5" />
+                  <span className="text-xs text-muted-foreground">Menu</span>
+                </Button>
+              </SheetTrigger>
             <SheetContent className="bg-background">
               <div className="flex flex-col gap-2 mt-8">
                 {links.map((link) => (
@@ -155,6 +162,7 @@ const Navigation = () => {
               </div>
             </SheetContent>
           </Sheet>
+          </div>
         </div>
       </div>
     </nav>

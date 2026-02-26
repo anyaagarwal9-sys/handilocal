@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
+import FloatingArtisanCTA from "./components/FloatingArtisanCTA";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Artisans from "./pages/Artisans";
@@ -37,6 +38,7 @@ const App = () => (
         </Routes>
         <Footer />
         <BackToTop />
+        <FloatingArtisanCTA />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
