@@ -38,6 +38,7 @@ const App = () => (
         </Routes>
         <Footer />
         <BackToTop />
+        <FloatingArtisanCTA />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
