@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { User } from "lucide-react";
 import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
+import team2 from "@/assets/vaahini-profile.jpg";
 import team3 from "@/assets/team-3.jpg";
 import neesahNew from "@/assets/neesah-new.jpg";
 import jitendra9 from "@/assets/jitendra-9.jpg";
