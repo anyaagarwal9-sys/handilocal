@@ -210,7 +210,7 @@ const Home = () => {
                   size="lg"
                   className="gap-2 rounded-full px-10 py-6 text-lg font-bold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all animate-pulse-subtle"
                 >
-                  🎨 Discover Creators <ArrowRight className="w-5 h-5" />
+                  &nbsp;Discover Creators <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
               <Dialog>
