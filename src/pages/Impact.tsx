@@ -5,8 +5,6 @@ import { Users, MousePointerClick, TrendingUp } from "lucide-react";
 import {
   LineChart,
   Line,
-  BarChart,
-  Bar,
   XAxis,
   YAxis,
   Tooltip,
@@ -14,10 +12,8 @@ import {
   CartesianGrid,
 } from "recharts";
 import { format, parseISO } from "date-fns";
-import { artisans } from "@/data/artisans";
 
 type DailyPoint = { date: string; visitors: number };
-type ArtisanClicks = { name: string; clicks: number };
 
 // Baseline totals accumulated since site launch (pre-analytics tracking).
 // Live DB counts are added on top of these so the numbers keep climbing.
