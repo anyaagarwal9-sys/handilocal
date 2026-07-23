@@ -33,8 +33,9 @@ const seededRand = (seed: number) => {
   };
 };
 
-// Distribute `total` visits across days from `startISO` to today with an
-// uneven, generally-rising trend + weekly bumps + occasional spikes.
+// Distribute `total` visits across days from `startISO` to today.
+// The curve is intentionally fairly even, with busier periods in Feb and April,
+// plus a small weekly bump on weekends. The total is preserved exactly.
 const buildBaselineDaily = (total: number, startISO: string) => {
   const start = new Date(startISO + "T00:00:00Z");
   const today = new Date();
@@ -47,26 +48,48 @@ const buildBaselineDaily = (total: number, startISO: string) => {
   const rand = seededRand(42);
   const weights: number[] = [];
   for (let i = 0; i < days; i++) {
-    // Growth curve: slow start, faster later
-    const growth = 0.4 + Math.pow(i / days, 1.6) * 2.2;
-    // Weekly rhythm (weekends slightly higher)
+    const d = new Date(start.getTime() + i * 86_400_000);
+    const month = d.getUTCMonth(); // 0 = Jan
+
+    // Seasonal rhythm: busy in Feb and Apr, calmer in the months between.
+    const monthMultipliers: Record<number, number> = {
+      0: 0.75, // Jan (launch ramp-up)
+      1: 1.45, // Feb — busy
+      2: 0.85, // Mar — quieter
+      3: 1.45, // Apr — busy
+      4: 1.0,
+      5: 1.0,
+      6: 1.0,
+      7: 1.0,
+      8: 1.0,
+      9: 1.0,
+      10: 1.0,
+      11: 1.0,
+    };
+    const seasonal = monthMultipliers[month] ?? 1;
+
+    // Gentle overall growth from launch to now.
+    const growth = 0.8 + (i / days) * 0.6;
+
+    // Weekly bump: weekends slightly higher.
     const dow = (start.getUTCDay() + i) % 7;
-    const weekly = dow === 0 || dow === 6 ? 1.35 : 1;
-    // Random jitter
-    const jitter = 0.5 + rand() * 1.3;
-    // Occasional spike day
-    const spike = rand() > 0.92 ? 2.4 + rand() * 1.5 : 1;
-    weights.push(growth * weekly * jitter * spike);
+    const weekly = dow === 0 || dow === 6 ? 1.2 : 1;
+
+    // Very small jitter so the line still looks organic, not robotic.
+    const jitter = 0.92 + rand() * 0.16;
+
+    weights.push(seasonal * growth * weekly * jitter);
   }
 
   const sum = weights.reduce((a, b) => a + b, 0);
   const raw = weights.map((w) => (w / sum) * total);
-  // Round while preserving total
+
+  // Round while preserving total.
   const out: { date: string; visitors: number }[] = [];
   let carry = 0;
   for (let i = 0; i < days; i++) {
     const v = raw[i] + carry;
-    const rounded = Math.max(1, Math.round(v));
+    const rounded = Math.max(0, Math.round(v));
     carry = v - rounded;
     const d = new Date(start.getTime() + i * 86_400_000);
     out.push({ date: d.toISOString().slice(0, 10), visitors: rounded });
