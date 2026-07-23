@@ -9,10 +9,28 @@ import prince3 from "@/assets/prince-3.jpg";
 
 const Artisans = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredArtisans = selectedCategory
-    ? artisans.filter((artisan) => artisan.categories?.includes(selectedCategory))
-    : artisans;
+  const query = searchQuery.trim().toLowerCase();
+  const filteredArtisans = artisans.filter((artisan) => {
+    const matchesCategory = selectedCategory
+      ? artisan.categories?.includes(selectedCategory)
+      : true;
+    if (!matchesCategory) return false;
+    if (!query) return true;
+    const haystack = [
+      artisan.name,
+      artisan.craft,
+      artisan.products,
+      artisan.workLocation,
+      artisan.location,
+      ...(artisan.categories ?? []),
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase();
+    return haystack.includes(query);
+  });
 
   return (
     <div className="min-h-screen bg-background">
