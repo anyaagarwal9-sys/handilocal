@@ -102,7 +102,6 @@ const Impact = () => {
   const [totalClicks, setTotalClicks] = useState(CLICKS_BASELINE);
   const [firstVisit, setFirstVisit] = useState<string | null>(null);
   const [daily, setDaily] = useState<DailyPoint[]>([]);
-  const [clicksByArtisan, setClicksByArtisan] = useState<ArtisanClicks[]>([]);
   const [loading, setLoading] = useState(true);
 
   const load = async () => {
@@ -141,19 +140,6 @@ const Impact = () => {
         .map(([date, visitors]) => ({ date, visitors }))
     );
 
-    // Group clicks by artisan
-    const byArtisan = new Map<number, number>();
-    clicks.forEach((c) => {
-      byArtisan.set(c.artisan_id, (byArtisan.get(c.artisan_id) ?? 0) + 1);
-    });
-    const list: ArtisanClicks[] = Array.from(byArtisan.entries())
-      .map(([id, clicks]) => ({
-        name: artisans.find((a) => a.id === id)?.name ?? `Artisan #${id}`,
-        clicks,
-      }))
-      .sort((a, b) => b.clicks - a.clicks)
-      .slice(0, 10);
-    setClicksByArtisan(list);
     setLoading(false);
   };
 
@@ -266,31 +252,6 @@ const Impact = () => {
           )}
         </Card>
 
-        <Card className="p-6">
-          <h2 className="text-xl font-semibold mb-4">Top artisans by profile views</h2>
-          {loading ? (
-            <p className="text-muted-foreground">Loading…</p>
-          ) : clicksByArtisan.length === 0 ? (
-            <p className="text-muted-foreground">No profile clicks yet.</p>
-          ) : (
-            <div className="h-80">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={clicksByArtisan} layout="vertical" margin={{ left: 20 }}>
-                  <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
-                  <XAxis type="number" allowDecimals={false} tick={{ fontSize: 12 }} />
-                  <YAxis
-                    type="category"
-                    dataKey="name"
-                    width={120}
-                    tick={{ fontSize: 12 }}
-                  />
-                  <Tooltip />
-                  <Bar dataKey="clicks" fill="hsl(var(--primary))" radius={[0, 4, 4, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          )}
-        </Card>
       </div>
     </div>
   );
