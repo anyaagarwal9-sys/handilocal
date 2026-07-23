@@ -2,26 +2,26 @@ import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Mail, Phone, MapPin, Globe } from "lucide-react";
-import { artisans } from "@/data/artisans";
+import { creators } from "@/data/creators";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
 import { trackProfileClick } from "@/lib/tracking";
 
-const ArtisanProfile = () => {
+const CreatorProfile = () => {
   const { id } = useParams();
-  const artisanId = Number(id);
-  const artisan = artisans.find((a) => a.id === artisanId);
+  const creatorId = Number(id);
+  const creator = creators.find((a) => a.id === creatorId);
 
   useEffect(() => {
-    if (artisan) trackProfileClick(artisan.id);
-  }, [artisan?.id]);
+    if (creator) trackProfileClick(creator.id);
+  }, [creator?.id]);
 
-  if (!artisan) {
+  if (!creator) {
     return (
       <div className="min-h-screen py-16 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
-          <h1 className="text-3xl font-bold text-foreground">Artisan not found</h1>
+          <h1 className="text-3xl font-bold text-foreground">Creator not found</h1>
           <p className="mt-2 text-muted-foreground">
-            The artisan profile you’re looking for doesn’t exist.
+            The creator profile you’re looking for doesn’t exist.
           </p>
         </div>
       </div>
@@ -33,9 +33,9 @@ const ArtisanProfile = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="mb-6">
           <Link
-            to="/artisans"
+            to="/creators"
             className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:underline"
-            aria-label="Back to artisan directory"
+            aria-label="Back to creator directory"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to directory
@@ -45,47 +45,47 @@ const ArtisanProfile = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <img 
-              src={artisan.image}
-              alt={artisan.name}
+              src={creator.image}
+              alt={creator.name}
               className="w-full rounded-lg shadow-lg"
             />
           </div>
           <div>
-            <h1 className="text-4xl font-bold mb-2 text-foreground">{artisan.name}</h1>
-            {(artisan.craft || artisan.products) && (
+            <h1 className="text-4xl font-bold mb-2 text-foreground">{creator.name}</h1>
+            {(creator.craft || creator.products) && (
               <p className="text-2xl text-primary mb-4">
-                {artisan.craft ?? artisan.products}
+                {creator.craft ?? creator.products}
               </p>
             )}
-            {artisan.story && (
-              <p className="text-muted-foreground mb-6 leading-relaxed">{artisan.story}</p>
+            {creator.story && (
+              <p className="text-muted-foreground mb-6 leading-relaxed">{creator.story}</p>
             )}
             
             <div className="space-y-3 mb-8">
-              {(artisan.workLocation || artisan.location || artisan.homeVillage) && (
+              {(creator.workLocation || creator.location || creator.homeVillage) && (
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary" />
                   <span>
-                    {artisan.workLocation ?? artisan.location ?? artisan.homeVillage}
+                    {creator.workLocation ?? creator.location ?? creator.homeVillage}
                   </span>
                 </div>
               )}
-              {artisan.email && (
+              {creator.email && (
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span>{artisan.email}</span>
+                  <span>{creator.email}</span>
                 </div>
               )}
-              {artisan.phone && (
+              {creator.phone && (
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Phone className="w-5 h-5 text-primary" />
-                  <span>{artisan.phone}</span>
+                  <span>{creator.phone}</span>
                 </div>
               )}
-              {artisan.website && (
+              {creator.website && (
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Globe className="w-5 h-5 text-primary" />
-                  <span>{artisan.website}</span>
+                  <span>{creator.website}</span>
                 </div>
               )}
             </div>
@@ -96,97 +96,97 @@ const ArtisanProfile = () => {
           <h2 className="text-2xl font-semibold mb-6">Details</h2>
 
           <dl className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
-            {artisan.age !== undefined && (
+            {creator.age !== undefined && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Age</dt>
-                <dd className="text-muted-foreground">{artisan.age}</dd>
+                <dd className="text-muted-foreground">{creator.age}</dd>
               </div>
             )}
-            {artisan.homeVillage && (
+            {creator.homeVillage && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Home / Village</dt>
-                <dd className="text-muted-foreground">{artisan.homeVillage}</dd>
+                <dd className="text-muted-foreground">{creator.homeVillage}</dd>
               </div>
             )}
-            {artisan.educationBackground && (
+            {creator.educationBackground && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Education</dt>
-                <dd className="text-muted-foreground">{artisan.educationBackground}</dd>
+                <dd className="text-muted-foreground">{creator.educationBackground}</dd>
               </div>
             )}
-            {artisan.family && (
+            {creator.family && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Family</dt>
-                <dd className="text-muted-foreground">{artisan.family}</dd>
+                <dd className="text-muted-foreground">{creator.family}</dd>
               </div>
             )}
-            {artisan.products && (
+            {creator.products && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Products</dt>
-                <dd className="text-muted-foreground">{artisan.products}</dd>
+                <dd className="text-muted-foreground">{creator.products}</dd>
               </div>
             )}
-            {artisan.businessName && (
+            {creator.businessName && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Business name</dt>
-                <dd className="text-muted-foreground">{artisan.businessName}</dd>
+                <dd className="text-muted-foreground">{creator.businessName}</dd>
               </div>
             )}
-            {artisan.workingYears && (
+            {creator.workingYears && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Working years</dt>
-                <dd className="text-muted-foreground">{artisan.workingYears}</dd>
+                <dd className="text-muted-foreground">{creator.workingYears}</dd>
               </div>
             )}
-            {artisan.timings && (
+            {creator.timings && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Timings</dt>
-                <dd className="text-muted-foreground">{artisan.timings}</dd>
+                <dd className="text-muted-foreground">{creator.timings}</dd>
               </div>
             )}
-            {artisan.priceRange && (
+            {creator.priceRange && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Price range</dt>
-                <dd className="text-muted-foreground">{artisan.priceRange}</dd>
+                <dd className="text-muted-foreground">{creator.priceRange}</dd>
               </div>
             )}
-            {artisan.materials && (
+            {creator.materials && (
               <div>
                 <dt className="text-sm font-medium text-foreground">Materials</dt>
-                <dd className="text-muted-foreground">{artisan.materials}</dd>
+                <dd className="text-muted-foreground">{creator.materials}</dd>
               </div>
             )}
-            {artisan.howTheyStarted && (
+            {creator.howTheyStarted && (
               <div className="sm:col-span-2">
                 <dt className="text-sm font-medium text-foreground">How they started</dt>
-                <dd className="text-muted-foreground">{artisan.howTheyStarted}</dd>
+                <dd className="text-muted-foreground">{creator.howTheyStarted}</dd>
               </div>
             )}
-            {artisan.reasonForDoingThisWork && (
+            {creator.reasonForDoingThisWork && (
               <div className="sm:col-span-2">
                 <dt className="text-sm font-medium text-foreground">Reason for doing this work</dt>
-                <dd className="text-muted-foreground">{artisan.reasonForDoingThisWork}</dd>
+                <dd className="text-muted-foreground">{creator.reasonForDoingThisWork}</dd>
               </div>
             )}
-            {artisan.challengesFaced && (
+            {creator.challengesFaced && (
               <div className="sm:col-span-2">
                 <dt className="text-sm font-medium text-foreground">Challenges faced</dt>
-                <dd className="text-muted-foreground">{artisan.challengesFaced}</dd>
+                <dd className="text-muted-foreground">{creator.challengesFaced}</dd>
               </div>
             )}
-            {artisan.goals && (
+            {creator.goals && (
               <div className="sm:col-span-2">
                 <dt className="text-sm font-medium text-foreground">Goals</dt>
-                <dd className="text-muted-foreground">{artisan.goals}</dd>
+                <dd className="text-muted-foreground">{creator.goals}</dd>
               </div>
             )}
           </dl>
         </Card>
 
-        {artisan.gallery && artisan.gallery.length > 0 && (
+        {creator.gallery && creator.gallery.length > 0 && (
           <div className="mt-8">
             <h2 className="text-2xl font-semibold mb-6">Gallery</h2>
-            <GalleryLightbox images={artisan.gallery} title={artisan.name} />
+            <GalleryLightbox images={creator.gallery} title={creator.name} />
           </div>
         )}
       </div>
@@ -194,4 +194,4 @@ const ArtisanProfile = () => {
   );
 };
 
-export default ArtisanProfile;
+export default CreatorProfile;

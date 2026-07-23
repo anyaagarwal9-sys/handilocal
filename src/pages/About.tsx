@@ -37,7 +37,7 @@ const teamMembers = [
     name: "Neesah Kant Sharma",
     age: 14,
     role: "Creative & Coordination Head",
-    bio: "Communicates with artisans and builds genuine connections. She manages schedules, responsibilities, and interviews, keeping everyone aligned and on time.",
+    bio: "Communicates with creators and builds genuine connections. She manages schedules, responsibilities, and interviews, keeping everyone aligned and on time.",
     image: neesahNew,
   },
   {
@@ -108,13 +108,13 @@ const About = () => {
               }}
             >
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mx-0 py-[30px]">
-                We believe in the power of human connection and the beauty of handcrafted goods. Our platform was born
-                from a simple idea: to create a space where talented local artisans can share their stories and connect
-                with people who appreciate authentic craftsmanship.
+                We believe in the power of human connection and the beauty of locally made goods. Our platform was born
+                from a simple idea: to create a space where talented local creators, home-run businesses, and women-led
+                ventures can share their stories and connect with people who appreciate authentic work.
               </p>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-4">
                 We're not a marketplace — we're a bridge. We never handle transactions or take commissions. Every
-                artisan keeps 100% of their earnings, always.
+                creator keeps 100% of their earnings, always.
               </p>
             </motion.div>
           </div>
