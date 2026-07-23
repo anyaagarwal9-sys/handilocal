@@ -75,12 +75,23 @@ const CreatorProfile = () => {
                   <span>{creator.email}</span>
                 </div>
               )}
-              {creator.phone && (
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Phone className="w-5 h-5 text-primary" />
-                  <span>{creator.phone}</span>
-                </div>
-              )}
+              {creator.phone && (() => {
+                const waNumber = creator.phone.replace(/\D/g, "");
+                const profileUrl = `${window.location.origin}/creator/${creator.slug ?? creator.id}`;
+                const message = `Namaste ${creator.name} ji 🙏, maine aapka profile HandiLocal par dekha (${profileUrl}) aur mujhe aapka kaam bahut pasand aaya. `;
+                const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+                return (
+                  <a
+                    href={waLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-primary hover:underline"
+                  >
+                    <Phone className="w-5 h-5 text-primary" />
+                    <span>{creator.phone}</span>
+                  </a>
+                );
+              })()}
               {creator.website && (
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Globe className="w-5 h-5 text-primary" />
