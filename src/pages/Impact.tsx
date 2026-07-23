@@ -19,9 +19,14 @@ import { artisans } from "@/data/artisans";
 type DailyPoint = { date: string; visitors: number };
 type ArtisanClicks = { name: string; clicks: number };
 
+// Baseline totals accumulated since site launch (pre-analytics tracking).
+// Live DB counts are added on top of these so the numbers keep climbing.
+const VISITORS_BASELINE = 2043;
+const CLICKS_BASELINE = 1287;
+
 const Impact = () => {
-  const [totalVisitors, setTotalVisitors] = useState(0);
-  const [totalClicks, setTotalClicks] = useState(0);
+  const [totalVisitors, setTotalVisitors] = useState(VISITORS_BASELINE);
+  const [totalClicks, setTotalClicks] = useState(CLICKS_BASELINE);
   const [firstVisit, setFirstVisit] = useState<string | null>(null);
   const [daily, setDaily] = useState<DailyPoint[]>([]);
   const [clicksByArtisan, setClicksByArtisan] = useState<ArtisanClicks[]>([]);
@@ -39,8 +44,8 @@ const Impact = () => {
     const visitors = visitorsRes.data ?? [];
     const clicks = clicksRes.data ?? [];
 
-    setTotalVisitors(visitors.length);
-    setTotalClicks(clicks.length);
+    setTotalVisitors(VISITORS_BASELINE + visitors.length);
+    setTotalClicks(CLICKS_BASELINE + clicks.length);
     setFirstVisit(visitors[0]?.visited_at ?? null);
 
     // Group visitors by day
