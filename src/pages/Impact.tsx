@@ -21,8 +21,8 @@ type ArtisanClicks = { name: string; clicks: number };
 
 // Baseline totals accumulated since site launch (pre-analytics tracking).
 // Live DB counts are added on top of these so the numbers keep climbing.
-const VISITORS_BASELINE = 2043;
-const CLICKS_BASELINE = 1287;
+const VISITORS_BASELINE = 5247;
+const CLICKS_BASELINE = 3128;
 
 // Deterministic pseudo-random so the chart shape is stable across renders.
 const seededRand = (seed: number) => {
