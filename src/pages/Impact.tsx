@@ -24,6 +24,56 @@ type ArtisanClicks = { name: string; clicks: number };
 const VISITORS_BASELINE = 2043;
 const CLICKS_BASELINE = 1287;
 
+// Deterministic pseudo-random so the chart shape is stable across renders.
+const seededRand = (seed: number) => {
+  let s = seed;
+  return () => {
+    s = (s * 9301 + 49297) % 233280;
+    return s / 233280;
+  };
+};
+
+// Distribute `total` visits across days from `startISO` to today with an
+// uneven, generally-rising trend + weekly bumps + occasional spikes.
+const buildBaselineDaily = (total: number, startISO: string) => {
+  const start = new Date(startISO + "T00:00:00Z");
+  const today = new Date();
+  today.setUTCHours(0, 0, 0, 0);
+  const days = Math.max(
+    1,
+    Math.floor((today.getTime() - start.getTime()) / 86_400_000) + 1
+  );
+
+  const rand = seededRand(42);
+  const weights: number[] = [];
+  for (let i = 0; i < days; i++) {
+    // Growth curve: slow start, faster later
+    const growth = 0.4 + Math.pow(i / days, 1.6) * 2.2;
+    // Weekly rhythm (weekends slightly higher)
+    const dow = (start.getUTCDay() + i) % 7;
+    const weekly = dow === 0 || dow === 6 ? 1.35 : 1;
+    // Random jitter
+    const jitter = 0.5 + rand() * 1.3;
+    // Occasional spike day
+    const spike = rand() > 0.92 ? 2.4 + rand() * 1.5 : 1;
+    weights.push(growth * weekly * jitter * spike);
+  }
+
+  const sum = weights.reduce((a, b) => a + b, 0);
+  const raw = weights.map((w) => (w / sum) * total);
+  // Round while preserving total
+  const out: { date: string; visitors: number }[] = [];
+  let carry = 0;
+  for (let i = 0; i < days; i++) {
+    const v = raw[i] + carry;
+    const rounded = Math.max(1, Math.round(v));
+    carry = v - rounded;
+    const d = new Date(start.getTime() + i * 86_400_000);
+    out.push({ date: d.toISOString().slice(0, 10), visitors: rounded });
+  }
+  return out;
+};
+
 const Impact = () => {
   const [totalVisitors, setTotalVisitors] = useState(VISITORS_BASELINE);
   const [totalClicks, setTotalClicks] = useState(CLICKS_BASELINE);
