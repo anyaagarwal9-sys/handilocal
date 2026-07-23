@@ -168,6 +168,7 @@ export const productCategories: ProductCategory[] = [
 
 export type Creator = {
   id: number;
+  slug: string;
   name: string;
   age?: number;
   story?: string;
