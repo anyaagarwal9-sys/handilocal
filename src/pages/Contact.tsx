@@ -81,7 +81,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3 text-foreground">Send Us Feedback</h3>
               <p className="text-muted-foreground mb-6">
-                Have feedback, questions, or want to suggest an creator? Click below to send us an email directly.
+                Have feedback, questions, or want to suggest a creator? Click below to send us an email directly.
               </p>
               <Button onClick={handleFeedback} className="w-full" size="lg">
                 <Mail className="w-4 h-4 mr-2" />
@@ -90,10 +90,10 @@ const Contact = () => {
             </div>
 
             <div className="bg-card p-6 rounded-lg border border-border/50">
-              <h3 className="font-semibold mb-2 text-foreground">Are you an creator?</h3>
+              <h3 className="font-semibold mb-2 text-foreground">Are you a creator or home-run business?</h3>
               <p className="text-muted-foreground">
-                We're always looking to add talented creators to our directory. Feel free to reach out to
-                connect—or to share other creators who should get this opportunity.
+                We're always looking to add talented local creators, home-run businesses, and women-led ventures to our
+                directory. Feel free to reach out to connect—or to share others who should get this opportunity.
               </p>
             </div>
           </div>
