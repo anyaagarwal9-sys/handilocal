@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/dialog";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-// Import artisan images for the gallery
+// Import creator images for the gallery
 import aratnaBose1 from "@/assets/aratna-bose-1.jpg";
 import aratnaBose2 from "@/assets/aratna-bose-2.jpg";
 import jitendra3 from "@/assets/jitendra-3.jpg";
@@ -155,7 +155,7 @@ const Home = () => {
               variants={fadeInUp}
               className="text-lg md:text-xl mb-8 text-foreground/90 max-w-3xl mx-auto leading-relaxed drop-shadow-sm"
             >
-              Beautiful handmade products exist just minutes from your home — yet local artisans remain invisible
+              Beautiful handmade products exist just minutes from your home — yet local creators remain invisible
               because we choose <span className="text-foreground font-bold">convenience over community</span>.
             </motion.p>
 
@@ -204,12 +204,12 @@ const Home = () => {
             </motion.div>
 
             <motion.div variants={fadeInUp} className="flex gap-4 justify-center flex-wrap">
-              <Link to="/artisans">
+              <Link to="/creators">
                 <Button
                   size="lg"
                   className="gap-2 rounded-full px-10 py-6 text-lg font-bold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transition-all animate-pulse-subtle"
                 >
-                  🎨 Discover Artisans <ArrowRight className="w-5 h-5" />
+                  🎨 Discover Creators <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
               <Dialog>
@@ -222,7 +222,7 @@ const Home = () => {
                   <DialogHeader>
                     <DialogTitle className="text-2xl">The HandiLocal Story</DialogTitle>
                     <DialogDescription className="pt-4 text-base leading-relaxed">
-                      We partnered with 20-25 local artisans making handmade goods, interviewed them about their
+                      We partnered with 20-25 local creators making handmade goods, interviewed them about their
                       products and challenges, and built this platform to showcase their incredible work.
                       <br />
                       <br />
@@ -317,7 +317,7 @@ const Home = () => {
             }}
             className="text-2xl md:text-3xl font-bold text-primary-foreground"
           >
-            Bridging communities, one artisan at a time.
+            Bridging communities, one creator at a time.
           </motion.p>
         </div>
       </section>
@@ -343,7 +343,7 @@ const Home = () => {
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">The Problem We're Solving</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Thousands of skilled artisans remain invisible to digital consumers
+              Thousands of skilled creators remain invisible to digital consumers
             </p>
           </motion.div>
 
@@ -368,14 +368,14 @@ const Home = () => {
                 icon: TrendingDown,
                 title: "Middlemen Exploitation",
                 description:
-                  "Artisans depend on middlemen who take up to 40% commissions, drastically reducing their hard-earned income.",
+                  "Creators depend on middlemen who take up to 40% commissions, drastically reducing their hard-earned income.",
                 highlight: "40%",
               },
               {
                 icon: ShoppingBag,
                 title: "Platform Barriers",
                 description:
-                  "Requirements like GST registration, professional packaging, and complex logistics keep artisans off major platforms.",
+                  "Requirements like GST registration, professional packaging, and complex logistics keep creators off major platforms.",
                 highlight: "GST",
               },
             ].map((item, index) => (
@@ -420,7 +420,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">The Local Reality</h3>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  Around <strong className="text-foreground">1,800 artisans</strong> are registered under the ODOP (One
+                  Around <strong className="text-foreground">1,800 creators</strong> are registered under the ODOP (One
                   District One Product) scheme, but <strong className="text-foreground">fewer than 300</strong> have any
                   online presence. That's a massive digital inequality gap.
                 </p>
@@ -436,7 +436,7 @@ const Home = () => {
                   <span className="text-sm text-muted-foreground block mt-1">
                     Registered
                     <br />
-                    Artisans
+                    Creators
                   </span>
                 </motion.div>
                 <motion.div
@@ -472,13 +472,13 @@ const Home = () => {
                 Meet the Creators Near You
               </h3>
               <p className="text-muted-foreground text-lg">
-                Browse 21+ verified artisans and discover unique handmade products
+                Browse 21+ verified creators and discover unique handmade products
               </p>
             </div>
-            <Link to="/artisans" className="shrink-0">
+            <Link to="/creators" className="shrink-0">
               <Button size="lg" className="rounded-full px-8 text-base gap-2 shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-105 transition-all">
                 <Sparkles className="w-5 h-5" />
-                Browse Artisans
+                Browse Creators
               </Button>
             </Link>
           </motion.div>
@@ -527,7 +527,7 @@ const Home = () => {
               "Rajasthani Puppets",
               "Handwoven Textiles",
               "Handcrafted Jewellery",
-              "Artisan Bags",
+              "Creator Bags",
               "Home Decor",
               "Art & Paintings",
               "Hand-crafted Oud",
@@ -570,7 +570,7 @@ const Home = () => {
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">How We Bridge the Gap</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              We're not a marketplace — we're a bridge connecting artisans directly to buyers
+              We're not a marketplace — we're a bridge connecting creators directly to buyers
             </p>
           </motion.div>
 
@@ -588,7 +588,7 @@ const Home = () => {
                 icon: Heart,
                 title: "Direct Connection",
                 description:
-                  "Connect directly with artisans. No transaction fees, no commissions — they keep 100% of their earnings.",
+                  "Connect directly with creators. No transaction fees, no commissions — they keep 100% of their earnings.",
               },
               {
                 icon: Users,
@@ -647,8 +647,8 @@ const Home = () => {
             {[
               {
                 icon: BadgeCheck,
-                title: "Verified Artisans",
-                description: "Every artisan is personally interviewed and verified",
+                title: "Verified Creators",
+                description: "Every creator is personally interviewed and verified",
               },
               {
                 icon: HandHeart,
@@ -700,19 +700,19 @@ const Home = () => {
             }}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-primary-foreground">
-              Ready to Support Local Artisans?
+              Ready to Support Local Creators?
             </h2>
             <p className="text-xl mb-10 text-primary-foreground/90 max-w-2xl mx-auto">
               Browse our directory of skilled creators and find unique, handcrafted products made with love in your
               community
             </p>
-            <Link to="/artisans">
+            <Link to="/creators">
               <Button
                 size="lg"
                 variant="secondary"
                 className="rounded-full px-10 text-lg shadow-lg hover:shadow-xl transition-all"
               >
-                Explore Artisan Directory
+                Explore Creator Directory
               </Button>
             </Link>
           </motion.div>

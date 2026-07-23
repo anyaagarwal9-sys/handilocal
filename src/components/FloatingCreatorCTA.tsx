@@ -4,7 +4,7 @@ import { Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const FloatingArtisanCTA = () => {
+const FloatingCreatorCTA = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -23,13 +23,13 @@ const FloatingArtisanCTA = () => {
           transition={{ type: "spring", damping: 20 }}
           className="fixed bottom-6 right-6 z-50 lg:hidden"
         >
-          <Link to="/artisans">
+          <Link to="/creators">
             <Button
               size="lg"
               className="rounded-full px-6 py-6 text-base gap-2 shadow-xl shadow-primary/30 hover:shadow-2xl hover:scale-105 transition-all"
             >
               <Sparkles className="w-5 h-5" />
-              Discover Artisans
+              Discover Creators
             </Button>
           </Link>
         </motion.div>
@@ -38,4 +38,4 @@ const FloatingArtisanCTA = () => {
   );
 };
 
-export default FloatingArtisanCTA;
+export default FloatingCreatorCTA;

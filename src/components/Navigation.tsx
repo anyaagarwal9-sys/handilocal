@@ -60,7 +60,7 @@ const Navigation = () => {
   const links = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
-    { to: "/artisans", label: "Artisans" },
+    { to: "/creators", label: "Creators" },
     { to: "/impact", label: "Impact", icon: BarChart3 },
     { to: "/contact", label: "Contact" },
   ];
@@ -111,17 +111,17 @@ const Navigation = () => {
               <Share2 className="h-4 w-4 mr-2" />
               Share
             </Button>
-            <Link to="/artisans">
-              <Button className="rounded-full px-6">Find Artisans</Button>
+            <Link to="/creators">
+              <Button className="rounded-full px-6">Find Creators</Button>
             </Link>
           </div>
 
-          {/* Mobile: Artisans shortcut + Menu */}
+          {/* Mobile: Creators shortcut + Menu */}
           <div className="flex lg:hidden items-center gap-2">
-            <Link to="/artisans">
+            <Link to="/creators">
               <Button size="sm" className="rounded-full px-4 text-xs gap-1">
                 <Sparkles className="h-3.5 w-3.5" />
-                Artisans
+                Creators
               </Button>
             </Link>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -151,9 +151,9 @@ const Navigation = () => {
                     </Link>
                   );
                 })}
-                <Link to="/artisans" onClick={() => setIsOpen(false)}>
+                <Link to="/creators" onClick={() => setIsOpen(false)}>
                   <Button className="w-full mt-4 rounded-full">
-                    Find Artisans
+                    Find Creators
                   </Button>
                 </Link>
                 <Button

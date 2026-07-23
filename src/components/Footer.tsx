@@ -8,13 +8,13 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4 text-primary font-heading">HandiLocal</h3>
             <p className="text-sm text-muted-foreground">
-              Connecting local artisans with those who care.
+              Connecting local creators with those who care.
             </p>
           </div>
           <div>
             <h4 className="font-semibold mb-3">Explore</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/artisans" className="text-muted-foreground hover:text-primary">Artisans</Link></li>
+              <li><Link to="/creators" className="text-muted-foreground hover:text-primary">Creators</Link></li>
               <li><Link to="/how-it-works" className="text-muted-foreground hover:text-primary">How It Works</Link></li>
             </ul>
           </div>

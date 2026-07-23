@@ -1,4 +1,4 @@
-// Image imports for artisan profiles and galleries
+// Image imports for creator profiles and galleries
 import bimesProfile from "@/assets/bimes-profile.jpg";
 import bimes1 from "@/assets/bimes-1.jpg";
 import bimes2 from "@/assets/bimes-2.jpg";
@@ -115,7 +115,7 @@ import urmilaProfile from "@/assets/urmila-profile.jpg";
 import urmila1 from "@/assets/urmila-1.jpg";
 import urmila2 from "@/assets/urmila-2.jpg";
 
-// Note: For artisans whose profile photo shows products (not portraits),
+// Note: For creators whose profile photo shows products (not portraits),
 // we include the profile image in the gallery so products are shown in the "work" section.
 
 import sarthakProfile from "@/assets/sarthak-profile.jpg";
@@ -166,7 +166,7 @@ export const productCategories: ProductCategory[] = [
   "Fragrance",
 ];
 
-export type Artisan = {
+export type Creator = {
   id: number;
   name: string;
   age?: number;
@@ -204,7 +204,7 @@ const templateImages = [
   "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop",
 ] as const;
 
-const baseArtisans: Artisan[] = [
+const baseCreators: Creator[] = [
   {
     id: 1,
     name: "Bimes Trivedi",
@@ -282,7 +282,7 @@ const baseArtisans: Artisan[] = [
     image: rameshProfile,
     gallery: [rameshProfile, ramesh1],
     story:
-      "An artisan from Bihar, Ramesh Thakur has spent the last 20 years handcrafting diaries to support his family. Despite his craft being his only source of income, he has faced exploitation, yet perseveres—working tirelessly and masterfully at his trade to make a living. Every purchase helps him provide for his family, despite a market that often values convenience over artistic integrity and effort.",
+      "An creator from Bihar, Ramesh Thakur has spent the last 20 years handcrafting diaries to support his family. Despite his craft being his only source of income, he has faced exploitation, yet perseveres—working tirelessly and masterfully at his trade to make a living. Every purchase helps him provide for his family, despite a market that often values convenience over artistic integrity and effort.",
   },
   {
     id: 5,
@@ -323,7 +323,7 @@ const baseArtisans: Artisan[] = [
     image: babulalProfile,
     gallery: [babulalProfile, babulal1, babulal2],
     story:
-      "Babulal Bhaat is an artisan from Rajasthan, selling entirely handmade decorative hanging charms and Rajasthani puppets, pouring hours of work into each piece. His work at INA is a testament to family tradition and a dying art. Every purchase helps preserve Rajasthani artistic heritage and supports a household trying to make ends meet.",
+      "Babulal Bhaat is an creator from Rajasthan, selling entirely handmade decorative hanging charms and Rajasthani puppets, pouring hours of work into each piece. His work at INA is a testament to family tradition and a dying art. Every purchase helps preserve Rajasthani artistic heritage and supports a household trying to make ends meet.",
   },
   {
     id: 7,
@@ -379,7 +379,7 @@ const baseArtisans: Artisan[] = [
     image: babluProfileNew,
     gallery: [bablu4, bablu5, bablu6, bablu7],
     story:
-      "Bablu had a stable job at the local passport office until an accident changed his future overnight. A severe leg injury made it impossible to continue working. Sitting at a small table each day, he began experimenting with handcrafted jewellery. He now creates each piece by hand, but selling in a market that often overlooks craftsmanship remains challenging. Supporting artisans like him can make a real difference.",
+      "Bablu had a stable job at the local passport office until an accident changed his future overnight. A severe leg injury made it impossible to continue working. Sitting at a small table each day, he began experimenting with handcrafted jewellery. He now creates each piece by hand, but selling in a market that often overlooks craftsmanship remains challenging. Supporting creators like him can make a real difference.",
   },
   {
     id: 10,
@@ -396,7 +396,7 @@ const baseArtisans: Artisan[] = [
     image: nomaanProfile,
     gallery: [nomaan1, nomaan2, nomaan3, nomaan4, nomaan5, nomaan6, nomaan7, nomaan8, nomaan9],
     story:
-      "Nomaan Mansuri is a third-generation artisan from Muradabad, continuing a craft his grandfather began in 1971 and his father devoted his life to. Since childhood, he has grown up watching metal being shaped by hand—a tradition that once earned government recognition and newspaper coverage. But according to him, in the last 15 years the world has moved faster while traditional metal artisans earn less. Marketing is difficult, government policies are hard to oblige to, and setting up factories is nearly impossible. Despite these challenges, Nomaan took out a loan simply to continue the work he loves. He continues this work not because it is easy, but to carry forward the generational business of metal craftsmanship.",
+      "Nomaan Mansuri is a third-generation creator from Muradabad, continuing a craft his grandfather began in 1971 and his father devoted his life to. Since childhood, he has grown up watching metal being shaped by hand—a tradition that once earned government recognition and newspaper coverage. But according to him, in the last 15 years the world has moved faster while traditional metal creators earn less. Marketing is difficult, government policies are hard to oblige to, and setting up factories is nearly impossible. Despite these challenges, Nomaan took out a loan simply to continue the work he loves. He continues this work not because it is easy, but to carry forward the generational business of metal craftsmanship.",
   },
   {
     id: 13,
@@ -417,7 +417,7 @@ const baseArtisans: Artisan[] = [
     image: mlMukuProfile,
     gallery: [mlMuku1, mlMuku2, mlMuku3, mlMuku4, mlMuku5],
     story:
-      "ML Muku is a master artisan from Kashmir with over 50 years of experience in Pashmina shawls and hand embroidery. Through CraftsPoint, he continues a family craft that has survived for nearly 200 years, now working alongside his two sons to keep it alive. In a time where imitation \"Kashmiri\" products flood the market, authentic handwork struggles for recognition and fair value. His shawls represent generations of skill, patience, and cultural heritage that risk being lost if people stop choosing real handmade shawls over factory-made ones.",
+      "ML Muku is a master creator from Kashmir with over 50 years of experience in Pashmina shawls and hand embroidery. Through CraftsPoint, he continues a family craft that has survived for nearly 200 years, now working alongside his two sons to keep it alive. In a time where imitation \"Kashmiri\" products flood the market, authentic handwork struggles for recognition and fair value. His shawls represent generations of skill, patience, and cultural heritage that risk being lost if people stop choosing real handmade shawls over factory-made ones.",
   },
   {
     id: 14,
@@ -436,7 +436,7 @@ const baseArtisans: Artisan[] = [
     image: sonuProfile,
     gallery: [sonu1, sonu2, sonu3, sonu4, sonu5, sonu6, sonu7, sonu8, sonu9, sonu10, sonu11],
     story:
-      "Sonu is a Dokra artisan from Chhattisgarh, selling traditional metal statues and showpieces at Noida Haat under the name Kuldeep Handiworks. She describes Dokra as time-consuming and physically taxing, yet it competes with cheap factory-made decor that sells faster and draws more attention.",
+      "Sonu is a Dokra creator from Chhattisgarh, selling traditional metal statues and showpieces at Noida Haat under the name Kuldeep Handiworks. She describes Dokra as time-consuming and physically taxing, yet it competes with cheap factory-made decor that sells faster and draws more attention.",
   },
   {
     id: 15,
@@ -455,7 +455,7 @@ const baseArtisans: Artisan[] = [
     image: salmanProfile,
     gallery: [salman1, salman2, salman3, salman4, salman5, salman6, salman7, salman8, salman9, salman10, salman11],
     story:
-      "Salman is a 21-year-old artisan from Havada, Bihar, who has been involved in his family’s weaving tradition for the past 15 years. Coming from a lineage of weavers dating back nearly 200 years, he began learning the craft at a very young age, continuing a family business passed down through generations. He creates Madhubani hand-embroidered as well as block-painted suits and sarees, combining traditional techniques with careful, skilled workmanship. For him, this work is not just a profession, but a legacy—a responsibility to preserve his family’s heritage. Despite the time and effort required to produce each piece by hand, sustaining a livelihood through traditional weaving remains challenging. Support for artisans like Salman helps ensure that centuries-old crafts continue to survive, and families can make ends meet.",
+      "Salman is a 21-year-old creator from Havada, Bihar, who has been involved in his family’s weaving tradition for the past 15 years. Coming from a lineage of weavers dating back nearly 200 years, he began learning the craft at a very young age, continuing a family business passed down through generations. He creates Madhubani hand-embroidered as well as block-painted suits and sarees, combining traditional techniques with careful, skilled workmanship. For him, this work is not just a profession, but a legacy—a responsibility to preserve his family’s heritage. Despite the time and effort required to produce each piece by hand, sustaining a livelihood through traditional weaving remains challenging. Support for creators like Salman helps ensure that centuries-old crafts continue to survive, and families can make ends meet.",
   },
   {
     id: 16,
@@ -518,7 +518,7 @@ const baseArtisans: Artisan[] = [
       mohammedImtiyaz8,
     ],
     story:
-      "Mohammad Imtiyaz is an artisan from Srinagar, Kashmir, who has been involved in his family’s textile business for over 25 years. His family’s work dates back nearly 200 years, originating in Pahalgam, where traditional Kashmiri textiles were first produced and passed down through generations. Through his business, GM Textiles, Mohammad creates Kashmiri suits, Pashmina shawls, and silk sarees—all made entirely by hand. Using materials such as wool, pashmina, and silk, his work reflects the intricate craftsmanship and cultural heritage of the region. Continuing a family tradition, Mohammad remains committed to preserving these techniques. However, sustaining traditional textile work in a modern market presents ongoing challenges. Greater appreciation and support for handmade products made by artisans like Mohammad can help ensure long-standing cultural crafts and family livelihoods continue.",
+      "Mohammad Imtiyaz is an creator from Srinagar, Kashmir, who has been involved in his family’s textile business for over 25 years. His family’s work dates back nearly 200 years, originating in Pahalgam, where traditional Kashmiri textiles were first produced and passed down through generations. Through his business, GM Textiles, Mohammad creates Kashmiri suits, Pashmina shawls, and silk sarees—all made entirely by hand. Using materials such as wool, pashmina, and silk, his work reflects the intricate craftsmanship and cultural heritage of the region. Continuing a family tradition, Mohammad remains committed to preserving these techniques. However, sustaining traditional textile work in a modern market presents ongoing challenges. Greater appreciation and support for handmade products made by creators like Mohammad can help ensure long-standing cultural crafts and family livelihoods continue.",
   },
   {
     id: 18,
@@ -541,7 +541,7 @@ const baseArtisans: Artisan[] = [
     image: jitendraProfile,
     gallery: [jitendra1, jitendra2, jitendra3, jitendra4, jitendra5, jitendra6, jitendra7, jitendra8, jitendra9, jitendra10, jitendra11],
     story:
-      "Jitendra is an artisan from Haryana whose handcrafted bedsheets, bedcovers, cushion covers, and jute work are made using materials sourced from Jaipur. Under the name Art Creation, he has spent 20 years building a small business with no other financial security to fall back on. He struggles to find buyers who understand handmade value in a market full of machine-made alternatives.",
+      "Jitendra is an creator from Haryana whose handcrafted bedsheets, bedcovers, cushion covers, and jute work are made using materials sourced from Jaipur. Under the name Art Creation, he has spent 20 years building a small business with no other financial security to fall back on. He struggles to find buyers who understand handmade value in a market full of machine-made alternatives.",
   },
   {
     id: 19,
@@ -630,7 +630,7 @@ const baseArtisans: Artisan[] = [
     image: rajeenProfile,
     gallery: [rajeen1, rajeen2],
     story:
-      "Rajeen Mishra creates intricate papier-mâché artwork that closely resembles ceramic painting. Although his pieces have the appearance and finish of ceramics, they are entirely handmade from papier-mâché—a process that requires precision, patience, and skill. Through this craft, Rajeen produces decorative pieces that reflect both creativity and careful workmanship. However, like many traditional artisans, he faces challenges in gaining recognition for the time and effort invested in handmade work. Greater awareness and support can help ensure that unique crafts such as papier-mâché continue to be valued and sustained.",
+      "Rajeen Mishra creates intricate papier-mâché artwork that closely resembles ceramic painting. Although his pieces have the appearance and finish of ceramics, they are entirely handmade from papier-mâché—a process that requires precision, patience, and skill. Through this craft, Rajeen produces decorative pieces that reflect both creativity and careful workmanship. However, like many traditional creators, he faces challenges in gaining recognition for the time and effort invested in handmade work. Greater awareness and support can help ensure that unique crafts such as papier-mâché continue to be valued and sustained.",
   },
 ];
 
@@ -639,12 +639,12 @@ const normalizeInaLocation = (loc?: string) => {
   return loc.trim().toLowerCase() === "ina" ? "Delhi Haat, INA" : loc;
 };
 
-const shouldBeNoidaHaat = (a: Artisan) =>
+const shouldBeNoidaHaat = (a: Creator) =>
   ["ML Muku", "Sonu", "Salman", "Aratna Bose", "Mohammed Imtiyaz", "Jitendra"].includes(
     a.name
   );
 
-const normalizeWorkLocation = (a: Artisan): Artisan => {
+const normalizeWorkLocation = (a: Creator): Creator => {
   const next = {
     ...a,
     workLocation: normalizeInaLocation(a.workLocation),
@@ -657,8 +657,8 @@ const normalizeWorkLocation = (a: Artisan): Artisan => {
   return next;
 };
 
-const normalizeTimings = (a: Artisan): Artisan => {
-  // All artisans at Delhi Haat, INA should be 11-9pm EXCEPT Ramesh Thakur.
+const normalizeTimings = (a: Creator): Creator => {
+  // All creators at Delhi Haat, INA should be 11-9pm EXCEPT Ramesh Thakur.
   if (a.name !== "Ramesh Thakur" && a.workLocation === "Delhi Haat, INA") {
     return { ...a, timings: "11:00 AM – 9:00 PM" };
   }
@@ -679,7 +679,7 @@ const normalizeTimings = (a: Artisan): Artisan => {
   return a;
 };
 
-export const artisans: Artisan[] = baseArtisans.map((a, idx) => ({
+export const creators: Creator[] = baseCreators.map((a, idx) => ({
   ...normalizeTimings(normalizeWorkLocation(a)),
   image: a.image ?? templateImages[idx % templateImages.length],
 }));

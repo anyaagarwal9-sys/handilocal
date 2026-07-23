@@ -21,36 +21,36 @@ const staggerContainer = {
 const steps = [
   {
     icon: Search,
-    title: "Browse Artisans",
+    title: "Browse Creators",
     description:
-      "Explore our directory of talented local artisans and small business owners. Filter by craft, location, or specialty.",
+      "Explore our directory of talented local creators and small business owners. Filter by craft, location, or specialty.",
     detail: "We've carefully curated a collection of skilled creators from Noida, Delhi Haat, and surrounding areas.",
   },
   {
     icon: UserPlus,
     title: "Learn Their Story",
-    description: "Read about each artisan's journey, their craft techniques, and what makes their work unique.",
-    detail: "Every artisan has a story — from years of experience to the challenges they've overcome.",
+    description: "Read about each creator's journey, their craft techniques, and what makes their work unique.",
+    detail: "Every creator has a story — from years of experience to the challenges they've overcome.",
   },
   {
     icon: MessageCircle,
     title: "Connect Directly",
-    description: "Use the contact information provided to reach out directly to the artisan via WhatsApp or call.",
+    description: "Use the contact information provided to reach out directly to the creator via WhatsApp or call.",
     detail: "No middlemen, no complicated forms — just direct human connection.",
   },
   {
     icon: Handshake,
     title: "Support Local",
-    description: "Build a direct relationship with the artisan. 100% of your payment goes straight to them.",
+    description: "Build a direct relationship with the creator. 100% of your payment goes straight to them.",
     detail: "We never handle transactions or take commissions. Your support goes directly to the creator.",
   },
 ];
 
 const quickSteps = [
-  { icon: Package, title: "Browse", description: "Explore our curated collection of local artisans" },
+  { icon: Package, title: "Browse", description: "Explore our curated collection of local creators" },
   { icon: Users, title: "Discover", description: "Read their stories and view their handmade products" },
   { icon: MessageCircle, title: "Connect", description: "Reach out directly via WhatsApp or call" },
-  { icon: HandHeart, title: "Support", description: "Buy directly — 100% goes to the artisan" },
+  { icon: HandHeart, title: "Support", description: "Buy directly — 100% goes to the creator" },
 ];
 
 const HowItWorks = () => {
@@ -89,7 +89,7 @@ const HowItWorks = () => {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-foreground/85 font-semibold max-w-2xl mx-auto"
           >
-            Connecting you with local artisans in four simple steps — no middlemen, no fees, just direct connection.
+            Connecting you with local creators in four simple steps — no middlemen, no fees, just direct connection.
           </motion.p>
         </div>
       </section>
@@ -139,7 +139,7 @@ const HowItWorks = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Step by Step Guide</h2>
             <p className="text-lg text-muted-foreground">
-              Here's exactly how you can start supporting local artisans today
+              Here's exactly how you can start supporting local creators today
             </p>
           </motion.div>
 
@@ -185,11 +185,11 @@ const HowItWorks = () => {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 "No transaction fees or commissions",
-                "Direct communication between artisans and buyers",
+                "Direct communication between creators and buyers",
                 "Focus on storytelling and authentic connections",
                 "Supporting local communities and economies",
                 "Preserving traditional crafts and techniques",
-                "100% of earnings go to the artisan",
+                "100% of earnings go to the creator",
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -212,13 +212,13 @@ const HowItWorks = () => {
       <section className="py-16 md:py-20 px-4 bg-background">
         <div className="container mx-auto max-w-3xl text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Ready to Support Local Artisans?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Ready to Support Local Creators?</h2>
             <p className="text-lg text-muted-foreground mb-8">
               Start browsing our directory and discover the talented creators in your community.
             </p>
-            <Link to="/artisans">
+            <Link to="/creators">
               <Button size="lg" className="gap-2 rounded-full px-8 text-base shadow-lg shadow-primary/25">
-                Discover Artisans <ArrowRight className="w-4 h-4" />
+                Discover Creators <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
           </motion.div>
