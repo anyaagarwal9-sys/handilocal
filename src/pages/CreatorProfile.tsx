@@ -7,9 +7,8 @@ import { GalleryLightbox } from "@/components/GalleryLightbox";
 import { trackProfileClick } from "@/lib/tracking";
 
 const CreatorProfile = () => {
-  const { id } = useParams();
-  const creatorId = Number(id);
-  const creator = creators.find((a) => a.id === creatorId);
+  const { slug } = useParams();
+  const creator = creators.find((a) => a.slug === slug || String(a.id) === slug);
 
   useEffect(() => {
     if (creator) trackProfileClick(creator.id);
