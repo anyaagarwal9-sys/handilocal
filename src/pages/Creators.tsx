@@ -48,7 +48,7 @@ const Creators = () => {
         <div className="container mx-auto max-w-6xl relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Creator Directory</h1>
           <p className="text-xl text-foreground/85 font-semibold max-w-2xl">
-            Discover talented creators in your community
+            Discover talented creators, home-run businesses, and women-led ventures in your community
           </p>
         </div>
       </section>
@@ -61,7 +61,7 @@ const Creators = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
               <Input
                 type="search"
-                placeholder="Search by creator name, craft or product…"
+                placeholder="Search by creator name, category or product…"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-9"
