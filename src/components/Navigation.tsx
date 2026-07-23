@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, Share2, Sparkles } from "lucide-react";
+import { Menu, Share2, Sparkles, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -61,7 +61,7 @@ const Navigation = () => {
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
     { to: "/artisans", label: "Artisans" },
-    { to: "/how-it-works", label: "How It Works" },
+    { to: "/impact", label: "Impact", icon: BarChart3 },
     { to: "/contact", label: "Contact" },
   ];
 
@@ -80,19 +80,24 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            {links.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 font-heading ${
-                  isActive(link.to)
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground/70 hover:text-foreground hover:bg-accent"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {links.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  aria-label={link.label}
+                  title={Icon ? link.label : undefined}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 font-heading inline-flex items-center gap-1.5 ${
+                    isActive(link.to)
+                      ? "bg-primary text-primary-foreground"
+                      : "text-foreground/70 hover:text-foreground hover:bg-accent"
+                  }`}
+                >
+                  {Icon ? <Icon className="h-4 w-4" /> : link.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA Buttons - Desktop */}
@@ -128,20 +133,24 @@ const Navigation = () => {
               </SheetTrigger>
             <SheetContent className="bg-background">
               <div className="flex flex-col gap-2 mt-8">
-                {links.map((link) => (
-                  <Link
-                    key={link.to}
-                    to={link.to}
-                    onClick={() => setIsOpen(false)}
-                    className={`px-4 py-3 text-base font-medium rounded-lg transition-all font-heading ${
-                      isActive(link.to)
-                        ? "bg-primary text-primary-foreground"
-                        : "text-foreground/70 hover:text-foreground hover:bg-accent"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {links.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <Link
+                      key={link.to}
+                      to={link.to}
+                      onClick={() => setIsOpen(false)}
+                      className={`px-4 py-3 text-base font-medium rounded-lg transition-all font-heading inline-flex items-center gap-2 ${
+                        isActive(link.to)
+                          ? "bg-primary text-primary-foreground"
+                          : "text-foreground/70 hover:text-foreground hover:bg-accent"
+                      }`}
+                    >
+                      {Icon && <Icon className="h-4 w-4" />}
+                      {link.label}
+                    </Link>
+                  );
+                })}
                 <Link to="/artisans" onClick={() => setIsOpen(false)}>
                   <Button className="w-full mt-4 rounded-full">
                     Find Artisans
