@@ -205,7 +205,7 @@ const templateImages = [
   "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop",
 ] as const;
 
-const baseCreators: Creator[] = [
+const baseCreators: Omit<Creator, "slug">[] = [
   {
     id: 1,
     name: "Bimes Trivedi",
