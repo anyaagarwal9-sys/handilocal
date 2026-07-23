@@ -155,8 +155,9 @@ const Home = () => {
               variants={fadeInUp}
               className="text-lg md:text-xl mb-8 text-foreground/90 max-w-3xl mx-auto leading-relaxed drop-shadow-sm"
             >
-              Beautiful handmade products exist just minutes from your home — yet local creators remain invisible
-              because we choose <span className="text-foreground font-bold">convenience over community</span>.
+              Delicious home-made food, handcrafted jewellery, woven textiles, and unique home decor exist just minutes
+              from your home — yet local creators and home-run businesses remain invisible because we choose{" "}
+              <span className="text-foreground font-bold">convenience over community</span>.
             </motion.p>
 
             <motion.p
@@ -472,7 +473,7 @@ const Home = () => {
                 Meet the Creators Near You
               </h3>
               <p className="text-muted-foreground text-lg">
-                Browse 21+ verified creators and discover unique handmade products
+                Browse 21+ verified creators, home-run businesses, and women-led ventures
               </p>
             </div>
             <Link to="/creators" className="shrink-0">
@@ -524,13 +525,14 @@ const Home = () => {
             }}
           >
             {[
-              "Rajasthani Puppets",
+              "Home-Made Food",
               "Handwoven Textiles",
               "Handcrafted Jewellery",
-              "Creator Bags",
               "Home Decor",
               "Art & Paintings",
+              "Creator Bags",
               "Hand-crafted Oud",
+              "Women-Led Ventures",
             ].map((product, index) => (
               <motion.div
                 key={product}
@@ -703,8 +705,8 @@ const Home = () => {
               Ready to Support Local Creators?
             </h2>
             <p className="text-xl mb-10 text-primary-foreground/90 max-w-2xl mx-auto">
-              Browse our directory of skilled creators and find unique, handcrafted products made with love in your
-              community
+              Browse our directory of skilled creators, home-run businesses, and women-led ventures. Find food, fashion,
+              decor, and handcrafted products made with love in your community.
             </p>
             <Link to="/creators">
               <Button
