@@ -82,15 +82,21 @@ const CreatorProfile = () => {
                 const message = `Namaste ${creator.name} ji 🙏, maine aapka profile HandiLocal par dekha (${profileUrl}) aur mujhe aapka kaam bahut pasand aaya. `;
                 const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
                 return (
-                  <a
-                    href={waLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-primary hover:underline"
+                  <Button
+                    asChild
+                    size="lg"
+                    className="w-full sm:w-auto bg-[#25D366] hover:bg-[#1ebe57] text-white"
                   >
-                    <Phone className="w-5 h-5 text-primary" />
-                    <span>{creator.phone}</span>
-                  </a>
+                    <a
+                      href={waLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackProfileClick(creator.id)}
+                    >
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      Chat on WhatsApp
+                    </a>
+                  </Button>
                 );
               })()}
               {creator.website && (
