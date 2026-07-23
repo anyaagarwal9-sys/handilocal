@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, Mail, Phone, MapPin, Globe, MessageCircle } from "lucide-react";
 import { creators } from "@/data/creators";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
 import { trackProfileClick } from "@/lib/tracking";
