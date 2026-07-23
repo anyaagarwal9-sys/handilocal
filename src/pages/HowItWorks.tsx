@@ -23,13 +23,13 @@ const steps = [
     icon: Search,
     title: "Browse Creators",
     description:
-      "Explore our directory of talented local creators and small business owners. Filter by craft, location, or specialty.",
-    detail: "We've carefully curated a collection of skilled creators from Noida, Delhi Haat, and surrounding areas.",
+      "Explore our directory of talented local creators, home-run businesses, and women-led ventures. Filter by category, location, or specialty.",
+    detail: "We've curated skilled creators across food, jewellery, textiles, decor, and more from Noida, Delhi Haat, and surrounding areas.",
   },
   {
     icon: UserPlus,
     title: "Learn Their Story",
-    description: "Read about each creator's journey, their craft techniques, and what makes their work unique.",
+    description: "Read about each creator's journey, the skills they bring, and what makes their products unique.",
     detail: "Every creator has a story — from years of experience to the challenges they've overcome.",
   },
   {
