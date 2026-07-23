@@ -323,7 +323,7 @@ const baseCreators: Creator[] = [
     image: babulalProfile,
     gallery: [babulalProfile, babulal1, babulal2],
     story:
-      "Babulal Bhaat is an creator from Rajasthan, selling entirely handmade decorative hanging charms and Rajasthani puppets, pouring hours of work into each piece. His work at INA is a testament to family tradition and a dying art. Every purchase helps preserve Rajasthani artistic heritage and supports a household trying to make ends meet.",
+      "Babulal Bhaat is a creator from Rajasthan, selling entirely handmade decorative hanging charms and Rajasthani puppets, pouring hours of work into each piece. His work at INA is a testament to family tradition and a dying art. Every purchase helps preserve Rajasthani artistic heritage and supports a household trying to make ends meet.",
   },
   {
     id: 7,
@@ -518,7 +518,7 @@ const baseCreators: Creator[] = [
       mohammedImtiyaz8,
     ],
     story:
-      "Mohammad Imtiyaz is an creator from Srinagar, Kashmir, who has been involved in his family’s textile business for over 25 years. His family’s work dates back nearly 200 years, originating in Pahalgam, where traditional Kashmiri textiles were first produced and passed down through generations. Through his business, GM Textiles, Mohammad creates Kashmiri suits, Pashmina shawls, and silk sarees—all made entirely by hand. Using materials such as wool, pashmina, and silk, his work reflects the intricate craftsmanship and cultural heritage of the region. Continuing a family tradition, Mohammad remains committed to preserving these techniques. However, sustaining traditional textile work in a modern market presents ongoing challenges. Greater appreciation and support for handmade products made by creators like Mohammad can help ensure long-standing cultural crafts and family livelihoods continue.",
+      "Mohammad Imtiyaz is a creator from Srinagar, Kashmir, who has been involved in his family’s textile business for over 25 years. His family’s work dates back nearly 200 years, originating in Pahalgam, where traditional Kashmiri textiles were first produced and passed down through generations. Through his business, GM Textiles, Mohammad creates Kashmiri suits, Pashmina shawls, and silk sarees—all made entirely by hand. Using materials such as wool, pashmina, and silk, his work reflects the intricate craftsmanship and cultural heritage of the region. Continuing a family tradition, Mohammad remains committed to preserving these techniques. However, sustaining traditional textile work in a modern market presents ongoing challenges. Greater appreciation and support for handmade products made by creators like Mohammad can help ensure long-standing cultural crafts and family livelihoods continue.",
   },
   {
     id: 18,
@@ -541,7 +541,7 @@ const baseCreators: Creator[] = [
     image: jitendraProfile,
     gallery: [jitendra1, jitendra2, jitendra3, jitendra4, jitendra5, jitendra6, jitendra7, jitendra8, jitendra9, jitendra10, jitendra11],
     story:
-      "Jitendra is an creator from Haryana whose handcrafted bedsheets, bedcovers, cushion covers, and jute work are made using materials sourced from Jaipur. Under the name Art Creation, he has spent 20 years building a small business with no other financial security to fall back on. He struggles to find buyers who understand handmade value in a market full of machine-made alternatives.",
+      "Jitendra is a creator from Haryana whose handcrafted bedsheets, bedcovers, cushion covers, and jute work are made using materials sourced from Jaipur. Under the name Art Creation, he has spent 20 years building a small business with no other financial security to fall back on. He struggles to find buyers who understand handmade value in a market full of machine-made alternatives.",
   },
   {
     id: 19,
