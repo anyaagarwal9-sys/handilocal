@@ -136,32 +136,6 @@ const Artisans = () => {
               </Link>
             ))}
           </div>
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={artisan.image}
-                    alt={artisan.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardContent className="pt-4">
-                  <h3 className="text-xl font-semibold mb-1">{artisan.name}</h3>
-                  {(artisan.craft || artisan.products) && (
-                    <p className="text-primary font-medium mb-2">{artisan.craft ?? artisan.products}</p>
-                  )}
-                  {(artisan.workLocation || artisan.location) && (
-                    <p className="text-sm text-muted-foreground">{artisan.workLocation ?? artisan.location}</p>
-                  )}
-                </CardContent>
-                <CardFooter>
-                  <Link to={`/artisan/${artisan.id}`} className="w-full">
-                    <Button variant="outline" className="w-full">
-                      View Profile
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
 
           {filteredArtisans.length === 0 && (
             <div className="text-center py-12">
