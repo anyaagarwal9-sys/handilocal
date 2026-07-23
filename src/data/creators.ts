@@ -680,7 +680,16 @@ const normalizeTimings = (a: Creator): Creator => {
   return a;
 };
 
+const slugify = (name: string) =>
+  name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
 export const creators: Creator[] = baseCreators.map((a, idx) => ({
   ...normalizeTimings(normalizeWorkLocation(a)),
   image: a.image ?? templateImages[idx % templateImages.length],
+  slug: slugify(a.name),
 }));
