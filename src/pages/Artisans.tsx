@@ -55,6 +55,21 @@ const Artisans = () => {
 
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
+          {/* Search */}
+          <div className="mb-6">
+            <div className="relative max-w-xl">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+              <Input
+                type="search"
+                placeholder="Search by artisan name, craft or product…"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-9"
+                aria-label="Search artisans"
+              />
+            </div>
+          </div>
+
           {/* Category Filter */}
           <div className="mb-10">
             <h3 className="text-sm font-medium text-muted-foreground mb-3">Filter by Category</h3>
@@ -85,11 +100,42 @@ const Artisans = () => {
           <p className="text-sm text-muted-foreground mb-6">
             Showing {filteredArtisans.length} artisan{filteredArtisans.length !== 1 ? "s" : ""}
             {selectedCategory && ` in ${selectedCategory}`}
+            {query && ` matching "${searchQuery.trim()}"`}
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredArtisans.map((artisan) => (
-              <Card key={artisan.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Link
+                key={artisan.id}
+                to={`/artisan/${artisan.id}`}
+                className="group block rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                <Card className="overflow-hidden h-full hover:shadow-lg transition-shadow cursor-pointer">
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={artisan.image}
+                      alt={artisan.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardContent className="pt-4">
+                    <h3 className="text-xl font-semibold mb-1 group-hover:text-primary transition-colors">{artisan.name}</h3>
+                    {(artisan.craft || artisan.products) && (
+                      <p className="text-primary font-medium mb-2">{artisan.craft ?? artisan.products}</p>
+                    )}
+                    {(artisan.workLocation || artisan.location) && (
+                      <p className="text-sm text-muted-foreground">{artisan.workLocation ?? artisan.location}</p>
+                    )}
+                  </CardContent>
+                  <CardFooter>
+                    <Button variant="outline" className="w-full pointer-events-none" tabIndex={-1}>
+                      View Profile
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Link>
+            ))}
+          </div>
                 <div className="aspect-square overflow-hidden">
                   <img
                     src={artisan.image}
