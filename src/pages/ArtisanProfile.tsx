@@ -1,13 +1,19 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Mail, Phone, MapPin, Globe } from "lucide-react";
 import { artisans } from "@/data/artisans";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
+import { trackProfileClick } from "@/lib/tracking";
 
 const ArtisanProfile = () => {
   const { id } = useParams();
   const artisanId = Number(id);
   const artisan = artisans.find((a) => a.id === artisanId);
+
+  useEffect(() => {
+    if (artisan) trackProfileClick(artisan.id);
+  }, [artisan?.id]);
 
   if (!artisan) {
     return (
