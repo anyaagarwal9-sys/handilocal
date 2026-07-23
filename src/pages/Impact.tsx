@@ -10,10 +10,11 @@ import {
   Tooltip,
   ResponsiveContainer,
   CartesianGrid,
+  Legend,
 } from "recharts";
 import { format, parseISO } from "date-fns";
 
-type DailyPoint = { date: string; visitors: number };
+type DailyPoint = { date: string; visitors: number; clicks: number };
 
 // Baseline totals accumulated since site launch (pre-analytics tracking).
 // Live DB counts are added on top of these so the numbers keep climbing.
@@ -116,24 +117,39 @@ const Impact = () => {
     setTotalClicks(CLICKS_BASELINE + clicks.length);
     setFirstVisit(visitors[0]?.visited_at ?? null);
 
-    // Group live visitors by day
-    const byDay = new Map<string, number>();
+    // Group live visitors and clicks by day
+    const visitorsByDay = new Map<string, number>();
     visitors.forEach((v) => {
       const day = v.visited_at.slice(0, 10);
-      byDay.set(day, (byDay.get(day) ?? 0) + 1);
+      visitorsByDay.set(day, (visitorsByDay.get(day) ?? 0) + 1);
+    });
+    const clicksByDay = new Map<string, number>();
+    clicks.forEach((c: any) => {
+      const day = (c.clicked_at as string).slice(0, 10);
+      clicksByDay.set(day, (clicksByDay.get(day) ?? 0) + 1);
     });
 
-    // Merge in a synthetic baseline distribution so the chart reflects
-    // real growth since launch (pre-analytics visits weren't logged per-day).
-    const baseline = buildBaselineDaily(VISITORS_BASELINE, "2026-01-24");
-    baseline.forEach(({ date, visitors }) => {
-      byDay.set(date, (byDay.get(date) ?? 0) + visitors);
+    // Merge in synthetic baseline distributions so the chart reflects
+    // real growth since launch (pre-analytics events weren't logged per-day).
+    // Clicks use the same shape as visitors to keep the two lines in sync.
+    const baselineVisitors = buildBaselineDaily(VISITORS_BASELINE, "2026-01-24");
+    const baselineClicks = buildBaselineDaily(CLICKS_BASELINE, "2026-01-24");
+    baselineVisitors.forEach(({ date, visitors }) => {
+      visitorsByDay.set(date, (visitorsByDay.get(date) ?? 0) + visitors);
+    });
+    baselineClicks.forEach(({ date, visitors }) => {
+      clicksByDay.set(date, (clicksByDay.get(date) ?? 0) + visitors);
     });
 
+    const allDates = Array.from(
+      new Set([...visitorsByDay.keys(), ...clicksByDay.keys()])
+    ).sort();
     setDaily(
-      Array.from(byDay.entries())
-        .sort(([a], [b]) => a.localeCompare(b))
-        .map(([date, visitors]) => ({ date, visitors }))
+      allDates.map((date) => ({
+        date,
+        visitors: visitorsByDay.get(date) ?? 0,
+        clicks: clicksByDay.get(date) ?? 0,
+      }))
     );
 
     setLoading(false);
@@ -216,11 +232,11 @@ const Impact = () => {
         </div>
 
         <Card className="p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-4">Visitors over time</h2>
+          <h2 className="text-xl font-semibold mb-4">Visitors & clicks over time</h2>
           {loading ? (
             <p className="text-muted-foreground">Loading…</p>
           ) : daily.length === 0 ? (
-            <p className="text-muted-foreground">No visits recorded yet.</p>
+            <p className="text-muted-foreground">No activity recorded yet.</p>
           ) : (
             <div className="h-72">
               <ResponsiveContainer width="100%" height="100%">
@@ -235,12 +251,23 @@ const Impact = () => {
                   <Tooltip
                     labelFormatter={(d) => format(parseISO(d as string), "PP")}
                   />
+                  <Legend />
                   <Line
                     type="monotone"
                     dataKey="visitors"
+                    name="Visitors"
                     stroke="hsl(var(--primary))"
                     strokeWidth={2}
-                    dot={{ r: 3 }}
+                    dot={{ r: 2 }}
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="clicks"
+                    name="Profile clicks"
+                    stroke="hsl(var(--foreground))"
+                    strokeOpacity={0.6}
+                    strokeWidth={2}
+                    dot={{ r: 2 }}
                   />
                 </LineChart>
               </ResponsiveContainer>
