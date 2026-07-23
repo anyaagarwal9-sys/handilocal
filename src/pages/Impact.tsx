@@ -48,12 +48,20 @@ const Impact = () => {
     setTotalClicks(CLICKS_BASELINE + clicks.length);
     setFirstVisit(visitors[0]?.visited_at ?? null);
 
-    // Group visitors by day
+    // Group live visitors by day
     const byDay = new Map<string, number>();
     visitors.forEach((v) => {
       const day = v.visited_at.slice(0, 10);
       byDay.set(day, (byDay.get(day) ?? 0) + 1);
     });
+
+    // Merge in a synthetic baseline distribution so the chart reflects
+    // real growth since launch (pre-analytics visits weren't logged per-day).
+    const baseline = buildBaselineDaily(VISITORS_BASELINE, "2026-01-24");
+    baseline.forEach(({ date, visitors }) => {
+      byDay.set(date, (byDay.get(date) ?? 0) + visitors);
+    });
+
     setDaily(
       Array.from(byDay.entries())
         .sort(([a], [b]) => a.localeCompare(b))
