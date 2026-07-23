@@ -107,7 +107,7 @@ const Creators = () => {
             {filteredCreators.map((creator) => (
               <Link
                 key={creator.id}
-                to={`/creator/${creator.id}`}
+                to={`/creator/${creator.slug}`}
                 className="group block rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
                 <Card className="overflow-hidden h-full hover:shadow-lg transition-shadow cursor-pointer">

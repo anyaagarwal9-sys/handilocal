@@ -168,6 +168,7 @@ export const productCategories: ProductCategory[] = [
 
 export type Creator = {
   id: number;
+  slug: string;
   name: string;
   age?: number;
   story?: string;
@@ -204,7 +205,7 @@ const templateImages = [
   "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop",
 ] as const;
 
-const baseCreators: Creator[] = [
+const baseCreators: Omit<Creator, "slug">[] = [
   {
     id: 1,
     name: "Bimes Trivedi",
@@ -639,12 +640,14 @@ const normalizeInaLocation = (loc?: string) => {
   return loc.trim().toLowerCase() === "ina" ? "Delhi Haat, INA" : loc;
 };
 
-const shouldBeNoidaHaat = (a: Creator) =>
+type BaseCreator = Omit<Creator, "slug">;
+
+const shouldBeNoidaHaat = (a: BaseCreator) =>
   ["ML Muku", "Sonu", "Salman", "Aratna Bose", "Mohammed Imtiyaz", "Jitendra"].includes(
     a.name
   );
 
-const normalizeWorkLocation = (a: Creator): Creator => {
+const normalizeWorkLocation = (a: BaseCreator): BaseCreator => {
   const next = {
     ...a,
     workLocation: normalizeInaLocation(a.workLocation),
@@ -657,7 +660,7 @@ const normalizeWorkLocation = (a: Creator): Creator => {
   return next;
 };
 
-const normalizeTimings = (a: Creator): Creator => {
+const normalizeTimings = (a: BaseCreator): BaseCreator => {
   // All creators at Delhi Haat, INA should be 11-9pm EXCEPT Ramesh Thakur.
   if (a.name !== "Ramesh Thakur" && a.workLocation === "Delhi Haat, INA") {
     return { ...a, timings: "11:00 AM – 9:00 PM" };
@@ -679,7 +682,16 @@ const normalizeTimings = (a: Creator): Creator => {
   return a;
 };
 
+const slugify = (name: string) =>
+  name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
 export const creators: Creator[] = baseCreators.map((a, idx) => ({
   ...normalizeTimings(normalizeWorkLocation(a)),
   image: a.image ?? templateImages[idx % templateImages.length],
+  slug: slugify(a.name),
 }));
