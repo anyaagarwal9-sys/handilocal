@@ -61,7 +61,6 @@ const Navigation = () => {
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
     { to: "/creators", label: "Creators" },
-    { to: "/impact", label: "Impact", icon: BarChart3 },
     { to: "/contact", label: "Contact" },
   ];
 
