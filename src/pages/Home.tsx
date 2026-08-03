@@ -13,9 +13,9 @@ import {
   HandHeart,
   MessageCircle,
   MapPin,
-  Package,
   BadgeCheck,
   BarChart3,
+
 } from "lucide-react";
 import {
   Dialog,
