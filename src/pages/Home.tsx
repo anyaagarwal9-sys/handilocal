@@ -131,24 +131,7 @@ const Home = () => {
               variants={fadeInUp}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground drop-shadow-md leading-tight"
             >
-              Discover asdsad a Hands{" "}
-              <span className="text-primary relative">
-                Behind
-                <motion.div
-                  className="absolute -bottom-2 left-0 right-0 h-3 bg-secondary/30 -z-10 rounded"
-                  initial={{
-                    scaleX: 0,
-                  }}
-                  animate={{
-                    scaleX: 1,
-                  }}
-                  transition={{
-                    delay: 0.8,
-                    duration: 0.5,
-                  }}
-                />
-              </span>{" "}
-              <br /> Your Community
+              Connecting local creators to our community, commission-free.
             </motion.h1>
 
             <motion.p
