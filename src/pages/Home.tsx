@@ -9,13 +9,11 @@ import {
   TrendingDown,
   Wifi,
   ShoppingBag,
-  Sparkles,
   HandHeart,
   MessageCircle,
   MapPin,
   BadgeCheck,
   BarChart3,
-
 } from "lucide-react";
 import {
   Dialog,
@@ -238,7 +236,7 @@ const Home = () => {
       </section>
 
       {/* Trust Section */}
-      <section className="py-10 px-4 bg-background md:py-[40px]">
+      <section className="py-10 px-4 bg-gradient-to-r from-secondary/30 via-primary/10 to-secondary/30 border-y border-border/50 md:py-[40px]">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             className="grid md:grid-cols-3 gap-8 text-center"
@@ -476,32 +474,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mid-page CTA Banner */}
-      <section className="py-10 px-4 bg-gradient-to-r from-secondary/30 via-primary/10 to-secondary/30 border-y border-border/50">
-        <div className="container mx-auto max-w-4xl">
-          <motion.div
-            className="flex flex-col md:flex-row items-center justify-between gap-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                Meet the Creators Near You
-              </h3>
-              <p className="text-muted-foreground text-lg">
-                Browse 21+ verified creators, home-run businesses, and women-led ventures
-              </p>
-            </div>
-            <Link to="/creators" className="shrink-0">
-              <Button size="lg" className="rounded-full px-8 text-base gap-2 shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-105 transition-all">
-                <Sparkles className="w-5 h-5" />
-                Browse Creators
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
 
 
       {/* What We Do Section - How We Bridge the Gap */}
