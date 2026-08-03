@@ -131,7 +131,7 @@ const Home = () => {
               variants={fadeInUp}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground drop-shadow-md leading-tight"
             >
-              Discover the Hands{" "}
+              Discover asdsad a Hands{" "}
               <span className="text-primary relative">
                 Behind
                 <motion.div
@@ -148,7 +148,7 @@ const Home = () => {
                   }}
                 />
               </span>{" "}
-              Your Community
+              <br /> Your Community
             </motion.h1>
 
             <motion.p
