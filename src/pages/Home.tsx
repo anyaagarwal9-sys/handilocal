@@ -610,51 +610,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Trust Section */}
-      <section className="py-10 px-4 bg-background md:py-[40px]">
-        <div className="container mx-auto max-w-4xl">
-          <motion.div
-            className="grid md:grid-cols-3 gap-8 text-center"
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-          >
-            {[
-              {
-                icon: BadgeCheck,
-                title: "Verified Creators",
-                description: "Every creator is personally interviewed and verified",
-              },
-              {
-                icon: HandHeart,
-                title: "Zero Fees",
-                description: "We don't handle money — ever",
-              },
-              {
-                icon: MessageCircle,
-                title: "Direct Contact",
-                description: "Talk to creators directly via WhatsApp or phone",
-              },
-            ].map((item) => (
-              <div key={item.title} className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-bold text-foreground mb-1">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-14 md:py-18 px-4 bg-primary relative overflow-hidden">
