@@ -143,7 +143,7 @@ const Home = () => {
 
             <motion.p
               variants={fadeInUp}
-              className="text-2xl md:text-3xl font-bold mb-10 text-foreground drop-shadow-md"
+              className="text-2xl md:text-3xl font-bold -mt-6 mb-10 text-foreground drop-shadow-md"
             >
               <span className="text-primary">HandiLocal</span> changes that.
             </motion.p>
