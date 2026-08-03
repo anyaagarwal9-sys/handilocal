@@ -15,6 +15,7 @@ import {
   MapPin,
   Package,
   BadgeCheck,
+  BarChart3,
 } from "lucide-react";
 import {
   Dialog,
