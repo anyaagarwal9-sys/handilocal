@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, Share2, Sparkles, BarChart3 } from "lucide-react";
+import { Menu, Share2, Sparkles, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -8,6 +8,12 @@ import {
 } from "@/components/ui/sheet";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+
+interface NavLink {
+  to: string;
+  label: string;
+  icon?: LucideIcon;
+}
 
 
 const Navigation = () => {
@@ -57,11 +63,10 @@ const Navigation = () => {
     }
   };
   
-  const links = [
+  const links: NavLink[] = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
     { to: "/creators", label: "Creators" },
-    { to: "/impact", label: "Impact", icon: BarChart3 },
     { to: "/contact", label: "Contact" },
   ];
 
