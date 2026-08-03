@@ -221,6 +221,17 @@ const Home = () => {
                 </DialogContent>
               </Dialog>
             </motion.div>
+
+            <motion.div variants={fadeInUp} className="mt-6">
+              <Link
+                to="/impact"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                <BarChart3 className="w-4 h-4" />
+                See live impact & insights
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
