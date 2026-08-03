@@ -38,13 +38,6 @@ const Contact = () => {
             </Button>
           </div>
 
-          <div className="bg-card p-6 rounded-lg border border-border/50">
-            <h3 className="font-semibold mb-2 text-foreground">Are you a creator or home-run business?</h3>
-            <p className="text-muted-foreground">
-              We're always looking to add talented local creators, home-run businesses, and women-led ventures to our
-              directory. Feel free to reach out to connect—or to share others who should get this opportunity.
-            </p>
-          </div>
         </div>
       </div>
     </div>
