@@ -333,36 +333,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Tagline Section */}
-      <section className="py-10 px-4 bg-gradient-to-r from-primary to-primary/90 relative overflow-hidden">
-        <motion.div
-          className="absolute inset-0 opacity-10 border-dotted"
-          style={{
-            backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-            backgroundSize: "32px 32px",
-          }}
-        />
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <motion.p
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            className="text-2xl md:text-3xl font-bold text-primary-foreground"
-          >
-            Bridging communities, one creator at a time.
-          </motion.p>
-        </div>
-      </section>
-
-      <section className="py-12 px-4 bg-card relative md:py-[20px]">
+      <section className="py-12 px-4 bg-muted/30 relative md:py-[20px]">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             className="text-center mb-16"
