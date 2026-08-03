@@ -441,7 +441,7 @@ const Home = () => {
                   online presence. That's a massive digital inequality gap.
                 </p>
               </div>
-              <div className="flex gap-6">
+              <div className="flex flex-wrap justify-center gap-6 w-full lg:w-auto">
                 <motion.div
                   className="text-center bg-background rounded-2xl p-6 shadow-lg min-w-[140px]"
                   whileHover={{
