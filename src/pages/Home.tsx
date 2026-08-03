@@ -498,7 +498,7 @@ const Home = () => {
 
 
       {/* What We Do Section - How We Bridge the Gap */}
-      <section className="py-12 px-4 bg-card relative md:py-[30px]">
+      <section className="py-12 px-4 bg-background relative md:py-[30px]">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             className="text-center mb-16"
