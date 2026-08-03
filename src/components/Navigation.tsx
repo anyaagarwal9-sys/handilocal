@@ -63,7 +63,7 @@ const Navigation = () => {
     }
   };
   
-  const links = [
+  const links: NavLink[] = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
     { to: "/creators", label: "Creators" },
