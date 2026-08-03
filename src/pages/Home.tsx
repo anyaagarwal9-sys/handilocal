@@ -155,7 +155,9 @@ const Home = () => {
               variants={fadeInUp}
               className="text-lg md:text-xl mb-8 text-foreground/90 max-w-3xl mx-auto leading-relaxed drop-shadow-sm"
             >
-              Connecting local entrepreneurs to neighbors, commission-free.
+              Delicious home-made food, handcrafted jewellery, woven textiles, and unique home decor exist just minutes
+              from your home — yet local creators and home-run businesses remain invisible because we choose{" "}
+              <span className="text-foreground font-bold">convenience over community</span>.
             </motion.p>
 
             <motion.p
