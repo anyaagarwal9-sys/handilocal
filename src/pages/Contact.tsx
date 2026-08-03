@@ -15,7 +15,7 @@ const Contact = () => {
     <div className="min-h-screen py-16 px-4 bg-background">
       <div className="container mx-auto max-w-2xl">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center text-foreground">Contact Us</h1>
-        <p className="text-xl text is text-muted-foreground text-center mb-12">
+        <p className="text-xl text-muted-foreground text-center mb-12">
           Have questions? We'd love to hear from you.
         </p>
 
